@@ -6,30 +6,30 @@
   font-family: "Montserrat", sans-serif;
 }
 header {
-  // background-color: rgb(153, 153, 153);
-  overflow: visible;
   .header-all {
     width: 100%;
     position: fixed;
     top: 0px;
     color: white;
     z-index: 100;
-
-    // border: 1px red solid;
     .header-control-width {
       width: 1280px;
-
+      // height: 40vh;
       margin: 0 auto;
+      overflow: visible;
       // border: 1px red solid;
       padding-left: 150px;
-      padding-right: 150px;
+      padding-right: 200px;
       display: flex;
       justify-content: space-between;
+      // align-items: center;
       position: fixed;
-      background: rgba(0, 0, 0, 0.3);
+      background: rgba(0, 0, 0, 0.5);
       z-index: 100;
       transition: 0.5s;
       .header-left {
+        display: flex;
+        align-items: center;
         margin-bottom: 10px;
         img {
           margin-top: 10px;
@@ -50,16 +50,37 @@ header {
           padding-bottom: 8px;
           // border: 1px red solid;
           .first-page {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            padding-bottom: 3px;
+            transition: 0.2s;
+            // border: 1px red solid;
+            &:hover {
+              color: rgb(197, 188, 188);
+            }
+            &::before {
+              content: "";
+              position: absolute;
+              // left: 70%;
+              bottom: 10px; /* 调整下划线的位置 */
+              width: 0;
+              height: 4px;
+              background-color: white;
+              transition: height 0.2s ease-in-out, width 0.3s ease-in-out;
+            }
             &:hover::before {
               height: 2px;
               width: 2.8%; /* hover 状态下将下划线的宽度设置为 100% */
             }
+            // border: 1px red solid;
             i {
               font-size: 16px;
               margin-left: 3px;
             }
           }
-          a {
+          .line-design {
+            // position: relative;
             color: white;
             margin: 0 10px;
             text-decoration: none;
@@ -83,8 +104,15 @@ header {
               height: 2px;
               width: 5%; /* hover 状态下将下划线的宽度设置为 100% */
             }
+            // .triangle {
+            //   position: absolute;
+            //   top: 2px;
+            //   left: 100%;
+            //   font-size: 2px;
+            // }
           }
         }
+
         .human-icon,
         .home {
           font-size: 10px;
@@ -98,6 +126,14 @@ header {
             color: white;
             text-decoration: none;
             margin-right: 5px;
+            // border: 1px red solid;
+          }
+          .fa-solid {
+            font-size: 10px;
+            vertical-align: center;
+            animation: caseMove 2s infinite;
+            // border: 1px red solid;
+            // padding-bottom: 5px;
           }
           .under-case {
             display: none;
@@ -159,6 +195,7 @@ header {
     }
   }
 }
+
 .mini-detail,
 .bon-detail,
 .corner-detail,

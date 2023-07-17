@@ -6,9 +6,6 @@
   font-family: "Montserrat", sans-serif;
 }
 
-header {
-  overflow: visible;
-}
 header .header-all {
   width: 100%;
   position: fixed;
@@ -19,16 +16,19 @@ header .header-all {
 header .header-all .header-control-width {
   width: 1280px;
   margin: 0 auto;
+  overflow: visible;
   padding-left: 150px;
-  padding-right: 150px;
+  padding-right: 200px;
   display: flex;
   justify-content: space-between;
   position: fixed;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.5);
   z-index: 100;
   transition: 0.5s;
 }
 header .header-all .header-control-width .header-left {
+  display: flex;
+  align-items: center;
   margin-bottom: 10px;
 }
 header .header-all .header-control-width .header-left img {
@@ -47,25 +47,17 @@ header .header-all .header-control-width .header-right {
 header .header-all .header-control-width .header-right div {
   padding-bottom: 8px;
 }
-header .header-all .header-control-width .header-right div .first-page:hover::before {
-  height: 2px;
-  width: 2.8%; /* hover 状态下将下划线的宽度设置为 100% */
-}
-header .header-all .header-control-width .header-right div .first-page i {
-  font-size: 16px;
-  margin-left: 3px;
-}
-header .header-all .header-control-width .header-right div a {
+header .header-all .header-control-width .header-right div .first-page {
   color: white;
   margin: 0 10px;
   text-decoration: none;
   padding-bottom: 3px;
   transition: 0.2s;
 }
-header .header-all .header-control-width .header-right div a:hover {
+header .header-all .header-control-width .header-right div .first-page:hover {
   color: rgb(197, 188, 188);
 }
-header .header-all .header-control-width .header-right div a::before {
+header .header-all .header-control-width .header-right div .first-page::before {
   content: "";
   position: absolute;
   bottom: 10px; /* 调整下划线的位置 */
@@ -74,7 +66,34 @@ header .header-all .header-control-width .header-right div a::before {
   background-color: white;
   transition: height 0.2s ease-in-out, width 0.3s ease-in-out;
 }
-header .header-all .header-control-width .header-right div a:hover::before {
+header .header-all .header-control-width .header-right div .first-page:hover::before {
+  height: 2px;
+  width: 2.8%; /* hover 状态下将下划线的宽度设置为 100% */
+}
+header .header-all .header-control-width .header-right div .first-page i {
+  font-size: 16px;
+  margin-left: 3px;
+}
+header .header-all .header-control-width .header-right div .line-design {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  padding-bottom: 3px;
+  transition: 0.2s;
+}
+header .header-all .header-control-width .header-right div .line-design:hover {
+  color: rgb(197, 188, 188);
+}
+header .header-all .header-control-width .header-right div .line-design::before {
+  content: "";
+  position: absolute;
+  bottom: 10px; /* 调整下划线的位置 */
+  width: 0;
+  height: 4px;
+  background-color: white;
+  transition: height 0.2s ease-in-out, width 0.3s ease-in-out;
+}
+header .header-all .header-control-width .header-right div .line-design:hover::before {
   height: 2px;
   width: 5%; /* hover 状态下将下划线的宽度设置为 100% */
 }
@@ -90,6 +109,11 @@ header .header-all .header-control-width .header-right .all-case .top-case {
   color: white;
   text-decoration: none;
   margin-right: 5px;
+}
+header .header-all .header-control-width .header-right .all-case .fa-solid {
+  font-size: 10px;
+  vertical-align: center;
+  animation: caseMove 2s infinite;
 }
 header .header-all .header-control-width .header-right .all-case .under-case {
   display: none;

@@ -83,7 +83,7 @@ header .header-all .header-control-width {
   margin: 0 auto;
   overflow: visible;
   padding-left: 150px;
-  padding-right: 200px;
+  padding-right: 150px;
   display: flex;
   justify-content: space-between;
   position: fixed;
