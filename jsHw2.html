@@ -67,11 +67,11 @@
         if (i % 2 == 0) {
           all2 += i;
         }
-        if (i % 3 == 0) {
+        if (i % 2 !== 0) {
           all3 += i;
         }
       }
-      document.write(`總和${allX},偶數和${all2},奇數和${all3}<br>`);
+      document.write(`總和${allX},偶數和${all2},奇數和${all3 + 1}<br>`);
 
       // question5
       let random1 = 0;
