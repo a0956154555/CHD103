@@ -226,6 +226,36 @@ main {
           border-top: 1px rgb(163, 160, 160) solid;
         }
       }
+      .news-post-orange {
+        width: 100%;
+        border: 1px red solid;
+        display: flex;
+        .orange-pic {
+          width: 50%;
+          img {
+            width: 100%;
+            vertical-align: top;
+          }
+        }
+        .orange-txt {
+          width: 50%;
+          color: rgb(197, 196, 196);
+          letter-spacing: 1px;
+          display: flex;
+          flex-direction: column;
+          .txt-date {
+            span {
+              font-size: 20px;
+              position: relative;
+              top: 4px;
+            }
+          }
+          .season-discount {
+            text-decoration: none;
+            color: black;
+          }
+        }
+      }
     }
   }
 }

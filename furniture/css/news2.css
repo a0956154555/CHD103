@@ -198,4 +198,32 @@ main .main-txt .main-control-width .main-control-width-title::after {
   transform: translateX(-100%);
   content: "";
   border-top: 1px rgb(163, 160, 160) solid;
+}
+main .main-txt .main-control-width .news-post-orange {
+  width: 100%;
+  border: 1px red solid;
+  display: flex;
+}
+main .main-txt .main-control-width .news-post-orange .orange-pic {
+  width: 50%;
+}
+main .main-txt .main-control-width .news-post-orange .orange-pic img {
+  width: 100%;
+  vertical-align: top;
+}
+main .main-txt .main-control-width .news-post-orange .orange-txt {
+  width: 50%;
+  color: rgb(197, 196, 196);
+  letter-spacing: 1px;
+  display: flex;
+  flex-direction: column;
+}
+main .main-txt .main-control-width .news-post-orange .orange-txt .txt-date span {
+  font-size: 20px;
+  position: relative;
+  top: 4px;
+}
+main .main-txt .main-control-width .news-post-orange .orange-txt .season-discount {
+  text-decoration: none;
+  color: black;
 }/*# sourceMappingURL=news2.css.map */
