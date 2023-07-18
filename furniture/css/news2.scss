@@ -190,7 +190,7 @@ main {
   }
   .main-txt {
     width: 100%;
-    height: 100vh;
+    height: 300vh;
     // border: 1px red solid;
     .main-control-width {
       width: 90%;
@@ -199,7 +199,7 @@ main {
       height: 100%;
       .main-control-width-title {
         width: 100%;
-        height: 20%;
+        height: 10%;
         // border: 1px red solid;
         font-size: 28px;
         letter-spacing: 4px;
@@ -228,8 +228,9 @@ main {
       }
       .news-post-orange {
         width: 100%;
-        border: 1px red solid;
+        // border: 1px red solid;
         display: flex;
+        margin-bottom: 50px;
         .orange-pic {
           width: 50%;
           img {
@@ -243,6 +244,10 @@ main {
           letter-spacing: 1px;
           display: flex;
           flex-direction: column;
+          justify-content: space-around;
+          align-items: flex-start;
+          // border: 2px red solid;
+          padding-left: 5px;
           .txt-date {
             span {
               font-size: 20px;
@@ -251,8 +256,101 @@ main {
             }
           }
           .season-discount {
+            margin: 20px 0px;
             text-decoration: none;
-            color: black;
+            font-size: 30px;
+            color: white;
+            letter-spacing: 3px;
+            span {
+              color: rgb(212, 18, 18);
+            }
+          }
+          .discount-txt-detail {
+            white-space: nowrap;
+            max-width: 500px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            // border: 2px red solid;
+          }
+          .discount-more-btn {
+            margin-left: auto;
+            padding-right: 20px;
+            cursor: pointer;
+            position: relative;
+            font-size: 20px;
+            // border: 1px red solid;
+            &::after {
+              width: 100%;
+              content: "";
+              position: absolute;
+              left: -100%;
+              bottom: 50%;
+              border-bottom: 1px white solid;
+            }
+          }
+        }
+      }
+      .news-post-factory {
+        width: 100%;
+        // border: 1px red solid;
+        display: flex;
+        margin-bottom: 50px;
+        .factory-pic {
+          width: 50%;
+          img {
+            width: 100%;
+            vertical-align: top;
+          }
+        }
+        .factory-txt {
+          width: 50%;
+          color: rgb(197, 196, 196);
+          letter-spacing: 1px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: flex-start;
+          // border: 2px red solid;
+          padding-left: 5px;
+          .txt-date {
+            span {
+              font-size: 20px;
+              position: relative;
+              top: 4px;
+            }
+          }
+          .season-discount {
+            margin: 20px 0px;
+            text-decoration: none;
+            font-size: 30px;
+            color: white;
+            letter-spacing: 3px;
+            span {
+              color: rgb(212, 18, 18);
+            }
+          }
+          .discount-txt-detail {
+            white-space: nowrap;
+            max-width: 500px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            // border: 2px red solid;
+          }
+          .discount-more-btn {
+            margin-left: auto;
+            padding-right: 20px;
+            cursor: pointer;
+            position: relative;
+            font-size: 20px;
+            // border: 1px red solid;
+            &::after {
+              width: 100%;
+              content: "";
+              position: absolute;
+              left: -100%;
+              bottom: 50%;
+              border-bottom: 1px white solid;
+            }
           }
         }
       }
