@@ -499,6 +499,10 @@ main {
               font-weight: bold;
               color: rgb(235, 231, 231);
             }
+            a {
+              color: white;
+              text-decoration: none;
+            }
           }
           .show-link-two {
             transition: 0.6s;

@@ -413,6 +413,10 @@ main .posts-all .all-customers-response .customers-width-control .design-links-a
   font-weight: bold;
   color: rgb(235, 231, 231);
 }
+main .posts-all .all-customers-response .customers-width-control .design-links-all .show-link-one a {
+  color: white;
+  text-decoration: none;
+}
 main .posts-all .all-customers-response .customers-width-control .design-links-all .show-link-two {
   transition: 0.6s;
 }
