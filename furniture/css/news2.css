@@ -200,8 +200,10 @@ main .main-txt .main-control-width .main-control-width-title::after {
   border-top: 1px rgb(163, 160, 160) solid;
 }
 main .main-txt .main-control-width .news-post-orange {
-  width: 100%;
+  width: 80%;
+  border: 1px red solid;
   display: flex;
+  margin: 0 auto;
   margin-bottom: 50px;
 }
 main .main-txt .main-control-width .news-post-orange .orange-pic {

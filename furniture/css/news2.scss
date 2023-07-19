@@ -227,9 +227,10 @@ main {
         }
       }
       .news-post-orange {
-        width: 100%;
-        // border: 1px red solid;
+        width: 80%;
+        border: 1px red solid;
         display: flex;
+        margin: 0 auto;
         margin-bottom: 50px;
         .orange-pic {
           width: 50%;
@@ -334,6 +335,7 @@ main {
             max-width: 500px;
             overflow: hidden;
             text-overflow: ellipsis;
+
             // border: 2px red solid;
           }
           .discount-more-btn {
