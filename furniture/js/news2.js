@@ -51,3 +51,33 @@ window.addEventListener("scroll", function () {
 
   lastScrollPosition = currentScrollPosition;
 });
+// ----------------------------
+let card1 = document.querySelectorAll(".card1");
+let card2 = document.querySelectorAll(".card2");
+let firstFloor = document.querySelectorAll(".first-floor");
+
+// firstFloor.addEventListener("mouseover", function () {
+//   card1.style.rotate = "90deg";
+//   card2.style.rotate = "-180deg";
+// });
+// firstFloor.addEventListener("mouseover", function () {});
+// for (let j of firstFloor) {
+//   j.addEventListener("mouseover", function () {
+//     for (let i of card1) {
+//       i.style.rotate = "90deg";
+//     }
+//     for (let i of card2) {
+//       i.style.rotate = "-180deg";
+//     }
+//   });
+// }
+for (let i = 0; i < firstFloor.length; i++) {
+  firstFloor[i].addEventListener("mouseover", function () {
+    card1[i].style.rotate = "90deg";
+    card2[i].style.rotate = "-180deg";
+  });
+  firstFloor[i].addEventListener("mouseout", function () {
+    card1[i].style.rotate = "45deg";
+    card2[i].style.rotate = "-45deg";
+  });
+}

@@ -138,11 +138,11 @@ header .header-all .header-control-width .header-right .all-case .under-case a:h
   color: rgba(223, 218, 218, 0.928);
 }
 
-main {
+.news-banner {
   width: 100%;
   background-color: rgb(49, 48, 48);
 }
-main .news-title {
+.news-banner .news-title {
   width: 100%;
   height: 100vh;
   background-image: url(../../news2-img/1.jpg);
@@ -158,149 +158,79 @@ main .news-title {
   position: relative;
   transition: 1s;
 }
-main .news-title .news-title-span {
+.news-banner .news-title .news-title-span {
   position: relative;
   left: -25px;
 }
-main .main-txt {
+.news-banner .news-posts-all {
   width: 100%;
-  height: 100%;
+  background-color: rgb(49, 48, 48);
+  padding: 30px;
 }
-main .main-txt .main-control-width {
-  width: 90%;
+.news-banner .news-posts-all .news-control-width {
+  width: 80%;
+  height: 100%;
   margin: 0 auto;
-  border: 2px red solid;
-  height: 100%;
 }
-main .main-txt .main-control-width .main-control-width-title {
+.news-banner .news-posts-all .news-control-width .news-post-card {
   width: 100%;
-  height: 120px;
-  font-size: 28px;
-  letter-spacing: 4px;
-  color: white;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.news-banner .news-posts-all .news-control-width .news-post-card .first-floor {
+  width: calc(33.3333333333% - 30px);
+  color: white;
+  height: 400px;
+  border: 1px white solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  margin-bottom: 50px;
+}
+.news-banner .news-posts-all .news-control-width .news-post-card .first-floor:hover {
+  background-color: rgb(35, 34, 34);
+}
+.news-banner .news-posts-all .news-control-width .news-post-card .first-floor .top-img {
+  width: 100%;
+  height: 70%;
+  overflow: hidden;
+}
+.news-banner .news-posts-all .news-control-width .news-post-card .first-floor .top-img img {
+  width: 100%;
+}
+.news-banner .news-posts-all .news-control-width .news-post-card .first-floor .txt-point {
+  font-size: 18px;
+}
+.news-banner .news-posts-all .news-control-width .news-post-card .first-floor .date {
+  border-top: 1px white solid;
+  display: flex;
+  width: 100%;
+  height: 10%;
+  justify-content: space-between;
+  padding: 0px 10px;
+}
+.news-banner .news-posts-all .news-control-width .news-post-card .first-floor .date div {
+  width: 20px;
+  height: 100%;
+  display: flex;
   align-items: center;
   position: relative;
 }
-main .main-txt .main-control-width .main-control-width-title::before {
-  width: 40%;
-  position: absolute;
-  left: 0%;
-  content: "";
-  border-top: 1px rgb(163, 160, 160) solid;
-}
-main .main-txt .main-control-width .main-control-width-title::after {
-  width: 40%;
-  position: absolute;
-  left: 100%;
-  transform: translateX(-100%);
-  content: "";
-  border-top: 1px rgb(163, 160, 160) solid;
-}
-main .main-txt .main-control-width .news-post-orange {
-  width: 80%;
-  border: 1px white solid;
-  display: flex;
-  margin: 0 auto;
-  margin-bottom: 50px;
-}
-main .main-txt .main-control-width .news-post-orange .orange-pic {
-  width: 50%;
-}
-main .main-txt .main-control-width .news-post-orange .orange-pic img {
+.news-banner .news-posts-all .news-control-width .news-post-card .first-floor .date div .date-span {
   width: 100%;
-  vertical-align: top;
+  height: 0.6px;
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  background-color: white;
 }
-main .main-txt .main-control-width .news-post-orange .orange-txt {
-  width: 50%;
-  color: rgb(197, 196, 196);
-  letter-spacing: 1px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: flex-start;
-  padding-left: 5px;
+.news-banner .news-posts-all .news-control-width .news-post-card .first-floor .date div .date-span:first-child {
+  rotate: 45deg;
+  transition: 0.6s;
 }
-main .main-txt .main-control-width .news-post-orange .orange-txt .txt-date span {
-  font-size: 20px;
-  position: relative;
-  top: 4px;
-}
-main .main-txt .main-control-width .news-post-orange .orange-txt .season-discount {
-  margin: 20px 0px;
-  text-decoration: none;
-  font-size: 30px;
-  color: white;
-  letter-spacing: 3px;
-}
-main .main-txt .main-control-width .news-post-orange .orange-txt .season-discount span {
-  color: rgb(212, 18, 18);
-}
-main .main-txt .main-control-width .news-post-orange .orange-txt .discount-txt-detail {
-  white-space: nowrap;
-  max-width: 350px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  font-size: 12px;
-}
-main .main-txt .main-control-width .news-post-orange .orange-txt .discount-more-btn {
-  margin-left: auto;
-  padding-right: 20px;
-  cursor: pointer;
-  position: relative;
-  font-size: 14px;
-}
-main .main-txt .main-control-width .news-post-factory {
-  width: 80%;
-  margin: 0 auto;
-  display: flex;
-  margin-bottom: 50px;
-}
-main .main-txt .main-control-width .news-post-factory .factory-pic {
-  width: 50%;
-}
-main .main-txt .main-control-width .news-post-factory .factory-pic img {
-  width: 100%;
-  vertical-align: top;
-}
-main .main-txt .main-control-width .news-post-factory .factory-txt {
-  width: 50%;
-  color: rgb(197, 196, 196);
-  letter-spacing: 1px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: flex-start;
-  border: 1px white solid;
-  padding-left: 5px;
-}
-main .main-txt .main-control-width .news-post-factory .factory-txt .txt-date span {
-  font-size: 20px;
-  position: relative;
-  top: 4px;
-}
-main .main-txt .main-control-width .news-post-factory .factory-txt .season-discount {
-  margin: 20px 0px;
-  text-decoration: none;
-  font-size: 30px;
-  color: white;
-  letter-spacing: 3px;
-}
-main .main-txt .main-control-width .news-post-factory .factory-txt .season-discount span {
-  color: rgb(212, 18, 18);
-}
-main .main-txt .main-control-width .news-post-factory .factory-txt .discount-txt-detail {
-  white-space: nowrap;
-  max-width: 350px;
-  font-size: 12px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-main .main-txt .main-control-width .news-post-factory .factory-txt .discount-more-btn {
-  margin-left: auto;
-  padding-right: 20px;
-  cursor: pointer;
-  position: relative;
-  font-size: 14px;
+.news-banner .news-posts-all .news-control-width .news-post-card .first-floor .date div .date-span:nth-child(2) {
+  rotate: -45deg;
+  transition: 0.6s;
 }/*# sourceMappingURL=news2.css.map */
