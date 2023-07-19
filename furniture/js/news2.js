@@ -81,3 +81,11 @@ for (let i = 0; i < firstFloor.length; i++) {
     card2[i].style.rotate = "-45deg";
   });
 }
+// ----------------------------
+let pageBtn = document.querySelector(".pageBtn");
+pageBtn.addEventListener("click", function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
