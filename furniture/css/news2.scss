@@ -164,7 +164,7 @@ header {
 }
 main {
   width: 100%;
-  height: 300vh;
+  // height: 200vh;
   //   border: 1px red solid;
   background-color: rgb(49, 48, 48);
   .news-title {
@@ -190,7 +190,7 @@ main {
   }
   .main-txt {
     width: 100%;
-    height: 300vh;
+    height: 100%;
     // border: 1px red solid;
     .main-control-width {
       width: 90%;
@@ -199,7 +199,7 @@ main {
       height: 100%;
       .main-control-width-title {
         width: 100%;
-        height: 10%;
+        height: 120px;
         // border: 1px red solid;
         font-size: 28px;
         letter-spacing: 4px;
@@ -228,7 +228,7 @@ main {
       }
       .news-post-orange {
         width: 80%;
-        border: 1px red solid;
+        border: 1px white solid;
         display: flex;
         margin: 0 auto;
         margin-bottom: 50px;
@@ -268,9 +268,10 @@ main {
           }
           .discount-txt-detail {
             white-space: nowrap;
-            max-width: 500px;
+            max-width: 350px;
             overflow: hidden;
             text-overflow: ellipsis;
+            font-size: 12px;
             // border: 2px red solid;
           }
           .discount-more-btn {
@@ -278,21 +279,22 @@ main {
             padding-right: 20px;
             cursor: pointer;
             position: relative;
-            font-size: 20px;
+            font-size: 14px;
             // border: 1px red solid;
-            &::after {
-              width: 100%;
-              content: "";
-              position: absolute;
-              left: -100%;
-              bottom: 50%;
-              border-bottom: 1px white solid;
-            }
+            // &::after {
+            //   width: 100%;
+            //   content: "";
+            //   position: absolute;
+            //   left: -100%;
+            //   bottom: 50%;
+            //   border-bottom: 1px white solid;
+            // }
           }
         }
       }
       .news-post-factory {
-        width: 100%;
+        width: 80%;
+        margin: 0 auto;
         // border: 1px red solid;
         display: flex;
         margin-bottom: 50px;
@@ -311,7 +313,7 @@ main {
           flex-direction: column;
           justify-content: space-around;
           align-items: flex-start;
-          // border: 2px red solid;
+          border: 1px white solid;
           padding-left: 5px;
           .txt-date {
             span {
@@ -332,7 +334,8 @@ main {
           }
           .discount-txt-detail {
             white-space: nowrap;
-            max-width: 500px;
+            max-width: 350px;
+            font-size: 12px;
             overflow: hidden;
             text-overflow: ellipsis;
 
@@ -343,16 +346,16 @@ main {
             padding-right: 20px;
             cursor: pointer;
             position: relative;
-            font-size: 20px;
+            font-size: 14px;
             // border: 1px red solid;
-            &::after {
-              width: 100%;
-              content: "";
-              position: absolute;
-              left: -100%;
-              bottom: 50%;
-              border-bottom: 1px white solid;
-            }
+            // &::after {
+            //   width: 100%;
+            //   content: "";
+            //   position: absolute;
+            //   left: -100%;
+            //   bottom: 50%;
+            //   border-bottom: 1px white solid;
+            // }
           }
         }
       }

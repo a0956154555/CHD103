@@ -140,7 +140,6 @@ header .header-all .header-control-width .header-right .all-case .under-case a:h
 
 main {
   width: 100%;
-  height: 300vh;
   background-color: rgb(49, 48, 48);
 }
 main .news-title {
@@ -165,7 +164,7 @@ main .news-title .news-title-span {
 }
 main .main-txt {
   width: 100%;
-  height: 300vh;
+  height: 100%;
 }
 main .main-txt .main-control-width {
   width: 90%;
@@ -175,7 +174,7 @@ main .main-txt .main-control-width {
 }
 main .main-txt .main-control-width .main-control-width-title {
   width: 100%;
-  height: 10%;
+  height: 120px;
   font-size: 28px;
   letter-spacing: 4px;
   color: white;
@@ -201,7 +200,7 @@ main .main-txt .main-control-width .main-control-width-title::after {
 }
 main .main-txt .main-control-width .news-post-orange {
   width: 80%;
-  border: 1px red solid;
+  border: 1px white solid;
   display: flex;
   margin: 0 auto;
   margin-bottom: 50px;
@@ -240,27 +239,21 @@ main .main-txt .main-control-width .news-post-orange .orange-txt .season-discoun
 }
 main .main-txt .main-control-width .news-post-orange .orange-txt .discount-txt-detail {
   white-space: nowrap;
-  max-width: 500px;
+  max-width: 350px;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-size: 12px;
 }
 main .main-txt .main-control-width .news-post-orange .orange-txt .discount-more-btn {
   margin-left: auto;
   padding-right: 20px;
   cursor: pointer;
   position: relative;
-  font-size: 20px;
-}
-main .main-txt .main-control-width .news-post-orange .orange-txt .discount-more-btn::after {
-  width: 100%;
-  content: "";
-  position: absolute;
-  left: -100%;
-  bottom: 50%;
-  border-bottom: 1px white solid;
+  font-size: 14px;
 }
 main .main-txt .main-control-width .news-post-factory {
-  width: 100%;
+  width: 80%;
+  margin: 0 auto;
   display: flex;
   margin-bottom: 50px;
 }
@@ -279,6 +272,7 @@ main .main-txt .main-control-width .news-post-factory .factory-txt {
   flex-direction: column;
   justify-content: space-around;
   align-items: flex-start;
+  border: 1px white solid;
   padding-left: 5px;
 }
 main .main-txt .main-control-width .news-post-factory .factory-txt .txt-date span {
@@ -298,7 +292,8 @@ main .main-txt .main-control-width .news-post-factory .factory-txt .season-disco
 }
 main .main-txt .main-control-width .news-post-factory .factory-txt .discount-txt-detail {
   white-space: nowrap;
-  max-width: 500px;
+  max-width: 350px;
+  font-size: 12px;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -307,13 +302,5 @@ main .main-txt .main-control-width .news-post-factory .factory-txt .discount-mor
   padding-right: 20px;
   cursor: pointer;
   position: relative;
-  font-size: 20px;
-}
-main .main-txt .main-control-width .news-post-factory .factory-txt .discount-more-btn::after {
-  width: 100%;
-  content: "";
-  position: absolute;
-  left: -100%;
-  bottom: 50%;
-  border-bottom: 1px white solid;
+  font-size: 14px;
 }/*# sourceMappingURL=news2.css.map */
