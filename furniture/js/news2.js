@@ -122,7 +122,53 @@ let dateArr = [
   "2022.11.28",
   "2022.11.08",
 ];
+// let minn = dateArr[3].slice(0, 4);
+// console.log(minn);
 
+// for (let i = 0; i < dateArr.length; i++) {
+//   for (let j = i + 1; j < dateArr.length; j++) {
+//     let temp = "";
+//     if (parseInt(dateArr[i].slice(0, 4)) > parseInt(dateArr[j].slice(0, 4))) {
+//       temp = dateArr[j];
+//       dateArr[j] = dateArr[i];
+//       dateArr[i] = temp;
+//     }
+//   }
+//   for (let j = i + 1; j < dateArr.length; j++) {
+//     let temp = "";
+//     if (parseInt(dateArr[i].slice(-3)) > parseInt(dateArr[j].slice(-3))) {
+//       temp = dateArr[j];
+//       dateArr[j] = dateArr[i];
+//       dateArr[i] = temp;
+//     }
+//   }
+// }
+for (let i = 0; i < dateArr.length; i++) {
+  for (let j = i + 1; j < dateArr.length; j++) {
+    if (parseInt(dateArr[i].slice(0, 4)) > parseInt(dateArr[j].slice(0, 4))) {
+      let temp = dateArr[j];
+      dateArr[j] = dateArr[i];
+      dateArr[i] = temp;
+    } else if (
+      parseInt(dateArr[i].slice(0, 4)) === parseInt(dateArr[j].slice(0, 4))
+    ) {
+      if (parseInt(dateArr[i].slice(5, 7)) > parseInt(dateArr[j].slice(5, 7))) {
+        let temp = dateArr[j];
+        dateArr[j] = dateArr[i];
+        dateArr[i] = temp;
+      } else if (
+        parseInt(dateArr[i].slice(5, 7)) === parseInt(dateArr[j].slice(5, 7))
+      ) {
+        if (parseInt(dateArr[i].slice(-2)) > parseInt(dateArr[j].slice(-2))) {
+          let temp = dateArr[j];
+          dateArr[j] = dateArr[i];
+          dateArr[i] = temp;
+        }
+      }
+    }
+  }
+}
+console.log(dateArr.reverse());
 for (let i = 3; i <= 11; i++) {
   let divv = document.createElement("div");
   divv.classList.add("first-floor");
