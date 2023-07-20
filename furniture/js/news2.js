@@ -52,9 +52,9 @@ window.addEventListener("scroll", function () {
   lastScrollPosition = currentScrollPosition;
 });
 // ----------------------------
-let card1 = document.querySelectorAll(".card1");
-let card2 = document.querySelectorAll(".card2");
-let firstFloor = document.querySelectorAll(".first-floor");
+let card1 = document.getElementsByClassName(".card1");
+let card2 = document.getElementsByClassName(".card2");
+let firstFloor = document.getElementsByClassName(".first-floor");
 
 // firstFloor.addEventListener("mouseover", function () {
 //   card1.style.rotate = "90deg";
@@ -75,10 +75,12 @@ for (let i = 0; i < firstFloor.length; i++) {
   firstFloor[i].addEventListener("mouseover", function () {
     card1[i].style.rotate = "90deg";
     card2[i].style.rotate = "-180deg";
+    console.log("===over", i);
   });
   firstFloor[i].addEventListener("mouseout", function () {
     card1[i].style.rotate = "45deg";
     card2[i].style.rotate = "-45deg";
+    console.log("===over", i);
   });
 }
 // ----------------------------
@@ -104,7 +106,7 @@ let txtPointArr = [
   "【品牌學習】手工實木,曲線的雕刻者：Artisan",
   "【國外參訪】2022米蘭設計家具展",
   "【廠商來訪】開幸福的宅第:法國台北",
-  " 【廠商來訪】 中華民國室內設計裝修全國聯合會參訪暉楽家居代表圖",
+  "【廠商來訪】 中華民國室內設計裝修全國聯合會參訪暉楽家居代表圖",
 ];
 let dateArr = [
   "",
@@ -120,7 +122,7 @@ let dateArr = [
   "2022.11.28",
   "2022.11.08",
 ];
-
+let divvArr = [];
 for (let i = 3; i <= 11; i++) {
   let divv = document.createElement("div");
   divv.classList.add("first-floor");
@@ -139,6 +141,26 @@ for (let i = 3; i <= 11; i++) {
       </div>
     </div>
   `;
+  // divv.addEventListener("mouseover", function () {
+  //   card1.style.rotate = "90deg";
+  //   card2.style.rotate = "-180deg";
+  // });
+  // divv.addEventListener("mouseout", function () {
+  //   card1.style.rotate = "45deg";
+  //   card2.style.rotate = "-45deg";
+  // });
+  divv.addEventListener("mouseover", function () {
+    let card1 = this.querySelector(".card1");
+    let card2 = this.querySelector(".card2");
+    card1.style.rotate = "90deg";
+    card2.style.rotate = "-180deg";
+  });
 
+  divv.addEventListener("mouseout", function () {
+    let card1 = this.querySelector(".card1");
+    let card2 = this.querySelector(".card2");
+    card1.style.rotate = "45deg";
+    card2.style.rotate = "-45deg";
+  });
   newsPostCard.appendChild(divv);
 }
