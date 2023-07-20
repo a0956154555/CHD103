@@ -122,7 +122,7 @@ let dateArr = [
   "2022.11.28",
   "2022.11.08",
 ];
-let divvArr = [];
+
 for (let i = 3; i <= 11; i++) {
   let divv = document.createElement("div");
   divv.classList.add("first-floor");
