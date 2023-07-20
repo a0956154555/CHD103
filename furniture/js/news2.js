@@ -215,9 +215,9 @@ pageBtn.addEventListener("click", function () {
   } else {
     newsDataArr.sort((a, b) => b[2].localeCompare(a[2]));
   }
-  // 清空現有的畫面
+
   newsPostCard.innerHTML = "";
-  // 根據新的排序建立新的 HTML 元素並加入容器
+
   for (let i = 0; i < newsDataArr.length; i++) {
     let divv = document.createElement("div");
     divv.classList.add("first-floor");
