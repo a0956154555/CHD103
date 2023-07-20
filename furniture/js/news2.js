@@ -89,3 +89,56 @@ pageBtn.addEventListener("click", function () {
     behavior: "smooth",
   });
 });
+
+let newsPostCard = document.querySelector(".news-post-card");
+let divv;
+let txtPointArr = [
+  "",
+  "",
+  "",
+  "【慈善捐款】嬰兒之家 x 暉楽家居",
+  "【國外參展】德國科隆展",
+  "【法國參展】暉楽造訪高第",
+  "【新品入駐】 沈醉在英國浪漫優雅的設計",
+  "【春宴綻藝】米其林餐酒會",
+  "【品牌學習】手工實木,曲線的雕刻者：Artisan",
+  "【國外參訪】2022米蘭設計家具展",
+  "【廠商來訪】開幸福的宅第:法國台北",
+  " 【廠商來訪】 中華民國室內設計裝修全國聯合會參訪暉楽家居代表圖",
+];
+let dateArr = [
+  "",
+  "",
+  "",
+  "2023.07.01",
+  "2023.06.25",
+  "2023.05.18",
+  "2023.04.28",
+  "2023.03.18",
+  "2023.01.12",
+  "2022.12.20",
+  "2022.11.28",
+  "2022.11.08",
+];
+
+for (let i = 3; i <= 11; i++) {
+  let divv = document.createElement("div");
+  divv.classList.add("first-floor");
+  divv.innerHTML = `
+    <div class="top-img">
+      <img src="../../news2-img/${i}.jpg" alt="" />
+    </div>
+    <div class="txt-point">
+      ${txtPointArr[i]}
+    </div>
+    <div class="date">
+      <div>${dateArr[i]}</div>
+      <div>
+        <span class="date-span card1"></span>
+        <span class="date-span card2"></span>
+      </div>
+    </div>
+  `;
+
+  newsPostCard.appendChild(divv);
+}
