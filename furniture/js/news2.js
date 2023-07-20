@@ -126,19 +126,30 @@ let newsDataArr = [
     "【慈善捐款】嬰兒之家 x 暉楽家居",
     "2023.06.25",
   ],
-  ["../../news2-img/photo3.jpg", "【國外參展】德國科隆展"],
-  ["../../news2-img/photo4.jpg", "【法國參展】暉楽造訪高第"],
-  ["../../news2-img/photo5.jpg", "【新品入駐】 沈醉在英國浪漫優雅的設計"],
-  ["../../news2-img/photo6.jpg", "【春宴綻藝】米其林餐酒會"],
-  ["../../news2-img/photo7.jpg", "【品牌學習】手工實木,曲線的雕刻者：Artisan"],
-  ["../../news2-img/photo8.jpg", "【國外參訪】2022米蘭設計家具展"],
+  ["../../news2-img/photo3.jpg", "【國外參展】德國科隆展", "2023.05.18"],
+  ["../../news2-img/photo4.jpg", "【法國參展】暉楽造訪高第", "2023.04.28"],
+  [
+    "../../news2-img/photo5.jpg",
+    "【新品入駐】 沈醉在英國浪漫優雅的設計",
+    "2023.03.18",
+  ],
+  ["../../news2-img/photo6.jpg", "【春宴綻藝】米其林餐酒會", "2023.01.12"],
+  [
+    "../../news2-img/photo7.jpg",
+    "【品牌學習】手工實木,曲線的雕刻者：Artisan",
+    "2022.12.20",
+  ],
+  [
+    "../../news2-img/photo8.jpg",
+    "【國外參訪】2022米蘭設計家具展",
+    "2022.11.28",
+  ],
   [
     "../../news2-img/photo9.jpg",
     "【廠商來訪】 中華民國室內設計裝修全國聯合會參訪暉楽家居代表圖",
     "2022.06.18",
   ],
 ];
-
 // let minn = dateArr[3].slice(0, 4);
 // console.log(minn);
 
@@ -160,26 +171,35 @@ let newsDataArr = [
 //     }
 //   }
 // }
-for (let i = 0; i < dateArr.length; i++) {
-  for (let j = i + 1; j < dateArr.length; j++) {
-    if (parseInt(dateArr[i].slice(0, 4)) > parseInt(dateArr[j].slice(0, 4))) {
-      let temp = dateArr[j];
-      dateArr[j] = dateArr[i];
-      dateArr[i] = temp;
-    } else if (
-      parseInt(dateArr[i].slice(0, 4)) === parseInt(dateArr[j].slice(0, 4))
+for (let i = 0; i < newsDataArr.length; i++) {
+  for (let j = i + 1; j < newsDataArr.length; j++) {
+    if (
+      parseInt(dateArr[2][i].slice(0, 4)) > parseInt(dateArr[2][j].slice(0, 4))
     ) {
-      if (parseInt(dateArr[i].slice(5, 7)) > parseInt(dateArr[j].slice(5, 7))) {
-        let temp = dateArr[j];
-        dateArr[j] = dateArr[i];
-        dateArr[i] = temp;
-      } else if (
-        parseInt(dateArr[i].slice(5, 7)) === parseInt(dateArr[j].slice(5, 7))
+      let temp = dateArr[2][j];
+      dateArr[2][j] = dateArr[2][i];
+      dateArr[2][i] = temp;
+    } else if (
+      parseInt(dateArr[2][i].slice(0, 4)) ===
+      parseInt(dateArr[2][j].slice(0, 4))
+    ) {
+      if (
+        parseInt(dateArr[2][i].slice(5, 7)) >
+        parseInt(dateArr[2][j].slice(5, 7))
       ) {
-        if (parseInt(dateArr[i].slice(-2)) > parseInt(dateArr[j].slice(-2))) {
-          let temp = dateArr[j];
-          dateArr[j] = dateArr[i];
-          dateArr[i] = temp;
+        let temp = dateArr[2][j];
+        dateArr[2][j] = dateArr[2][i];
+        dateArr[2][i] = temp;
+      } else if (
+        parseInt(dateArr[2][i].slice(5, 7)) ===
+        parseInt(dateArr[2][j].slice(5, 7))
+      ) {
+        if (
+          parseInt(dateArr[2][i].slice(-2)) > parseInt(dateArr[2][j].slice(-2))
+        ) {
+          let temp = dateArr[2][j];
+          dateArr[2][j] = dateArr[2][i];
+          dateArr[2][i] = temp;
         }
       }
     }
@@ -187,26 +207,29 @@ for (let i = 0; i < dateArr.length; i++) {
 }
 
 let pageBtnBool = false;
+
 pageBtn.addEventListener("click", function () {
   pageBtnBool = !pageBtnBool;
   if (pageBtnBool) {
-    dateArr.reverse();
+    newsDataArr.sort((a, b) => a[2].localeCompare(b[2]));
+  } else {
+    newsDataArr.sort((a, b) => b[2].localeCompare(a[2]));
   }
   // 清空現有的畫面
   newsPostCard.innerHTML = "";
-  // 根據重新排序的 dateArr 建立新的 HTML 元素並加入容器
-  for (let i = 1; i <= 9; i++) {
+  // 根據新的排序建立新的 HTML 元素並加入容器
+  for (let i = 0; i < newsDataArr.length; i++) {
     let divv = document.createElement("div");
     divv.classList.add("first-floor");
     divv.innerHTML = `
       <div class="top-img">
-        <img src="../../news2-img/photo${i}.jpg" alt="" />
+        <img src="${newsDataArr[i][0]}" alt="" />
       </div>
       <div class="txt-point">
-        ${txtPointArr[i]}
+        ${newsDataArr[i][1]}
       </div>
       <div class="date">
-        <div>${dateArr[i]}</div>
+        <div>${newsDataArr[i][2]}</div>
         <div>
           <span class="date-span card1"></span>
           <span class="date-span card2"></span>
@@ -229,6 +252,9 @@ pageBtn.addEventListener("click", function () {
     newsPostCard.appendChild(divv);
   }
 });
+
+// ...後續的程式碼...
+
 for (let i = 1; i <= 9; i++) {
   let divv = document.createElement("div");
   divv.classList.add("first-floor");
