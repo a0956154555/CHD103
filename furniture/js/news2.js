@@ -85,19 +85,17 @@ for (let i = 0; i < firstFloor.length; i++) {
 }
 // ----------------------------
 let pageBtn = document.querySelector(".pageBtn");
-pageBtn.addEventListener("click", function () {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth",
-  });
-});
+// pageBtn.addEventListener("click", function () {
+//   window.scrollTo({
+//     top: 0,
+//     behavior: "smooth",
+//   });
+// });
 
 let newsPostCard = document.querySelector(".news-post-card");
 let divv;
 let txtPointArr = [
-  "",
-  "",
-  "",
+  "【廠商來訪】夢想時分:瓦爾喬麗",
   "【慈善捐款】嬰兒之家 x 暉楽家居",
   "【國外參展】德國科隆展",
   "【法國參展】暉楽造訪高第",
@@ -107,11 +105,9 @@ let txtPointArr = [
   "【國外參訪】2022米蘭設計家具展",
   "【廠商來訪】開幸福的宅第:法國台北",
   "【廠商來訪】 中華民國室內設計裝修全國聯合會參訪暉楽家居代表圖",
+  "【廠商來訪】世界級的盛宴:馬爾地夫",
 ];
 let dateArr = [
-  "",
-  "",
-  "",
   "2023.07.01",
   "2023.06.25",
   "2023.05.18",
@@ -121,7 +117,28 @@ let dateArr = [
   "2022.12.20",
   "2022.11.28",
   "2022.11.08",
+  "2022.06.18",
 ];
+let newsDataArr = [
+  ["../../news2-img/photo1.jpg", "【廠商來訪】夢想時分:瓦爾喬麗", "2023.07.01"],
+  [
+    "../../news2-img/photo2.jpg",
+    "【慈善捐款】嬰兒之家 x 暉楽家居",
+    "2023.06.25",
+  ],
+  ["../../news2-img/photo3.jpg", "【國外參展】德國科隆展"],
+  ["../../news2-img/photo4.jpg", "【法國參展】暉楽造訪高第"],
+  ["../../news2-img/photo5.jpg", "【新品入駐】 沈醉在英國浪漫優雅的設計"],
+  ["../../news2-img/photo6.jpg", "【春宴綻藝】米其林餐酒會"],
+  ["../../news2-img/photo7.jpg", "【品牌學習】手工實木,曲線的雕刻者：Artisan"],
+  ["../../news2-img/photo8.jpg", "【國外參訪】2022米蘭設計家具展"],
+  [
+    "../../news2-img/photo9.jpg",
+    "【廠商來訪】 中華民國室內設計裝修全國聯合會參訪暉楽家居代表圖",
+    "2022.06.18",
+  ],
+];
+
 // let minn = dateArr[3].slice(0, 4);
 // console.log(minn);
 
@@ -168,13 +185,56 @@ for (let i = 0; i < dateArr.length; i++) {
     }
   }
 }
-console.log(dateArr.reverse());
-for (let i = 3; i <= 11; i++) {
+
+let pageBtnBool = false;
+pageBtn.addEventListener("click", function () {
+  pageBtnBool = !pageBtnBool;
+  if (pageBtnBool) {
+    dateArr.reverse();
+  }
+  // 清空現有的畫面
+  newsPostCard.innerHTML = "";
+  // 根據重新排序的 dateArr 建立新的 HTML 元素並加入容器
+  for (let i = 1; i <= 9; i++) {
+    let divv = document.createElement("div");
+    divv.classList.add("first-floor");
+    divv.innerHTML = `
+      <div class="top-img">
+        <img src="../../news2-img/photo${i}.jpg" alt="" />
+      </div>
+      <div class="txt-point">
+        ${txtPointArr[i]}
+      </div>
+      <div class="date">
+        <div>${dateArr[i]}</div>
+        <div>
+          <span class="date-span card1"></span>
+          <span class="date-span card2"></span>
+        </div>
+      </div>
+    `;
+    divv.addEventListener("mouseover", function () {
+      let card1 = this.querySelector(".card1");
+      let card2 = this.querySelector(".card2");
+      card1.style.rotate = "90deg";
+      card2.style.rotate = "-180deg";
+    });
+
+    divv.addEventListener("mouseout", function () {
+      let card1 = this.querySelector(".card1");
+      let card2 = this.querySelector(".card2");
+      card1.style.rotate = "45deg";
+      card2.style.rotate = "-45deg";
+    });
+    newsPostCard.appendChild(divv);
+  }
+});
+for (let i = 1; i <= 9; i++) {
   let divv = document.createElement("div");
   divv.classList.add("first-floor");
   divv.innerHTML = `
     <div class="top-img">
-      <img src="../../news2-img/${i}.jpg" alt="" />
+      <img src="../../news2-img/photo${i}.jpg" alt="" />
     </div>
     <div class="txt-point">
       ${txtPointArr[i]}
@@ -187,14 +247,6 @@ for (let i = 3; i <= 11; i++) {
       </div>
     </div>
   `;
-  // divv.addEventListener("mouseover", function () {
-  //   card1.style.rotate = "90deg";
-  //   card2.style.rotate = "-180deg";
-  // });
-  // divv.addEventListener("mouseout", function () {
-  //   card1.style.rotate = "45deg";
-  //   card2.style.rotate = "-45deg";
-  // });
   divv.addEventListener("mouseover", function () {
     let card1 = this.querySelector(".card1");
     let card2 = this.querySelector(".card2");
@@ -210,3 +262,4 @@ for (let i = 3; i <= 11; i++) {
   });
   newsPostCard.appendChild(divv);
 }
+// ----------------------------------
