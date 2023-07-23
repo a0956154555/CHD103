@@ -238,6 +238,7 @@ createApp({
       heartShow: false,
       redHeart: false,
       openTxt: [true, true, true, true],
+      test: true,
       allPerson: [
         [
           "HI~我的名字是Jane,我的設計風格以簡潔、舒適為主，注重細節和功能性。我相信良好的軟裝設計可以為空間帶來舒適和融洽的氛圍，讓居住者在其中感到愉悅和放鬆。",
