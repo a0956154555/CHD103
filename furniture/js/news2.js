@@ -32,25 +32,25 @@ let newsTitleSpan = document.querySelector(".news-title-span");
 let mainControlWidthTitle = document.querySelector(".main-control-width-title");
 
 let lastScrollPosition = document.documentElement.scrollTop;
-window.addEventListener("scroll", function () {
-  let currentScrollPosition = document.documentElement.scrollTop;
+// window.addEventListener("scroll", function () {
+//   let currentScrollPosition = document.documentElement.scrollTop;
 
-  if (currentScrollPosition > lastScrollPosition) {
-    newsTitle.style.opacity = "0";
-    setTimeout(() => {
-      newsTitle.style.opacity = "1";
-    }, 1000);
-    newsTitle.style.backgroundImage = "url(../../news2-img/2.jpg)";
-  } else {
-    newsTitle.style.opacity = "0";
-    setTimeout(() => {
-      newsTitle.style.opacity = "1";
-    }, 1000);
-    newsTitle.style.backgroundImage = "url(../../news2-img/1.jpg)";
-  }
+//   if (currentScrollPosition > lastScrollPosition) {
+//     newsTitle.style.opacity = "0";
+//     setTimeout(() => {
+//       newsTitle.style.opacity = "1";
+//     }, 1000);
+//     newsTitle.style.backgroundImage = "url(../../news2-img/2.jpg)";
+//   } else {
+//     newsTitle.style.opacity = "0";
+//     setTimeout(() => {
+//       newsTitle.style.opacity = "1";
+//     }, 1000);
+//     newsTitle.style.backgroundImage = "url(../../news2-img/1.jpg)";
+//   }
 
-  lastScrollPosition = currentScrollPosition;
-});
+//   lastScrollPosition = currentScrollPosition;
+// });
 // ----------------------------
 let card1 = document.getElementsByClassName(".card1");
 let card2 = document.getElementsByClassName(".card2");
