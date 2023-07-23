@@ -61,7 +61,83 @@
         <div class="about-banner"></div>
       </article>
     </header>
-    <div class="main"></div>
+    <section id="app">
+      <section class="under-banner-txt">
+        <div
+          class="readPost"
+          :class="{'disappear':disappearTrue}"
+          @click="readPost"
+          v-if="delayNone"
+        >
+          閱讀文章
+        </div>
+        <div v-if="!delayNone" class="second-part">{{designerTxt}}</div>
+        <div class="heart" v-if="heartShow" @click="redLove">
+          <img
+            :src="redHeart ? '../../furniture_img/H03.svg' : '../../furniture_img/H00.png'"
+            alt=""
+          />
+        </div>
+      </section>
+      <div class="person" v-for="(person,index) in personArr">
+        <div class="pic">
+          <img :src="'../../furniture_img/human' + (index+1) + '.jpg'" alt="" />
+        </div>
+        <div class="txt">
+          <div class="openTxt" v-if="openTxt[index]" @click="closeTxt(index)">
+            開啟對話
+          </div>
+          <div v-if="!openTxt[index]" class="person-txt">
+            {{allPerson[index][0]}}
+            <div class="proficient" @click="changeTxtProficient(index)">
+              擅長領域
+            </div>
+            <div class="personality" @click="changeTxtPersonality(index)">
+              個性
+            </div>
+            <div class="introduction" @click="changeTxtIntroduction(index)">
+              自我介紹
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="allCase">
+        <div class="input-type-all">
+          <div class="input-name">
+            <label for="typeName">請輸入關鍵字 : </label>
+            <div>
+              <input
+                type="text"
+                placeholder="請輸入設計師姓名"
+                id="typeName"
+                v-model="userSearch"
+                @input="searchProducts"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="card-case-all">
+          <div class="card-case" v-for="(val, i) in imgSrcArr" :key="i">
+            <div class="card-case-pic">
+              <img :src="val" alt="" />
+            </div>
+
+            <div class="dateAndLike" v-if="i <= 4">CreatedBy:{{janeName}}</div>
+            <div class="dateAndLike" v-else-if="i >= 4 && i<=8">
+              CreatedBy:{{justinName}}
+            </div>
+            <div class="dateAndLike" v-else-if="i >= 8 && i<=12">
+              CreatedBy:{{nelsonName}}
+            </div>
+            <div class="dateAndLike" v-else-if="i >12">
+              CreatedBy:{{dandyName}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="../js/designCaseVue.js"></script>
     <script src="../js/designCaseHeaderFooter.js"></script>
   </body>
 </html>

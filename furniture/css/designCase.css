@@ -253,7 +253,207 @@ header .about-us .about-banner:nth-child(4):hover::after {
   display: flex;
 }
 
-.main {
-  height: 100vh;
+#app {
   width: 100%;
+  border: 1px #f7f7f7 solid;
+  background-color: rgb(49, 48, 48);
+}
+#app .under-banner-txt {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+#app .under-banner-txt .readPost {
+  font-size: 20px;
+  letter-spacing: 3px;
+  color: white;
+  cursor: pointer;
+  border: 1px white solid;
+  padding: 10px;
+  border-radius: 10px;
+  opacity: 1;
+  transition: 0.3s;
+  animation: upAndDown infinite 3s linear;
+}
+#app .under-banner-txt .disappear {
+  opacity: 0;
+}
+#app .under-banner-txt .second-part {
+  color: white;
+  letter-spacing: 3px;
+  line-height: 3;
+  height: 80%;
+  width: 80%;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+}
+#app .under-banner-txt .heart {
+  cursor: pointer;
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#app .under-banner-txt .heart {
+  animation: upAndDown 2s infinite linear;
+}
+#app .under-banner-txt .heart img {
+  width: 30px;
+}
+#app .person {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  margin-bottom: 20px;
+  padding-bottom: 50px;
+  background-color: rgb(49, 48, 48);
+}
+#app .person .txt {
+  width: 80%;
+  height: 100%;
+  border: 3px #2f3a7d solid;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  letter-spacing: 3px;
+  background-color: #f7f7f7;
+  position: relative;
+}
+#app .person .txt .openTxt {
+  cursor: pointer;
+  border: 1px black solid;
+  padding: 10px;
+  border-radius: 10px;
+  animation: upAndDown 5s infinite linear;
+}
+#app .person .txt .person-txt {
+  line-height: 2;
+  width: 80%;
+}
+#app .person .txt .person-txt .proficient {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px;
+  border: 1px black solid;
+  padding: 5px 20px;
+  font-size: 14px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+#app .person .txt .person-txt .personality {
+  position: absolute;
+  left: 40%;
+  transform: translateX(-50%);
+  bottom: 20px;
+  border: 1px black solid;
+  padding: 5px 20px;
+  font-size: 14px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+#app .person .txt .person-txt .introduction {
+  position: absolute;
+  left: 61.7%;
+  transform: translateX(-50%);
+  bottom: 20px;
+  border: 1px black solid;
+  padding: 5px 20px;
+  font-size: 14px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+#app .person .pic {
+  width: 20%;
+  height: 100%;
+  overflow: hidden;
+}
+#app .person .pic:first-child img {
+  position: relative;
+  right: 40px;
+}
+#app .person .pic img {
+  width: 300px;
+}
+#app .allCase {
+  width: 90%;
+  margin: 0 auto;
+  border-top: 1px white solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+}
+#app .allCase .input-type-all {
+  display: flex;
+  width: 60%;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+#app .allCase .input-type-all div {
+  color: white;
+}
+#app .allCase .input-type-all label {
+  color: white;
+  margin-right: 5px;
+}
+#app .allCase .input-type-all .input-name {
+  display: flex;
+}
+#app .allCase .input-type-all .popular,
+#app .allCase .input-type-all .latest {
+  border: 1px white solid;
+  padding: 10px;
+  cursor: pointer;
+}
+#app .allCase .card-case-all {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#app .allCase .card-case-all .card-case {
+  width: calc(50% - 10px);
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+}
+#app .allCase .card-case-all .card-case .card-case-pic img {
+  width: 100%;
+  scale: 2;
+}
+#app .allCase .card-case-all .card-case .dateAndLike {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  font-size: 20px;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+@keyframes upAndDown {
+  0% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(-15px);
+  }
+  75% {
+    transform: translateY(15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }/*# sourceMappingURL=designCase.css.map */
