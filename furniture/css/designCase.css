@@ -425,6 +425,12 @@ header .about-us .about-banner:nth-child(4):hover::after {
   padding: 10px;
   cursor: pointer;
 }
+#app .allCase .check-designer {
+  font-size: 25px;
+  letter-spacing: 3px;
+  color: white;
+  margin-bottom: 20px;
+}
 #app .allCase .card-case-all {
   display: flex;
   width: 100%;
