@@ -11,6 +11,7 @@ createApp({
       disappearTrue: false,
       delayNone: true,
       designerTxt: "",
+      favoriteList: false,
       designerTxtArr: [
         "當",
         "一",
@@ -291,6 +292,8 @@ createApp({
       nelsonName: "Nelson",
       dandyName: "Dandy",
       userSearch: "",
+      noticeFalse: false,
+      favoriteArr: [],
       imgSrcArr: [
         "../../furniture_img3/characterPic1.jpg",
         "../../furniture_img3/characterPic2.jpg",
@@ -425,6 +428,25 @@ createApp({
       this.threeBox = false;
       this.fourBox = true;
     },
+    pushFavorite(val, i) {
+      if (this.favoriteArr.indexOf(val) == -1 && i <= 4) {
+        this.favoriteArr.push([val, this.janeName]);
+      } else if (this.favoriteArr.indexOf(val) == -1 && i >= 4 && i <= 8) {
+        this.favoriteArr.push([val, this.justinName]);
+      } else if (this.favoriteArr.indexOf(val) == -1 && i >= 8 && i <= 12) {
+        this.favoriteArr.push([val, this.nelsonName]);
+      } else if (this.favoriteArr.indexOf(val) == -1 && i > 12) {
+        this.favoriteArr.push([val, this.dandyName]);
+      }
+
+      console.log(this.favoriteArr);
+    },
+    deleteFavorite(index) {
+      this.favoriteArr.splice(index, 1);
+    },
+    closeNotice() {
+      this.noticeFalse = false;
+    },
   },
   computed: {
     controlAllBox() {
@@ -432,6 +454,15 @@ createApp({
         return this;
       }
     },
+    favoriteTitle() {
+      return this.favoriteArr.length !== 0 ? "收納清單" : "目前暫無任何商品";
+    },
   },
-  watch: {},
+  watch: {
+    favoriteList() {
+      if (this.favoriteArr.length <= 0) {
+        return false;
+      }
+    },
+  },
 }).mount("#app");
