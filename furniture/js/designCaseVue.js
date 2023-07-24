@@ -455,7 +455,9 @@ createApp({
       }
     },
     favoriteTitle() {
-      return this.favoriteArr.length !== 0 ? "收納清單" : "目前暫無任何商品";
+      return this.favoriteArr.length !== 0
+        ? "目前數量 : " + this.favoriteArr.length
+        : "目前暫無任何商品";
     },
   },
   watch: {
