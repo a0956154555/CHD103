@@ -115,9 +115,27 @@
               />
             </div>
           </div>
-          <div class="control-box-btn" @click="controlTwoBox">2</div>
-          <div class="control-box-btn" @click="controlThreeBox">3</div>
-          <div class="control-box-btn" @click="controlfourBox">4</div>
+          <div
+            class="control-box-btn"
+            :class="{'clickChColor' : twoBox}"
+            @click="controlTwoBox"
+          >
+            2
+          </div>
+          <div
+            class="control-box-btn"
+            :class="{'clickChColor' : threeBox}"
+            @click="controlThreeBox"
+          >
+            3
+          </div>
+          <div
+            class="control-box-btn"
+            :class="{'clickChColor' : fourBox}"
+            @click="controlfourBox"
+          >
+            4
+          </div>
         </div>
         <div class="card-case-all">
           <div

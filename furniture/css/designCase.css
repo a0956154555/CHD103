@@ -409,6 +409,10 @@ header .about-us .about-banner:nth-child(4):hover::after {
 #app .allCase .input-type-all .input-name {
   display: flex;
 }
+#app .allCase .input-type-all .clickChColor {
+  color: black;
+  background-color: white;
+}
 #app .allCase .input-type-all .control-box-btn {
   border: 1px white solid;
   padding: 10px;
