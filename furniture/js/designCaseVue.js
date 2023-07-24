@@ -1,6 +1,127 @@
 const { createApp } = Vue;
 
 createApp({
+  template: `
+  <section class="under-banner-txt">
+        <div
+          class="readPost"
+          :class="{'disappear':disappearTrue}"
+          @click="readPost"
+          v-if="delayNone"
+        >
+          閱讀文章
+        </div>
+        <div v-if="!delayNone" class="second-part">{{designerTxt}}</div>
+        <div class="heart" v-if="heartShow" @click="redLove">
+          <img
+            :src="redHeart ? '../../furniture_img/H03.svg' : '../../furniture_img/H00.png'"
+            alt=""
+          />
+        </div>
+      </section>
+      <div class="person" v-for="(person,index) in personArr">
+        <div class="pic">
+          <img :src="'../../furniture_img/human' + (index+1) + '.jpg'" alt="" />
+        </div>
+        <div class="txt">
+          <div class="openTxt" v-if="openTxt[index]" @click="closeTxt(index)">
+            開啟對話
+          </div>
+          <div v-if="!openTxt[index]" class="person-txt">
+            {{allPerson[index][0]}}
+            <div class="proficient" @click="changeTxtProficient(index)">
+              擅長領域
+            </div>
+            <div class="personality" @click="changeTxtPersonality(index)">
+              個性
+            </div>
+            <div class="introduction" @click="changeTxtIntroduction(index)">
+              自我介紹
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="allCase" @mouseover.once="noticeFalse = true">
+        <div class="input-type-all">
+          <div class="input-name">
+            <label for="typeName">請輸入關鍵字 : </label>
+            <div>
+              <input
+                type="text"
+                placeholder="請輸入設計師姓名"
+                id="typeName"
+                v-model="userSearch"
+                @input="searchProducts"
+              />
+            </div>
+          </div>
+          <div
+            class="control-box-btn"
+            :class="{'clickChColor' : twoBox}"
+            @click="controlTwoBox"
+          >
+            2
+          </div>
+          <div
+            class="control-box-btn"
+            :class="{'clickChColor' : threeBox}"
+            @click="controlThreeBox"
+          >
+            3
+          </div>
+          <div
+            class="control-box-btn"
+            :class="{'clickChColor' : fourBox}"
+            @click="controlfourBox"
+          >
+            4
+          </div>
+        </div>
+        <div class="check-designer">目前搜尋設計師為 : {{userSearch}}</div>
+        <div class="card-case-all">
+          <div
+            class="card-case"
+            :class="{'two-box' : twoBox},{'three-box' : threeBox},{'four-box' : fourBox}"
+            v-for="(val, i) in imgSrcArr"
+            :key="val"
+            @click="pushFavorite(val,i)"
+          >
+            <div class="card-case-pic">
+              <img :src="val" alt="" />
+            </div>
+
+            <div class="dateAndLike" v-if="i <= 4">CreatedBy:{{janeName}}</div>
+            <div class="dateAndLike" v-else-if="i >= 4 && i<=8">
+              CreatedBy:{{justinName}}
+            </div>
+            <div class="dateAndLike" v-else-if="i >= 8 && i<=12">
+              CreatedBy:{{nelsonName}}
+            </div>
+            <div class="dateAndLike" v-else-if="i >12">
+              CreatedBy:{{dandyName}}
+            </div>
+          </div>
+        </div>
+      </div>
+      <article class="favorite">
+        <div class="favorite-title">{{favoriteTitle}}</div>
+        <div class="mostLikeAll">
+          <div v-for="(i,index) in favoriteArr" :key="i" class="mostLike">
+            <div class="close-favorite" @click="deleteFavorite(index)">X</div>
+            <img :src="i[0]" alt="" />
+            <div class="favoriteName">CreatedBy : {{i[1]}}</div>
+          </div>
+        </div>
+      </article>
+      <section class="notice" v-if="noticeFalse">
+        <div class="notice-main">
+          <div class="notice-txt">
+            如有喜歡的設計專案，輕按一下就可放置底部的收納清單
+          </div>
+          <div class="notice-close" @click="closeNotice">關閉</div>
+        </div>
+      </section>
+  `,
   data() {
     return {
       message: "hello",
