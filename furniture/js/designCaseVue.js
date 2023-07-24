@@ -426,6 +426,12 @@ createApp({
       this.fourBox = true;
     },
   },
-  computed: {},
+  computed: {
+    controlAllBox() {
+      if (this.twoBox == true) {
+        return this;
+      }
+    },
+  },
   watch: {},
 }).mount("#app");
