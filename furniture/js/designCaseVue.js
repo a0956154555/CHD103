@@ -4,6 +4,9 @@ createApp({
   data() {
     return {
       message: "hello",
+      twoBox: true,
+      threeBox: false,
+      fourBox: false,
       personArr: ["Jane Liu", "Justin Lin", "Nelson Wu", "Dandy Wang"],
       disappearTrue: false,
       delayNone: true,
@@ -406,6 +409,21 @@ createApp({
     },
     changeTxtIntroduction(index) {
       this.allPerson[index][0] = this.allPerson2[index][0];
+    },
+    controlTwoBox() {
+      this.twoBox = true;
+      this.threeBox = false;
+      this.fourBox = false;
+    },
+    controlThreeBox() {
+      this.twoBox = false;
+      this.threeBox = true;
+      this.fourBox = false;
+    },
+    controlfourBox() {
+      this.twoBox = false;
+      this.threeBox = false;
+      this.fourBox = true;
     },
   },
   computed: {},

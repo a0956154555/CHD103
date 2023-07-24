@@ -395,7 +395,7 @@ header .about-us .about-banner:nth-child(4):hover::after {
 #app .allCase .input-type-all {
   display: flex;
   width: 60%;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   margin-bottom: 50px;
 }
@@ -408,6 +408,11 @@ header .about-us .about-banner:nth-child(4):hover::after {
 }
 #app .allCase .input-type-all .input-name {
   display: flex;
+}
+#app .allCase .input-type-all .control-box-btn {
+  border: 1px white solid;
+  padding: 10px;
+  cursor: pointer;
 }
 #app .allCase .input-type-all .popular,
 #app .allCase .input-type-all .latest {
@@ -442,6 +447,15 @@ header .about-us .about-banner:nth-child(4):hover::after {
   color: white;
   display: flex;
   justify-content: center;
+}
+#app .allCase .card-case-all .two-box {
+  width: calc(50% - 10px);
+}
+#app .allCase .card-case-all .three-box {
+  width: calc(33.3333333333% - 10px);
+}
+#app .allCase .card-case-all .four-box {
+  width: calc(25% - 10px);
 }
 
 footer {

@@ -427,11 +427,12 @@ header {
     padding: 20px;
     .input-type-all {
       display: flex;
-      //   border: 1px red solid;
+      // border: 1px red solid;
       width: 60%;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
       margin-bottom: 50px;
+
       div {
         color: white;
       }
@@ -441,6 +442,11 @@ header {
       }
       .input-name {
         display: flex;
+      }
+      .control-box-btn {
+        border: 1px white solid;
+        padding: 10px;
+        cursor: pointer;
       }
       .popular,
       .latest {
@@ -480,6 +486,15 @@ header {
           display: flex;
           justify-content: center;
         }
+      }
+      .two-box {
+        width: calc(100% / 2 - 10px);
+      }
+      .three-box {
+        width: calc(100% / 3 - 10px);
+      }
+      .four-box {
+        width: calc(100% / 4 - 10px);
       }
     }
   }
