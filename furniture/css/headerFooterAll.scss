@@ -1,402 +1,404 @@
-header {
-  .header-all {
-    width: 100%;
-    position: fixed;
-    top: 0px;
-    color: white;
-    z-index: 100;
-    // border: 10px red solid;
-    background: rgba(0, 0, 0, 0.5);
-    .header-control-width {
+@media (max-width: 1150px) {
+  header {
+    .header-all {
       width: 100%;
-      // height: 40vh;
-      margin: 0 auto;
-      overflow: visible;
-      // border: 1px red solid;
-      padding-left: 150px;
-      padding-right: 150px;
-      display: flex;
-      justify-content: space-between;
-      // align-items: center;
       position: fixed;
-      background: rgba(0, 0, 0, 0.5);
+      top: 0px;
+      color: white;
       z-index: 100;
-      transition: 0.5s;
-      .header-left {
-        display: flex;
-        align-items: center;
-        margin-bottom: 10px;
-        img {
-          margin-top: 10px;
-          padding-bottom: 0;
-          display: flex;
-          align-items: center;
-          // border: 1px red solid;
-          width: 100px;
-        }
-      }
-      .header-middle {
-        width: 50px;
-        height: 50px;
-        // border: 2px red solid;
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        display: none;
-
-        span {
-          width: 80%;
-          height: 2px;
-          position: absolute;
-          background-color: white;
-          &:first-child {
-            top: 50%;
-          }
-          &:nth-child(2) {
-            top: 70%;
-          }
-        }
-        @media (max-width: 1150px) {
-          display: flex;
-        }
-      }
-      .header-right {
-        display: flex;
+      // border: 10px red solid;
+      background: rgba(0, 0, 0, 0.5);
+      .header-control-width {
+        width: 100%;
+        // height: 40vh;
+        margin: 0 auto;
+        overflow: visible;
         // border: 1px red solid;
-        align-items: flex-end;
-        padding-bottom: 10px;
-        text-shadow: #666 2px 1px 5px;
-        @media (max-width: 1150px) {
-          position: absolute;
-          flex-direction: column;
-          display: none;
-          width: 100%;
-          height: 100vh;
-          justify-content: flex-start;
+        padding-left: 150px;
+        padding-right: 150px;
+        display: flex;
+        justify-content: space-between;
+        // align-items: center;
+        position: fixed;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 100;
+        transition: 0.5s;
+        .header-left {
+          display: flex;
           align-items: center;
-          translate: -1200px 0px;
-          transition: 0.3s;
-          // bottom: 100%;
-          top: 100%;
-          left: 0%;
-          padding: 0px;
-          background-color: rgb(49, 48, 48);
-          // border: 10px red solid;
-        }
-        div {
-          padding-bottom: 8px;
-          @media (max-width: 1150px) {
-            height: calc(100% / 8 - 15px);
-            width: 100%;
-            border-bottom: 1px white solid;
+          margin-bottom: 10px;
+          img {
+            margin-top: 10px;
+            padding-bottom: 0;
             display: flex;
-            justify-content: center;
             align-items: center;
-          }
-          // border: 1px red solid;
-          .first-page {
-            color: white;
-            margin: 0 10px;
-            text-decoration: none;
-            padding-bottom: 3px;
-            transition: 0.2s;
             // border: 1px red solid;
-            &:hover {
-              color: rgb(197, 188, 188);
-            }
-            &::before {
-              content: "";
-              position: absolute;
-              // left: 70%;
-              bottom: 10px; /* 调整下划线的位置 */
-              width: 0;
-              height: 4px;
-              background-color: white;
-              transition: height 0.2s ease-in-out, width 0.3s ease-in-out;
-            }
-            &:hover::before {
-              height: 2px;
-              width: 2.8%; /* hover 状态下将下划线的宽度设置为 100% */
-            }
-            // border: 1px red solid;
-            i {
-              font-size: 16px;
-              margin-left: 3px;
-            }
-          }
-          .line-design {
-            // position: relative;
-            color: white;
-            margin: 0 10px;
-            text-decoration: none;
-            padding-bottom: 3px;
-            transition: 0.2s;
-            // border: 1px red solid;
-            &:hover {
-              color: rgb(197, 188, 188);
-            }
-            &::before {
-              content: "";
-              position: absolute;
-              // left: 70%;
-              bottom: 10px; /* 调整下划线的位置 */
-              width: 0;
-              height: 4px;
-              background-color: white;
-              transition: height 0.2s ease-in-out, width 0.3s ease-in-out;
-            }
-            &:hover::before {
-              height: 2px;
-              width: 5%; /* hover 状态下将下划线的宽度设置为 100% */
-            }
-            // .triangle {
-            //   position: absolute;
-            //   top: 2px;
-            //   left: 100%;
-            //   font-size: 2px;
-            // }
+            width: 100px;
           }
         }
-
-        .human-icon,
-        .home {
-          font-size: 10px;
-        }
-        .all-case {
-          // margin: 0 10px;
-          text-decoration: none;
-          // padding-bottom: 3px;
-          transition: 0.2s;
+        .header-middle {
+          width: 50px;
+          height: 50px;
+          // border: 2px red solid;
           position: relative;
-          .top-case {
-            color: white;
-            text-decoration: none;
-            margin-right: 5px;
-            // border: 1px red solid;
-          }
-          .fa-solid {
-            font-size: 10px;
-            vertical-align: center;
-            animation: caseMove 2s infinite;
-            // border: 1px red solid;
-            // padding-bottom: 5px;
-          }
-          .under-case {
-            display: none;
-            flex-direction: column;
-            position: absolute;
-            overflow: white-space;
-            white-space: nowrap;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          display: none;
 
-            z-index: 101;
-            padding-left: 15px;
-            padding-right: 15px;
-            padding-top: 15px;
-            // position: relative;
-            background-color: rgba(30, 29, 29, 1);
-            @media (max-width: 1150px) {
-              width: 100%;
-              height: 80vh;
-              top: -100%;
+          span {
+            width: 80%;
+            height: 2px;
+            position: absolute;
+            background-color: white;
+            &:first-child {
+              top: 50%;
             }
-            .under-close {
-              display: none;
-              @media (max-width: 1150px) {
-                display: flex;
-                // border: 1px red solid;
-                font-size: 25px;
-                justify-content: flex-end;
-                padding-right: 20px;
-                align-items: center;
-                // position: absolute;
-                // top: 10%;
-                // right: 10%;
+            &:nth-child(2) {
+              top: 70%;
+            }
+          }
+          @media (max-width: 1150px) {
+            display: flex;
+          }
+        }
+        .header-right {
+          display: flex;
+          // border: 1px red solid;
+          align-items: flex-end;
+          padding-bottom: 10px;
+          text-shadow: #666 2px 1px 5px;
+          @media (max-width: 1150px) {
+            position: absolute;
+            flex-direction: column;
+            display: none;
+            width: 100%;
+            height: 100vh;
+            justify-content: flex-start;
+            align-items: center;
+            translate: -1200px 0px;
+            transition: 0.3s;
+            // bottom: 100%;
+            top: 100%;
+            left: 0%;
+            padding: 0px;
+            background-color: rgb(49, 48, 48);
+            // border: 10px red solid;
+          }
+          div {
+            padding-bottom: 8px;
+            @media (max-width: 1150px) {
+              height: calc(100% / 8 - 15px);
+              width: 100%;
+              border-bottom: 1px white solid;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+            // border: 1px red solid;
+            .first-page {
+              color: white;
+              margin: 0 10px;
+              text-decoration: none;
+              padding-bottom: 3px;
+              transition: 0.2s;
+              // border: 1px red solid;
+              &:hover {
+                color: rgb(197, 188, 188);
+              }
+              &::before {
+                content: "";
+                position: absolute;
+                // left: 70%;
+                bottom: 10px; /* 调整下划线的位置 */
+                width: 0;
+                height: 4px;
+                background-color: white;
+                transition: height 0.2s ease-in-out, width 0.3s ease-in-out;
+              }
+              &:hover::before {
+                height: 2px;
+                width: 2.8%; /* hover 状态下将下划线的宽度设置为 100% */
+              }
+              // border: 1px red solid;
+              i {
+                font-size: 16px;
+                margin-left: 3px;
               }
             }
-            a {
-              margin-bottom: 10px;
+            .line-design {
+              // position: relative;
+              color: white;
+              margin: 0 10px;
+              text-decoration: none;
+              padding-bottom: 3px;
+              transition: 0.2s;
+              // border: 1px red solid;
+              &:hover {
+                color: rgb(197, 188, 188);
+              }
+              &::before {
+                content: "";
+                position: absolute;
+                // left: 70%;
+                bottom: 10px; /* 调整下划线的位置 */
+                width: 0;
+                height: 4px;
+                background-color: white;
+                transition: height 0.2s ease-in-out, width 0.3s ease-in-out;
+              }
+              &:hover::before {
+                height: 2px;
+                width: 5%; /* hover 状态下将下划线的宽度设置为 100% */
+              }
+              // .triangle {
+              //   position: absolute;
+              //   top: 2px;
+              //   left: 100%;
+              //   font-size: 2px;
+              // }
+            }
+          }
+
+          .human-icon,
+          .home {
+            font-size: 10px;
+          }
+          .all-case {
+            // margin: 0 10px;
+            text-decoration: none;
+            // padding-bottom: 3px;
+            transition: 0.2s;
+            position: relative;
+            .top-case {
               color: white;
               text-decoration: none;
+              margin-right: 5px;
+              // border: 1px red solid;
+            }
+            .fa-solid {
+              font-size: 10px;
+              vertical-align: center;
+              animation: caseMove 2s infinite;
+              // border: 1px red solid;
+              // padding-bottom: 5px;
+            }
+            .under-case {
+              display: none;
+              flex-direction: column;
+              position: absolute;
               overflow: white-space;
               white-space: nowrap;
+
+              z-index: 101;
+              padding-left: 15px;
+              padding-right: 15px;
+              padding-top: 15px;
+              // position: relative;
+              background-color: rgba(30, 29, 29, 1);
               @media (max-width: 1150px) {
-                height: calc(100% / 3);
                 width: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                border: 1px white solid;
+                height: 80vh;
+                top: -100%;
               }
-              &:hover {
-                color: rgba(223, 218, 218, 0.928);
+              .under-close {
+                display: none;
+                @media (max-width: 1150px) {
+                  display: flex;
+                  // border: 1px red solid;
+                  font-size: 25px;
+                  justify-content: flex-end;
+                  padding-right: 20px;
+                  align-items: center;
+                  // position: absolute;
+                  // top: 10%;
+                  // right: 10%;
+                }
+              }
+              a {
+                margin-bottom: 10px;
+                color: white;
+                text-decoration: none;
+                overflow: white-space;
+                white-space: nowrap;
+                @media (max-width: 1150px) {
+                  height: calc(100% / 3);
+                  width: 100%;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  border: 1px white solid;
+                }
+                &:hover {
+                  color: rgba(223, 218, 218, 0.928);
+                }
               }
             }
           }
         }
       }
     }
-  }
-  .banner {
-    background-color: rgb(49, 48, 48);
-    position: relative; /* 添加相对定位 */
-    z-index: -1;
-    @media (max-width: 1150px) {
-      height: 70vh;
-    }
-    img {
-      // max-width: 1280px;
-      position: relative;
-      top: -110px;
-      left: 0;
-      width: 100%;
-      height: 120vh;
+    .banner {
+      background-color: rgb(49, 48, 48);
+      position: relative; /* 添加相对定位 */
       z-index: -1;
-      transition: 1.5s;
       @media (max-width: 1150px) {
-        height: 100%;
+        height: 70vh;
       }
-      // opacity: 0;
+      img {
+        // max-width: 1280px;
+        position: relative;
+        top: -110px;
+        left: 0;
+        width: 100%;
+        height: 120vh;
+        z-index: -1;
+        transition: 1.5s;
+        @media (max-width: 1150px) {
+          height: 100%;
+        }
+        // opacity: 0;
+      }
+      // &::after {
+      //   content: "HU furniture";
+      //   position: absolute;
+      //   top: 40%;
+      //   left: 25%;
+      //   font-size: 50px;
+      //   letter-spacing: 3px;
+      //   color: rgba(187, 174, 174, 0.3);
+      //   z-index: -2;
+      // }
     }
-    // &::after {
-    //   content: "HU furniture";
-    //   position: absolute;
-    //   top: 40%;
-    //   left: 25%;
-    //   font-size: 50px;
-    //   letter-spacing: 3px;
-    //   color: rgba(187, 174, 174, 0.3);
-    //   z-index: -2;
-    // }
   }
-}
 
-footer {
-  width: 100%;
-  .footer-width-control {
-    // padding-left: 120px;
-    position: relative;
-    padding-top: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  footer {
     width: 100%;
-    height: 50vh;
-    background-color: #cec5ba;
-    // border: 1px red solid;
-    @media (max-width: 900px) {
-      height: 30vh;
-      padding: 0px 15px;
-    }
-    // background-image: url(../../furniture_img/Group\ 3.svg);
-    // background-repeat: no-repeat;
-    // background-size: cover;
-    // background-position: -30px;
-    // border: 1px red solid;
-    .footer-all {
+    .footer-width-control {
+      // padding-left: 120px;
+      position: relative;
+      padding-top: 40px;
       display: flex;
-      //   border: 1px red solid;
-      color: #423e44;
-      @media (max-width: 1100px) {
-        width: 80%;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 50vh;
+      background-color: #cec5ba;
+      // border: 1px red solid;
+      @media (max-width: 900px) {
+        height: 30vh;
+        padding: 0px 15px;
       }
-      .footer-left {
-        // border: 1px red solid;
-        margin-right: 80px;
-        line-height: 30px;
-        padding-right: 15px;
-        @media (max-width: 1100px) {
-          margin: 0px;
-          margin-right: 0px;
-          width: calc(100% / 3 - 30px);
-        }
-        h4 {
-          font-size: 18px;
-          margin-bottom: 15px;
-          @media (max-width: 900px) {
-            font-size: 16px;
-          }
-        }
-        a {
-          font-weight: 300;
-          letter-spacing: 4px;
-          text-decoration: none;
-          color: black;
-          transition: 0.2s;
-          &:hover {
-            color: #524d55;
-          }
-        }
-      }
-      .footer-middle {
-        // border: 1px red solid;
-        margin-right: 80px;
-        line-height: 40px;
+      // background-image: url(../../furniture_img/Group\ 3.svg);
+      // background-repeat: no-repeat;
+      // background-size: cover;
+      // background-position: -30px;
+      // border: 1px red solid;
+      .footer-all {
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        //   border: 1px red solid;
+        color: #423e44;
         @media (max-width: 1100px) {
-          margin: 0px;
-          width: calc(100% / 3 - 20px);
+          width: 80%;
         }
-        .business {
+        .footer-left {
           // border: 1px red solid;
+          margin-right: 80px;
+          line-height: 30px;
+          padding-right: 15px;
           @media (max-width: 1100px) {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            font-size: 16px;
+            margin: 0px;
+            margin-right: 0px;
+            width: calc(100% / 3 - 30px);
+          }
+          h4 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            @media (max-width: 900px) {
+              font-size: 16px;
+            }
+          }
+          a {
+            font-weight: 300;
+            letter-spacing: 4px;
+            text-decoration: none;
+            color: black;
+            transition: 0.2s;
+            &:hover {
+              color: #524d55;
+            }
           }
         }
-        h4 {
-          font-size: 18px;
-          margin-bottom: 15px;
-          @media (max-width: 900px) {
-            font-size: 16px;
+        .footer-middle {
+          // border: 1px red solid;
+          margin-right: 80px;
+          line-height: 40px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          @media (max-width: 1100px) {
+            margin: 0px;
+            width: calc(100% / 3 - 20px);
+          }
+          .business {
+            // border: 1px red solid;
+            @media (max-width: 1100px) {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              flex-direction: column;
+              font-size: 16px;
+            }
+          }
+          h4 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            @media (max-width: 900px) {
+              font-size: 16px;
+            }
+          }
+          a {
+            font-weight: 300;
+            letter-spacing: 4px;
+            text-decoration: none;
+            color: black;
+            transition: 0.2s;
+            &:hover {
+              color: #524d55;
+            }
+          }
+          div {
+            font-weight: 300;
+            letter-spacing: 4px;
           }
         }
-        a {
-          font-weight: 300;
-          letter-spacing: 4px;
-          text-decoration: none;
-          color: black;
-          transition: 0.2s;
-          &:hover {
-            color: #524d55;
+        .footer-right {
+          // border: 1px red solid;
+          line-height: 40px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          h4 {
+            font-size: 18px;
+            margin-bottom: 15px;
           }
-        }
-        div {
-          font-weight: 300;
-          letter-spacing: 4px;
+          div {
+            font-weight: 300;
+            letter-spacing: 3px;
+            @media (max-width: 1150px) {
+              letter-spacing: 2px;
+              font-size: 14px;
+            }
+          }
         }
       }
-      .footer-right {
-        // border: 1px red solid;
-        line-height: 40px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        h4 {
-          font-size: 18px;
-          margin-bottom: 15px;
-        }
-        div {
-          font-weight: 300;
-          letter-spacing: 3px;
-          @media (max-width: 1150px) {
-            letter-spacing: 2px;
-            font-size: 14px;
-          }
-        }
+      .last-text {
+        position: absolute;
+        bottom: 20px;
+        letter-spacing: 3px;
+        font-weight: 300;
+        font-size: 12px;
       }
-    }
-    .last-text {
-      position: absolute;
-      bottom: 20px;
-      letter-spacing: 3px;
-      font-weight: 300;
-      font-size: 12px;
     }
   }
 }
