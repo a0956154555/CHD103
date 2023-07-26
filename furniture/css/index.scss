@@ -155,6 +155,8 @@ header {
           height: 100vh;
           justify-content: flex-start;
           align-items: center;
+          translate: -1200px 0px;
+          transition: 0.3s;
           // bottom: 100%;
           top: 100%;
           left: 0%;
@@ -271,11 +273,26 @@ header {
             padding-left: 15px;
             padding-right: 15px;
             padding-top: 15px;
-            background-color: rgba(30, 29, 29, 0.8);
+            // position: relative;
+            background-color: rgba(30, 29, 29, 1);
             @media (max-width: 1150px) {
               width: 100%;
-              height: 100%;
-              top: 100%;
+              height: 80vh;
+              top: -100%;
+            }
+            .under-close {
+              display: none;
+              @media (max-width: 1150px) {
+                display: flex;
+                // border: 1px red solid;
+                font-size: 25px;
+                justify-content: flex-end;
+                padding-right: 20px;
+                align-items: center;
+                // position: absolute;
+                // top: 10%;
+                // right: 10%;
+              }
             }
             a {
               margin-bottom: 10px;
@@ -283,7 +300,14 @@ header {
               text-decoration: none;
               overflow: white-space;
               white-space: nowrap;
-
+              @media (max-width: 1150px) {
+                height: calc(100% / 3);
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 1px white solid;
+              }
               &:hover {
                 color: rgba(223, 218, 218, 0.928);
               }
@@ -298,7 +322,7 @@ header {
     position: relative; /* 添加相对定位 */
     z-index: -1;
     @media (max-width: 1150px) {
-      height: 50vh;
+      height: 70vh;
     }
     img {
       // max-width: 1280px;
@@ -536,6 +560,7 @@ main {
           display: none;
           margin: 0 auto;
           margin-bottom: 30px;
+
           div {
             cursor: pointer;
             display: flex;
@@ -566,6 +591,7 @@ main {
           }
           .show-link-one {
             transition: 0.6s;
+
             &:hover {
               background-image: url(../../furniture_img/index-link-pic1.png);
               background-repeat: no-repeat;
@@ -575,7 +601,7 @@ main {
               align-items: flex-end;
               font-weight: bold;
               color: rgb(235, 231, 231);
-              @media (max-width: 900px) {
+              @media (max-width: 1100px) {
                 justify-content: center;
                 background-image: none;
                 background-position: initial;
@@ -1383,13 +1409,17 @@ footer {
       display: flex;
       //   border: 1px red solid;
       color: #423e44;
+      @media (max-width: 1100px) {
+        width: 80%;
+      }
       .footer-left {
         // border: 1px red solid;
         margin-right: 80px;
         line-height: 30px;
         padding-right: 15px;
-        @media (max-width: 900px) {
+        @media (max-width: 1100px) {
           margin: 0px;
+          margin-right: 0px;
           width: calc(100% / 3 - 30px);
         }
         h4 {
@@ -1417,13 +1447,13 @@ footer {
         display: flex;
         flex-direction: column;
         align-items: center;
-        @media (max-width: 900px) {
+        @media (max-width: 1100px) {
           margin: 0px;
           width: calc(100% / 3 - 20px);
         }
         .business {
           // border: 1px red solid;
-          @media (max-width: 900px) {
+          @media (max-width: 1100px) {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -1466,6 +1496,10 @@ footer {
         div {
           font-weight: 300;
           letter-spacing: 3px;
+          @media (max-width: 1150px) {
+            letter-spacing: 2px;
+            font-size: 14px;
+          }
         }
       }
     }
@@ -1559,5 +1593,16 @@ footer {
   }
   100% {
     transform: scale(1.8);
+  }
+}
+
+@keyframes menuTranslate {
+  0% {
+    opacity: 0;
+    translate: -1200px 0px;
+  }
+  100% {
+    opacity: 1;
+    translate: 0px 0px;
   }
 }

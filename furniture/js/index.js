@@ -43,6 +43,8 @@ let bannerPicAll = [
   "../../furniture_img/banner4.jpg",
 ];
 let currentIndex = 0;
+let underClose = document.querySelector(".under-close");
+
 let faMessage = document.querySelector(".fa-message");
 setInterval(() => {
   currentIndex = (currentIndex + 1) % bannerPicAll.length;
@@ -91,6 +93,7 @@ fetch(
 // window.addEventListener("scroll", function () {
 //   headerControlWidth.style.backgroundColor = "rgba(0, 0, 0, 0.8)";
 // });
+
 topCase.addEventListener("click", function () {
   underCaseTrueOrFalse = !underCaseTrueOrFalse;
   if (underCaseTrueOrFalse) {
@@ -114,7 +117,14 @@ hamburgerNews.addEventListener("click", function () {
     newsBottom.style.display = "none";
   }
 });
-
+underClose.addEventListener("click", function () {
+  underCaseTrueOrFalse = !underCaseTrueOrFalse;
+  if (underCaseTrueOrFalse) {
+    underCase.style.display = "flex";
+  } else {
+    underCase.style.display = "none";
+  }
+});
 mapHamburger.addEventListener("click", function () {
   mapTrueFalse = !mapTrueFalse;
   if (mapTrueFalse) {
@@ -270,6 +280,7 @@ headerMiddle.addEventListener("click", function () {
   menuTrue = !menuTrue;
   if (menuTrue) {
     headerRight.style.display = "flex";
+    headerRight.style.animation = "menuTranslate 1s forwards";
   } else {
     headerRight.style.display = "none";
   }
