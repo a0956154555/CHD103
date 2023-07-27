@@ -261,7 +261,7 @@
   footer .footer-width-control {
     position: relative;
     padding-top: 40px;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -410,4 +410,4 @@
     opacity: 1;
     translate: 0px 0px;
   }
-}/*# sourceMappingURL=headerFooterAll.css.map */
+}/*# sourceMappingURL=headerFooterCharacter.css.map */

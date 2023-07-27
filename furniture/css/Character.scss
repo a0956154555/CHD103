@@ -236,6 +236,11 @@ header {
   background-color: rgb(72, 71, 71);
   border: 0.8px white dotted;
   z-index: 200;
+  @media (max-width: 1150px) {
+    height: 70vh;
+    top: 50%;
+    translate: 0px -50%;
+  }
   .jane-title {
     height: 20%;
     width: 80%;
@@ -410,6 +415,11 @@ header {
   background-color: rgb(72, 71, 71);
   border: 0.8px white dotted;
   z-index: 200;
+  @media (max-width: 1150px) {
+    height: 70vh;
+    top: 50%;
+    translate: 0px -50%;
+  }
   .justin-title {
     height: 20%;
     width: 80%;
@@ -584,6 +594,11 @@ header {
   background-color: rgb(72, 71, 71);
   border: 0.8px white dotted;
   z-index: 200;
+  @media (max-width: 1150px) {
+    height: 70vh;
+    top: 50%;
+    translate: 0px -50%;
+  }
   .nelson-title {
     height: 20%;
     width: 80%;
@@ -758,6 +773,11 @@ header {
   background-color: rgb(72, 71, 71);
   border: 0.8px white dotted;
   z-index: 200;
+  @media (max-width: 1150px) {
+    height: 70vh;
+    top: 50%;
+    translate: 0px -50%;
+  }
   .dandy-title {
     height: 20%;
     width: 80%;

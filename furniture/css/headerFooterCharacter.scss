@@ -278,7 +278,7 @@
       // padding-left: 120px;
       position: relative;
       padding-top: 40px;
-      display: flex;
+      display: none;
       justify-content: center;
       align-items: center;
       width: 100%;
@@ -402,7 +402,6 @@
     }
   }
 }
-
 @keyframes menuTranslate {
   0% {
     opacity: 0;
