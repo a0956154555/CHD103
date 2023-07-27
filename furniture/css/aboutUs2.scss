@@ -120,6 +120,12 @@ header {
                 color: rgba(223, 218, 218, 0.928);
               }
             }
+            .under-close {
+              display: none;
+              @media (max-width: 1150px) {
+                display: flex;
+              }
+            }
           }
         }
       }
@@ -131,6 +137,9 @@ header {
     // border: 2px red solid;
     background-image: url(../../furniture_img/aboutUsPlus1.jpg);
     background-size: contain;
+    @media (max-width: 1150px) {
+      background-size: cover;
+    }
     background-repeat: no-repeat;
     background-position: top;
     background-color: rgb(49, 48, 48);
@@ -589,7 +598,7 @@ footer {
     }
     .last-text {
       position: absolute;
-      top: 240px;
+      bottom: 20px;
       letter-spacing: 3px;
       font-weight: 300;
       font-size: 12px;
@@ -614,5 +623,15 @@ footer {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+@keyframes menuTranslate {
+  0% {
+    opacity: 0;
+    translate: -1200px 0px;
+  }
+  100% {
+    opacity: 1;
+    translate: 0px 0px;
   }
 }
