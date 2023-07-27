@@ -205,6 +205,14 @@ header .header-all .header-control-width .header-right .all-case .under-case a {
 header .header-all .header-control-width .header-right .all-case .under-case a:hover {
   color: rgba(223, 218, 218, 0.928);
 }
+header .header-all .header-control-width .header-right .all-case .under-case .under-close {
+  display: none;
+}
+@media (max-width: 1150px) {
+  header .header-all .header-control-width .header-right .all-case .under-case .under-close .under-close {
+    display: flex;
+  }
+}
 
 .jane-introduce {
   width: 80%;
