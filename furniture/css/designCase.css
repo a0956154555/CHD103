@@ -653,7 +653,7 @@ footer .footer-width-control .footer-all .footer-right div {
 }
 footer .footer-width-control .last-text {
   position: absolute;
-  top: 240px;
+  bottom: 20px;
   letter-spacing: 3px;
   font-weight: 300;
   font-size: 12px;

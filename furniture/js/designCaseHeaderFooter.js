@@ -10,3 +10,16 @@ topCase.addEventListener("click", function () {
     underCase.style.display = "none";
   }
 });
+// -------------------------------手機板
+let headerMiddle = document.querySelector(".header-middle");
+let headerRight = document.querySelector(".header-right");
+let menuTrue = false;
+headerMiddle.addEventListener("click", function () {
+  menuTrue = !menuTrue;
+  if (menuTrue) {
+    headerRight.style.display = "flex";
+    headerRight.style.animation = "menuTranslate 1s forwards";
+  } else {
+    headerRight.style.display = "none";
+  }
+});
