@@ -301,3 +301,12 @@ headerMiddle.addEventListener("click", function () {
     headerRight.style.display = "none";
   }
 });
+let underClose = document.querySelector(".under-close");
+underClose.addEventListener("click", function () {
+  underCaseTrueOrFalse = !underCaseTrueOrFalse;
+  if (underCaseTrueOrFalse) {
+    underCase.style.display = "flex";
+  } else {
+    underCase.style.display = "none";
+  }
+});
