@@ -87,6 +87,11 @@ header .header-all {
   z-index: 100;
   background: rgba(0, 0, 0, 0.5);
 }
+@media (max-width: 450px) {
+  header .header-all {
+    width: 450px;
+  }
+}
 header .header-all .header-control-width {
   width: 100%;
   margin: 0 auto;
@@ -120,6 +125,14 @@ header .header-all .header-control-width .header-middle {
   justify-content: center;
   align-items: center;
   display: none;
+}
+@media (max-width: 450px) {
+  header .header-all .header-control-width .header-middle {
+    position: fixed;
+    right: 10px;
+    width: 30px;
+    height: 50px;
+  }
 }
 header .header-all .header-control-width .header-middle span {
   width: 80%;
@@ -302,6 +315,11 @@ header .banner {
 @media (max-width: 1150px) {
   header .banner {
     height: 70vh;
+  }
+}
+@media (max-width: 450px) {
+  header .banner {
+    height: 38vh;
   }
 }
 header .banner img {
@@ -605,6 +623,11 @@ main .posts-all .design-projects {
   flex-direction: column;
   padding-top: 50px;
   background-color: rgb(49, 48, 48);
+}
+@media (max-width: 450px) {
+  main .posts-all .design-projects {
+    display: none;
+  }
 }
 @media (max-width: 900px) {
   main .posts-all .design-projects .line-one-pic-all,
