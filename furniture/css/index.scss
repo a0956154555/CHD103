@@ -350,6 +350,9 @@ header {
     @media (max-width: 1150px) {
       height: 70vh;
     }
+    @media (max-width: 850px) {
+      height: 50vh;
+    }
     @media (max-width: 450px) {
       height: 38vh;
     }
@@ -425,8 +428,20 @@ main {
       }
       .news-bottom {
         display: none;
+        @media (max-width: 450px) {
+          flex-direction: column;
+          // border: 2px red solid;
+          justify-content: center;
+          align-items: center;
+        }
         // border: 1px red solid;
         .news-bottom-first {
+          @media (max-width: 900px) {
+            padding-left: 50px;
+          }
+          @media (max-width: 450px) {
+            padding: 0;
+          }
           img {
             width: 400px;
             animation: showOpacity 2s forwards;
@@ -441,6 +456,9 @@ main {
           padding-left: 100px;
           padding-right: 80px;
           position: relative;
+          @media (max-width: 450px) {
+            padding: 0;
+          }
           .news-bottom-second-top {
             display: flex;
             padding-bottom: 12px;
@@ -487,6 +505,9 @@ main {
           //   line-height: 22px;
           letter-spacing: 3.6px;
           color: white;
+          @media (max-width: 450px) {
+            display: none;
+          }
           // transition: 0.3s;
           // animation-fill-mode: forwards;
           &:hover {
@@ -602,9 +623,7 @@ main {
             height: 50vh;
             width: 50%;
             border: 1px rgb(125, 123, 123) solid;
-            @media (max-width: 900px) {
-              height: 30vh;
-            }
+
             &:hover {
               background-color: rgb(93, 92, 92);
             }
@@ -751,9 +770,7 @@ main {
         // border: 1px red solid;
         margin-bottom: 50px;
         // position: relative;
-        @media (max-width: 900px) {
-          height: 30vh;
-        }
+
         div {
           // border: 1px red solid;
           width: 30%;
@@ -768,12 +785,20 @@ main {
           display: flex;
           justify-content: center;
           align-items: center;
-          @media (max-width: 900px) {
+
+          @media (max-width: 1190px) {
             width: calc(100% / 3 - 50px);
-            height: 50%;
+            height: 80%;
+          }
+
+          @media (max-width: 850px) {
+            height: 60%;
           }
           img {
             width: 100%;
+            @media (max-width: 1190px) {
+              width: 150%;
+            }
           }
           &::after {
             position: absolute;
@@ -802,8 +827,13 @@ main {
           display: flex;
           justify-content: center;
           align-items: center;
-          @media (max-width: 900px) {
+
+          @media (max-width: 1190px) {
             width: calc(100% / 3 - 50px);
+            height: 80%;
+          }
+          @media (max-width: 850px) {
+            height: 60%;
           }
 
           &::after {
@@ -833,8 +863,12 @@ main {
           display: flex;
           justify-content: center;
           align-items: center;
-          @media (max-width: 900px) {
+          @media (max-width: 1190px) {
             width: calc(100% / 3 - 50px);
+            height: 80%;
+          }
+          @media (max-width: 850px) {
+            height: 60%;
           }
           &::after {
             position: absolute;
@@ -863,7 +897,13 @@ main {
           display: flex;
           justify-content: center;
           align-items: center;
-
+          @media (max-width: 1190px) {
+            width: calc(100% / 3 - 50px);
+            height: 80%;
+          }
+          @media (max-width: 850px) {
+            height: 60%;
+          }
           &::after {
             position: absolute;
             display: none;
@@ -891,7 +931,13 @@ main {
           display: flex;
           justify-content: center;
           align-items: center;
-
+          @media (max-width: 1190px) {
+            width: calc(100% / 3 - 50px);
+            height: 80%;
+          }
+          @media (max-width: 850px) {
+            height: 60%;
+          }
           &::after {
             position: absolute;
             display: none;
@@ -919,7 +965,13 @@ main {
           display: flex;
           justify-content: center;
           align-items: center;
-
+          @media (max-width: 1190px) {
+            width: calc(100% / 3 - 50px);
+            height: 80%;
+          }
+          @media (max-width: 850px) {
+            height: 60%;
+          }
           &::after {
             position: absolute;
             display: none;
@@ -947,7 +999,13 @@ main {
           display: flex;
           justify-content: center;
           align-items: center;
-
+          @media (max-width: 1190px) {
+            width: calc(100% / 3 - 50px);
+            height: 80%;
+          }
+          @media (max-width: 850px) {
+            height: 60%;
+          }
           &::after {
             position: absolute;
             display: none;
@@ -975,7 +1033,13 @@ main {
           display: flex;
           justify-content: center;
           align-items: center;
-
+          @media (max-width: 1190px) {
+            width: calc(100% / 3 - 50px);
+            height: 80%;
+          }
+          @media (max-width: 850px) {
+            height: 60%;
+          }
           &::after {
             position: absolute;
             display: none;
@@ -1003,7 +1067,13 @@ main {
           display: flex;
           justify-content: center;
           align-items: center;
-
+          @media (max-width: 1190px) {
+            width: calc(100% / 3 - 50px);
+            height: 80%;
+          }
+          @media (max-width: 850px) {
+            height: 60%;
+          }
           &::after {
             position: absolute;
             display: none;
@@ -1076,6 +1146,10 @@ main {
           display: none;
           margin: 0 auto;
           margin-bottom: 50px;
+          @media (max-width: 850px) {
+            width: 700px;
+            height: 350px;
+          }
         }
         .traffic-information-text {
           //   border: 1px red solid;
@@ -1297,14 +1371,15 @@ main {
   background-color: rgba(250, 248, 248, 1);
   border-radius: 15px;
   @media (max-width: 1150px) {
-    height: 50%;
-    width: 60%;
+    height: 40vh;
+    width: 50%;
     left: 35%;
     top: 45%;
   }
   @media (max-width: 900px) {
-    width: 100%;
-    left: 0%;
+    width: 70%;
+    left: 50%;
+    translate: -50% 0px;
   }
   // div {
   //   border: 1px white solid;
