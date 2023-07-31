@@ -45,6 +45,7 @@ let bannerPicAll = [
 let currentIndex = 0;
 let underClose = document.querySelector(".under-close");
 
+let footerLeft = document.querySelector(".footer-left");
 let faMessage = document.querySelector(".fa-message");
 setInterval(() => {
   currentIndex = (currentIndex + 1) % bannerPicAll.length;
@@ -245,6 +246,7 @@ send.addEventListener("click", function () {
     header.style.display = "block";
     main.style.display = "block";
     footerWidthControl.style.display = "flex";
+
     inPageNavigation.style.display = "flex";
   } else if (account.value == "" || pass.value == "") {
     threeTimes.innerHTML = `Account or password cannot be empty`;
