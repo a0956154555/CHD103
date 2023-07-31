@@ -238,6 +238,11 @@
     height: 70vh;
   }
 }
+@media (max-width: 1150px) and (max-width: 450px) {
+  header .banner {
+    height: 38vh;
+  }
+}
 @media (max-width: 1150px) {
   header .banner img {
     position: relative;
@@ -300,6 +305,11 @@
     width: calc(33.3333333333% - 30px);
   }
 }
+@media (max-width: 1150px) and (max-width: 450px) {
+  footer .footer-width-control .footer-all .footer-left {
+    display: none;
+  }
+}
 @media (max-width: 1150px) {
   footer .footer-width-control .footer-all .footer-left h4 {
     font-size: 18px;
@@ -334,6 +344,11 @@
   footer .footer-width-control .footer-all .footer-middle {
     margin: 0px;
     width: calc(33.3333333333% - 20px);
+  }
+}
+@media (max-width: 1150px) and (max-width: 450px) {
+  footer .footer-width-control .footer-all .footer-middle {
+    display: none;
   }
 }
 @media (max-width: 1150px) and (max-width: 1100px) {

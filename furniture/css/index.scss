@@ -1309,6 +1309,9 @@ main {
   @media (max-width: 765px) {
     left: 85%;
   }
+  @media (max-width: 450px) {
+    display: none;
+  }
   a {
     position: relative;
     margin-bottom: 20px;
@@ -1380,6 +1383,9 @@ main {
     width: 70%;
     left: 50%;
     translate: -50% 0px;
+  }
+  @media (max-width: 450px) {
+    display: none !important;
   }
   // div {
   //   border: 1px white solid;
@@ -1529,6 +1535,9 @@ footer {
           margin-right: 0px;
           width: calc(100% / 3 - 30px);
         }
+        @media (max-width: 450px) {
+          display: none;
+        }
         h4 {
           font-size: 18px;
           margin-bottom: 15px;
@@ -1557,6 +1566,9 @@ footer {
         @media (max-width: 1100px) {
           margin: 0px;
           width: calc(100% / 3 - 20px);
+        }
+        @media (max-width: 450px) {
+          display: none;
         }
         .business {
           // border: 1px red solid;
