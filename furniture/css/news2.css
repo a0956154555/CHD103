@@ -62,9 +62,15 @@ header .header-all {
   top: 0px;
   color: white;
   z-index: 100;
+  background: rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 450px) {
+  header .header-all {
+    width: 450px;
+  }
 }
 header .header-all .header-control-width {
-  width: 1280px;
+  width: 100%;
   margin: 0 auto;
   overflow: visible;
   padding-left: 150px;
@@ -88,6 +94,40 @@ header .header-all .header-control-width .header-left img {
   align-items: center;
   width: 100px;
 }
+header .header-all .header-control-width .header-middle {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+@media (max-width: 450px) {
+  header .header-all .header-control-width .header-middle {
+    position: fixed;
+    right: 30px;
+    width: 30px;
+    height: 50px;
+  }
+}
+header .header-all .header-control-width .header-middle span {
+  width: 80%;
+  height: 2px;
+  position: absolute;
+  background-color: white;
+}
+header .header-all .header-control-width .header-middle span:first-child {
+  top: 50%;
+}
+header .header-all .header-control-width .header-middle span:nth-child(2) {
+  top: 70%;
+}
+@media (max-width: 1150px) {
+  header .header-all .header-control-width .header-middle {
+    display: flex;
+  }
+}
 header .header-all .header-control-width .header-right {
   display: flex;
   align-items: flex-end;
@@ -98,7 +138,7 @@ header .header-all .header-control-width .header-right {
   header .header-all .header-control-width .header-right {
     position: absolute;
     flex-direction: column;
-    display: flex;
+    display: none;
     width: 100%;
     height: 100vh;
     justify-content: flex-start;
@@ -122,6 +162,12 @@ header .header-all .header-control-width .header-right div {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+}
+@media (max-width: 450px) {
+  header .header-all .header-control-width .header-right div {
+    height: auto;
+    padding: 30px;
   }
 }
 header .header-all .header-control-width .header-right div .first-page {
@@ -181,6 +227,13 @@ header .header-all .header-control-width .header-right .home {
 header .header-all .header-control-width .header-right .all-case {
   text-decoration: none;
   transition: 0.2s;
+  position: relative;
+}
+@media (max-width: 450px) {
+  header .header-all .header-control-width .header-right .all-case {
+    display: flex;
+    flex-direction: column;
+  }
 }
 header .header-all .header-control-width .header-right .all-case .top-case {
   color: white;
@@ -202,7 +255,35 @@ header .header-all .header-control-width .header-right .all-case .under-case {
   padding-left: 15px;
   padding-right: 15px;
   padding-top: 15px;
-  background-color: rgba(30, 29, 29, 0.8);
+  background-color: rgb(30, 29, 29);
+}
+@media (max-width: 1150px) {
+  header .header-all .header-control-width .header-right .all-case .under-case {
+    width: 100%;
+    height: 80vh;
+    top: -100%;
+  }
+}
+@media (max-width: 450px) {
+  header .header-all .header-control-width .header-right .all-case .under-case {
+    width: 100%;
+    height: 30vh;
+    margin: 0 auto;
+    top: 60%;
+    position: static;
+  }
+}
+header .header-all .header-control-width .header-right .all-case .under-case .under-close {
+  display: none;
+}
+@media (max-width: 1150px) {
+  header .header-all .header-control-width .header-right .all-case .under-case .under-close {
+    display: flex;
+    font-size: 25px;
+    justify-content: flex-end;
+    padding-right: 20px;
+    align-items: center;
+  }
 }
 header .header-all .header-control-width .header-right .all-case .under-case a {
   margin-bottom: 10px;
@@ -211,8 +292,52 @@ header .header-all .header-control-width .header-right .all-case .under-case a {
   overflow: white-space;
   white-space: nowrap;
 }
+@media (max-width: 1150px) {
+  header .header-all .header-control-width .header-right .all-case .under-case a {
+    height: 33.3333333333%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px white solid;
+  }
+}
 header .header-all .header-control-width .header-right .all-case .under-case a:hover {
   color: rgba(223, 218, 218, 0.928);
+}
+header .banner {
+  background-color: rgb(49, 48, 48);
+  position: relative; /* 添加相对定位 */
+  z-index: -1;
+}
+@media (max-width: 1150px) {
+  header .banner {
+    height: 70vh;
+  }
+}
+@media (max-width: 850px) {
+  header .banner {
+    height: 50vh;
+  }
+}
+@media (max-width: 450px) {
+  header .banner {
+    height: 38vh;
+  }
+}
+header .banner img {
+  position: relative;
+  top: -110px;
+  left: 0;
+  width: 100%;
+  height: 120vh;
+  z-index: -1;
+  transition: 1.5s;
+}
+@media (max-width: 1150px) {
+  header .banner img {
+    height: 100%;
+  }
 }
 
 .news-banner {
@@ -238,6 +363,11 @@ header .header-all .header-control-width .header-right .all-case .under-case a:h
 .news-banner .news-title .news-title-span {
   position: relative;
   left: -25px;
+}
+@media (max-width: 450px) {
+  .news-banner .news-title {
+    height: 90vh;
+  }
 }
 .news-banner .news-posts-all {
   width: 100%;
@@ -311,6 +441,11 @@ header .header-all .header-control-width .header-right .all-case .under-case a:h
   rotate: -45deg;
   transition: 0.6s;
 }
+@media (max-width: 450px) {
+  .news-banner .news-posts-all .news-control-width .news-post-card .first-floor {
+    width: calc(100% - 30px);
+  }
+}
 
 footer {
   width: 100%;
@@ -352,6 +487,11 @@ footer .footer-width-control .footer-all .footer-left {
     width: calc(33.3333333333% - 30px);
   }
 }
+@media (max-width: 450px) {
+  footer .footer-width-control .footer-all .footer-left {
+    display: none;
+  }
+}
 footer .footer-width-control .footer-all .footer-left h4 {
   font-size: 18px;
   margin-bottom: 15px;
@@ -382,6 +522,11 @@ footer .footer-width-control .footer-all .footer-middle {
   footer .footer-width-control .footer-all .footer-middle {
     margin: 0px;
     width: calc(33.3333333333% - 20px);
+  }
+}
+@media (max-width: 450px) {
+  footer .footer-width-control .footer-all .footer-middle {
+    display: none;
   }
 }
 @media (max-width: 1100px) {
@@ -436,12 +581,23 @@ footer .footer-width-control .footer-all .footer-right div {
     font-size: 14px;
   }
 }
+@media (max-width: 450px) {
+  footer .footer-width-control .footer-all .footer-right div {
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+}
 footer .footer-width-control .last-text {
   position: absolute;
   bottom: 20px;
   letter-spacing: 3px;
   font-weight: 300;
   font-size: 12px;
+}
+@media (max-width: 450px) {
+  footer .footer-width-control .last-text {
+    display: none;
+  }
 }
 
 @keyframes menuTranslate {
