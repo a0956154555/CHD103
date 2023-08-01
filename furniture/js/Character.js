@@ -292,7 +292,7 @@ underClose.addEventListener("click", function () {
 function isMobileDevice() {
   return window.matchMedia("(max-width: 450px)").matches;
 }
-if (isMobileDevice) {
+if (isMobileDevice()) {
   setInterval(() => {
     showNum++;
     if (showNum > 4) {
