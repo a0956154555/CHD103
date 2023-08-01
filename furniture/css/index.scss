@@ -1171,7 +1171,7 @@ main {
               display: flex;
               flex-direction: column;
               justify-content: center;
-              align-items: center;
+              align-items: flex-start;
             }
             h3 {
               font-size: 30px;
@@ -1208,6 +1208,9 @@ main {
           flex-direction: column;
           color: white;
           justify-content: center;
+          @media (max-width: 450px) {
+            align-items: flex-start;
+          }
           h3 {
             font-size: 30px;
             font-weight: 700;
@@ -1227,6 +1230,9 @@ main {
             margin-bottom: 6px;
             @media (max-width: 900px) {
               font-size: 20px;
+            }
+            @media (max-width: 450px) {
+              font-size: 25px;
             }
           }
           .address {

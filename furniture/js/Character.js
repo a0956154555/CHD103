@@ -267,10 +267,13 @@ setInterval(() => {
 let headerMiddle = document.querySelector(".header-middle");
 let headerRight = document.querySelector(".header-right");
 let menuTrue = false;
+let showFalse = false;
+let showNum = 1;
 headerMiddle.addEventListener("click", function () {
   menuTrue = !menuTrue;
   if (menuTrue) {
     headerRight.style.display = "flex";
+    showFalse = true;
     headerRight.style.animation = "menuTranslate 1s forwards";
   } else {
     headerRight.style.display = "none";
@@ -286,3 +289,15 @@ underClose.addEventListener("click", function () {
     underCase.style.display = "none";
   }
 });
+function isMobileDevice() {
+  return window.matchMedia("(max-width: 450px)").matches;
+}
+if (isMobileDevice) {
+  setInterval(() => {
+    showNum++;
+    if (showNum > 4) {
+      showNum = 1;
+    }
+    startOne.style.backgroundImage = `url("../../furniture_img/human${showNum}.jpg")`;
+  }, 1500); // 設定圖片切換間隔，這裡設定為 1 秒
+}

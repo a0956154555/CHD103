@@ -1243,7 +1243,7 @@ main .posts-all .all-traffic-information .traffic-width-control .traffic-informa
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
   }
 }
 main .posts-all .all-traffic-information .traffic-width-control .traffic-information-text .information-text-left h3 {
@@ -1284,6 +1284,11 @@ main .posts-all .all-traffic-information .traffic-width-control .information-tex
   color: white;
   justify-content: center;
 }
+@media (max-width: 450px) {
+  main .posts-all .all-traffic-information .traffic-width-control .information-text-right {
+    align-items: flex-start;
+  }
+}
 main .posts-all .all-traffic-information .traffic-width-control .information-text-right h3 {
   font-size: 30px;
   font-weight: 700;
@@ -1307,6 +1312,11 @@ main .posts-all .all-traffic-information .traffic-width-control .information-tex
 @media (max-width: 900px) {
   main .posts-all .all-traffic-information .traffic-width-control .information-text-right h4 {
     font-size: 20px;
+  }
+}
+@media (max-width: 450px) {
+  main .posts-all .all-traffic-information .traffic-width-control .information-text-right h4 {
+    font-size: 25px;
   }
 }
 main .posts-all .all-traffic-information .traffic-width-control .information-text-right .address {

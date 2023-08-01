@@ -372,6 +372,8 @@ header .banner img {
 @media (max-width: 450px) {
   .news-banner .news-title {
     height: 50vh;
+    background-position: 99%;
+    background-image: url(../../furniture_img/newsChange1.jpg);
   }
 }
 .news-banner .news-posts-all {
