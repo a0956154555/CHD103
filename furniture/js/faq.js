@@ -26,6 +26,14 @@ let question6TrueFalse = false;
 let question7Drop = document.querySelector(".question7-drop");
 let question7Ans = document.querySelector(".question7-ans");
 let question7TrueFalse = false;
+
+let question1 = document.querySelector(".question1");
+let question2 = document.querySelector(".question2");
+let question3 = document.querySelector(".question3");
+let question4 = document.querySelector(".question4");
+let question5 = document.querySelector(".question5");
+let question6 = document.querySelector(".question6");
+let question7 = document.querySelector(".question7");
 // -----------------------------------
 let send = document.querySelector(".send");
 let otherQuestion = document.querySelector(".other-question");
@@ -100,7 +108,7 @@ main1.addEventListener("mouseout", function () {
   lineShow.style.width = "100%";
 });
 // -----------------------------------------
-question1Drop.addEventListener("click", function () {
+question1.addEventListener("click", function () {
   question1TrueFalse = !question1TrueFalse;
   if (!question1TrueFalse) {
     question1Ans.style.opacity = "0";
@@ -122,7 +130,7 @@ question1Drop.addEventListener("click", function () {
     }, 100);
   }
 });
-question2Drop.addEventListener("click", function () {
+question2.addEventListener("click", function () {
   question2TrueFalse = !question2TrueFalse;
   if (!question2TrueFalse) {
     question2Ans.style.opacity = "0";
@@ -144,7 +152,7 @@ question2Drop.addEventListener("click", function () {
     }, 100);
   }
 });
-question3Drop.addEventListener("click", function () {
+question3.addEventListener("click", function () {
   question3TrueFalse = !question3TrueFalse;
   if (!question3TrueFalse) {
     question3Ans.style.opacity = "0";
@@ -166,7 +174,7 @@ question3Drop.addEventListener("click", function () {
     }, 100);
   }
 });
-question4Drop.addEventListener("click", function () {
+question4.addEventListener("click", function () {
   question4TrueFalse = !question4TrueFalse;
   if (!question4TrueFalse) {
     question4Ans.style.opacity = "0";
@@ -188,7 +196,7 @@ question4Drop.addEventListener("click", function () {
     }, 100);
   }
 });
-question5Drop.addEventListener("click", function () {
+question5.addEventListener("click", function () {
   question5TrueFalse = !question5TrueFalse;
   if (!question5TrueFalse) {
     question5Ans.style.opacity = "0";
@@ -210,7 +218,7 @@ question5Drop.addEventListener("click", function () {
     }, 100);
   }
 });
-question6Drop.addEventListener("click", function () {
+question6.addEventListener("click", function () {
   question6TrueFalse = !question6TrueFalse;
   if (!question6TrueFalse) {
     question6Ans.style.opacity = "0";
@@ -232,7 +240,7 @@ question6Drop.addEventListener("click", function () {
     }, 100);
   }
 });
-question7Drop.addEventListener("click", function () {
+question7.addEventListener("click", function () {
   question7TrueFalse = !question7TrueFalse;
   if (!question7TrueFalse) {
     question7Ans.style.opacity = "0";
