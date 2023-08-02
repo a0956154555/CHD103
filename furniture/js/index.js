@@ -287,3 +287,14 @@ headerMiddle.addEventListener("click", function () {
     headerRight.style.display = "none";
   }
 });
+
+let informationTextRightH3 = document.querySelector(
+  ".information-text-right h3"
+);
+function isMobileDevice() {
+  return window.matchMedia("(max-width: 450px)").matches;
+}
+
+if (isMobileDevice()) {
+  informationTextRightH3.innerText = "交通資訊";
+}
