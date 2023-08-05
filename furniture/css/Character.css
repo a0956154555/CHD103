@@ -162,7 +162,7 @@ header .header-all .header-control-width {
 }
 @media (max-width: 450px) {
   header .header-all .header-control-width {
-    width: 450px;
+    max-width: 414px;
     padding-right: 0;
   }
 }
@@ -1756,7 +1756,7 @@ footer {
 footer .footer-width-control {
   position: relative;
   padding-top: 40px;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   width: 100%;
