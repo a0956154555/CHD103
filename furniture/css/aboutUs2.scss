@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  // overflow-x: hidden;
+
   font-family: "Montserrat", sans-serif;
 }
 header {
@@ -21,7 +21,7 @@ header {
       width: 100%;
       // height: 40vh;
       margin: 0 auto;
-      overflow: visible;
+      overflow-x: hidden;
       // border: 1px red solid;
       padding-left: 150px;
       padding-right: 150px;

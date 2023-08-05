@@ -22,7 +22,7 @@ header .header-all {
 header .header-all .header-control-width {
   width: 100%;
   margin: 0 auto;
-  overflow: visible;
+  overflow-x: hidden;
   padding-left: 150px;
   padding-right: 150px;
   display: flex;
