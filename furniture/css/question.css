@@ -272,6 +272,11 @@ header article {
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 414px) {
+  header article {
+    background-attachment: scroll;
+  }
+}
 header article .title-chinese {
   font-size: 60px;
   letter-spacing: 4px;
@@ -643,6 +648,11 @@ main .paper1 .sendBtn {
   font-size: 30px;
   letter-spacing: 3px;
   position: relative;
+}
+@media (max-width: 414px) {
+  .welcome .welcome-son {
+    width: 100%;
+  }
 }
 @media (max-width: 414px) {
   .welcome .welcome-son {
