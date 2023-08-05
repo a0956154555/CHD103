@@ -22,7 +22,6 @@ header .header-all {
 header .header-all .header-control-width {
   width: 100%;
   margin: 0 auto;
-  overflow-x: hidden;
   padding-left: 150px;
   padding-right: 150px;
   display: flex;
@@ -396,6 +395,7 @@ main .introduce-all {
   background-color: rgb(49, 48, 48);
   color: white;
   display: flex;
+  overflow-x: hidden;
 }
 main .introduce-all .introduce-service {
   position: relative;
