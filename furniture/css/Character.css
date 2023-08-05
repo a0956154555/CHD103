@@ -604,11 +604,6 @@ header .header-all .header-control-width .header-right .all-case .under-case a:h
   margin: 0px 10px;
   cursor: pointer;
 }
-@media (max-width: 414px) {
-  .jane-introduce .jane-page div {
-    padding: 15px;
-  }
-}
 .jane-introduce .jane-page div:first-child {
   background-color: white;
   color: black;

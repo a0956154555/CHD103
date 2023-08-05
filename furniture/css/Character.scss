@@ -590,9 +590,7 @@ header {
       color: white;
       margin: 0px 10px;
       cursor: pointer;
-      @media (max-width: 414px) {
-        padding: 15px;
-      }
+
       &:first-child {
         background-color: white;
         color: black;
