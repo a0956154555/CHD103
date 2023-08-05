@@ -243,12 +243,12 @@ window.addEventListener("load", function () {
   }, 2000);
 });
 
-bannerTeam.addEventListener("mouseover", function () {
-  bannerTop.style.transform = "translateX(0px)";
-  setTimeout(() => {
-    bannerTop.style.opacity = "1";
-  }, 1000);
-});
+// bannerTeam.addEventListener("mouseover", function () {
+//   bannerTop.style.transform = "translateX(0px)";
+//   setTimeout(() => {
+//     bannerTop.style.opacity = "1";
+//   }, 1000);
+// });
 
 let countDesignersTxt = 0;
 designersTxt.innerHTML = `<span>The </span>`;

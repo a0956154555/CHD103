@@ -590,6 +590,9 @@ header {
       color: white;
       margin: 0px 10px;
       cursor: pointer;
+      @media (max-width: 414px) {
+        padding: 15px;
+      }
       &:first-child {
         background-color: white;
         color: black;
@@ -1216,7 +1219,7 @@ header {
     width: 100%;
     height: 30vh;
 
-    opacity: 0;
+    opacity: 1;
     // background-image: url("../../furniture_img/CharacterBanner1.jpg"),
     //   url("../../furniture_img/CharacterBanner2.jpg"),
     //   url("../../furniture_img/CharacterBanner3.jpg");
@@ -1231,7 +1234,7 @@ header {
     align-items: flex-end;
     justify-content: center;
     letter-spacing: 3px;
-    transform: translateX(-2000px);
+
     transition: 1s;
     .chinese {
       font-size: 20px;
@@ -1725,6 +1728,11 @@ header {
         // padding: 5px 15px;
         border-radius: 10px;
         // background-color: black;
+      }
+    }
+    img {
+      @media (max-width: 414px) {
+        display: none;
       }
     }
   }
