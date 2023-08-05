@@ -31,20 +31,36 @@ setInterval(() => {
   }, 3500);
 }, 600);
 
+function isMobileDevice() {
+  return window.matchMedia("(max-width: 450px)").matches;
+}
 let lastScrollPosition = document.documentElement.scrollTop;
 window.addEventListener("scroll", function () {
   let currentScrollPosition = document.documentElement.scrollTop;
-
-  if (currentScrollPosition > lastScrollPosition) {
-    // 向下滑动
-    // alert("向下滑动");
-    // 可以在这里编写处理向下滑动的代码
-    finalTxt.style.fontSize = "50px";
+  if (isMobileDevice()) {
+    if (currentScrollPosition > lastScrollPosition) {
+      // 向下滑动
+      // alert("向下滑动");
+      // 可以在这里编写处理向下滑动的代码
+      finalTxt.style.fontSize = "40px";
+    } else {
+      // 向上滑动
+      // alert("向上滑动");
+      // 可以在这里编写处理向上滑动的代码
+      finalTxt.style.fontSize = "50px";
+    }
   } else {
-    // 向上滑动
-    // alert("向上滑动");
-    // 可以在这里编写处理向上滑动的代码
-    finalTxt.style.fontSize = "100px";
+    if (currentScrollPosition > lastScrollPosition) {
+      // 向下滑动
+      // alert("向下滑动");
+      // 可以在这里编写处理向下滑动的代码
+      finalTxt.style.fontSize = "50px";
+    } else {
+      // 向上滑动
+      // alert("向上滑动");
+      // 可以在这里编写处理向上滑动的代码
+      finalTxt.style.fontSize = "100px";
+    }
   }
 
   // 更新上一次滚动位置
@@ -644,5 +660,34 @@ headerMiddle.addEventListener("click", function () {
     headerRight.style.animation = "menuTranslate 1s forwards";
   } else {
     headerRight.style.display = "none";
+  }
+});
+
+// -------------------------------手機板
+let furnInput = document.querySelector("#furn-input");
+furnInput.addEventListener("input", function () {
+  if (this.value.toUpperCase() == "SOFA") {
+    sofaItemsAll.style.display = "flex";
+    bedItemsAll.style.display = "none";
+    tableItemsAll.style.display = "none";
+  } else if (this.value.toUpperCase() == "BED") {
+    sofaItemsAll.style.display = "none";
+    bedItemsAll.style.display = "flex";
+    tableItemsAll.style.display = "none";
+  } else if (this.value.toUpperCase() == "TABLE") {
+    sofaItemsAll.style.display = "none";
+    bedItemsAll.style.display = "none";
+    tableItemsAll.style.display = "flex";
+  }
+});
+
+let underClose = document.querySelector(".under-close");
+
+underClose.addEventListener("click", function () {
+  underCaseTrueOrFalse = !underCaseTrueOrFalse;
+  if (underCaseTrueOrFalse) {
+    underCase.style.display = "flex";
+  } else {
+    underCase.style.display = "none";
   }
 });

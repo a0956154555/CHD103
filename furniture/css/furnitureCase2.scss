@@ -2,24 +2,31 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  // overflow-x: hidden;
+
   font-family: "Montserrat", sans-serif;
 }
 header {
+  overflow-x: hidden;
   .header-all {
     width: 100%;
     position: fixed;
     top: 0px;
     color: white;
     z-index: 100;
+    @media (max-width: 414px) {
+      max-width: 414px;
+      width: 100%;
+    }
+    // border: 10px red solid;
+    background: rgba(0, 0, 0, 0.5);
     .header-control-width {
-      width: 1280px;
+      width: 100%;
       // height: 40vh;
       margin: 0 auto;
       overflow: visible;
       // border: 1px red solid;
       padding-left: 150px;
-      padding-right: 200px;
+      padding-right: 150px;
       display: flex;
       justify-content: space-between;
       // align-items: center;
@@ -27,6 +34,9 @@ header {
       background: rgba(0, 0, 0, 0.5);
       z-index: 100;
       transition: 0.5s;
+      @media (max-width: 414px) {
+        width: 100%;
+      }
       .header-left {
         display: flex;
         align-items: center;
@@ -40,14 +50,74 @@ header {
           width: 100px;
         }
       }
+      .header-middle {
+        width: 50px;
+        height: 50px;
+        // border: 2px red solid;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: none;
+        @media (max-width: 450px) {
+          position: fixed;
+          right: 30px;
+          width: 30px;
+          height: 50px;
+        }
+        span {
+          width: 80%;
+          height: 2px;
+          position: absolute;
+          background-color: white;
+          &:first-child {
+            top: 50%;
+          }
+          &:nth-child(2) {
+            top: 70%;
+          }
+        }
+        @media (max-width: 1150px) {
+          display: flex;
+        }
+      }
       .header-right {
         display: flex;
         // border: 1px red solid;
         align-items: flex-end;
         padding-bottom: 10px;
         text-shadow: #666 2px 1px 5px;
+        @media (max-width: 1150px) {
+          position: absolute;
+          flex-direction: column;
+          display: none;
+          width: 100%;
+          height: 100vh;
+          justify-content: flex-start;
+          align-items: center;
+          translate: -1200px 0px;
+          transition: 0.3s;
+          // bottom: 100%;
+          top: 100%;
+          left: 0%;
+          padding: 0px;
+          background-color: rgb(49, 48, 48);
+          // border: 10px red solid;
+        }
         div {
           padding-bottom: 8px;
+          @media (max-width: 1150px) {
+            height: calc(100% / 8 - 15px);
+            width: 100%;
+            border-bottom: 1px white solid;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          @media (max-width: 450px) {
+            height: auto;
+            padding: 30px;
+          }
           // border: 1px red solid;
           .first-page {
             color: white;
@@ -122,6 +192,11 @@ header {
           text-decoration: none;
           // padding-bottom: 3px;
           transition: 0.2s;
+          position: relative;
+          @media (max-width: 450px) {
+            display: flex;
+            flex-direction: column;
+          }
           .top-case {
             color: white;
             text-decoration: none;
@@ -141,17 +216,53 @@ header {
             position: absolute;
             overflow: white-space;
             white-space: nowrap;
+
             z-index: 101;
             padding-left: 15px;
             padding-right: 15px;
             padding-top: 15px;
-            background-color: rgba(30, 29, 29, 0.8);
+            // position: relative;
+            background-color: rgba(30, 29, 29, 1);
+            @media (max-width: 1150px) {
+              width: 100%;
+              height: 80vh;
+              top: -100%;
+            }
+            @media (max-width: 450px) {
+              width: 100%;
+              height: 30vh;
+              margin: 0 auto;
+              top: 60%;
+              position: static;
+            }
+            .under-close {
+              display: none;
+              @media (max-width: 1150px) {
+                display: flex;
+                // border: 1px red solid;
+                font-size: 25px;
+                justify-content: flex-end;
+                padding-right: 20px;
+                align-items: center;
+                // position: absolute;
+                // top: 10%;
+                // right: 10%;
+              }
+            }
             a {
               margin-bottom: 10px;
               color: white;
               text-decoration: none;
               overflow: white-space;
               white-space: nowrap;
+              @media (max-width: 1150px) {
+                height: calc(100% / 3);
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 1px white solid;
+              }
               &:hover {
                 color: rgba(223, 218, 218, 0.928);
               }
@@ -179,6 +290,9 @@ header {
     justify-content: center;
     padding-left: 50px;
     background-color: rgba(0, 0, 0, 0.8);
+    @media (max-width: 414px) {
+      background-attachment: scroll;
+    }
     .banner-txt {
       overflow: hidden;
       font-size: 80px;
@@ -192,6 +306,9 @@ header {
       font-size: 100px;
       letter-spacing: 3px;
       color: white;
+      @media (max-width: 414px) {
+        font-size: 50px;
+      }
     }
   }
 }
@@ -334,6 +451,9 @@ main {
         border-radius: 20px;
         font-size: 14px;
         color: white;
+        @media (max-width: 414px) {
+          display: none;
+        }
         &:hover {
           animation: btnRotate 0.3s infinite;
           color: gray;
@@ -401,6 +521,9 @@ main {
         display: flex;
         justify-content: space-between;
         margin-bottom: 20px;
+        @media (max-width: 414px) {
+          flex-direction: column;
+        }
         .sofa-items,
         .bed-items,
         .table-items {
@@ -410,7 +533,10 @@ main {
           display: flex;
           flex-direction: column;
           position: relative;
-
+          @media (max-width: 414px) {
+            width: 100%;
+            margin-bottom: 20px;
+          }
           .sofa-items-pic,
           .bed-items-pic,
           .table-items-pic {
@@ -513,6 +639,11 @@ footer {
     width: 100%;
     height: 50vh;
     background-color: #cec5ba;
+    // border: 1px red solid;
+    @media (max-width: 900px) {
+      height: 30vh;
+      padding: 0px 15px;
+    }
     // background-image: url(../../furniture_img/Group\ 3.svg);
     // background-repeat: no-repeat;
     // background-size: cover;
@@ -522,14 +653,28 @@ footer {
       display: flex;
       //   border: 1px red solid;
       color: #423e44;
+      @media (max-width: 1100px) {
+        width: 80%;
+      }
       .footer-left {
         // border: 1px red solid;
         margin-right: 80px;
         line-height: 30px;
         padding-right: 15px;
+        @media (max-width: 1100px) {
+          margin: 0px;
+          margin-right: 0px;
+          width: calc(100% / 3 - 30px);
+        }
+        @media (max-width: 450px) {
+          display: none;
+        }
         h4 {
           font-size: 18px;
           margin-bottom: 15px;
+          @media (max-width: 900px) {
+            font-size: 16px;
+          }
         }
         a {
           font-weight: 300;
@@ -552,6 +697,9 @@ footer {
         @media (max-width: 1100px) {
           margin: 0px;
           width: calc(100% / 3 - 20px);
+        }
+        @media (max-width: 450px) {
+          display: none;
         }
         .business {
           // border: 1px red solid;
@@ -598,6 +746,14 @@ footer {
         div {
           font-weight: 300;
           letter-spacing: 3px;
+          @media (max-width: 1150px) {
+            letter-spacing: 2px;
+            font-size: 14px;
+          }
+          @media (max-width: 450px) {
+            font-size: 12px;
+            letter-spacing: 1px;
+          }
         }
       }
     }
@@ -607,6 +763,9 @@ footer {
       letter-spacing: 3px;
       font-weight: 300;
       font-size: 12px;
+      @media (max-width: 450px) {
+        display: none;
+      }
     }
   }
 }

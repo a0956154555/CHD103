@@ -21,7 +21,6 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="../css/furnitureCase2.css" />
-    <link rel="stylesheet" href="../css/headerFooterAll.css" />
     <title>Document</title>
   </head>
   <body>
@@ -44,6 +43,7 @@
               <a href="#" class="top-case">案例分享</a
               ><i class="fa-solid fa-caret-down"></i>
               <div class="under-case">
+                <div class="under-close">X</div>
                 <a href="../html/furnitureCase2.html">家具案例</a>
                 <a href="#">窗飾案例</a>
                 <a href="../html/designCase.html">軟裝案例</a>
@@ -299,6 +299,12 @@
           <div class="btn-item sofa-btn">SOFA</div>
           <div class="btn-item bed-btn">BED</div>
           <div class="btn-item table-btn">TABLE</div>
+          <input type="text" list="furn-select" id="furn-input" />
+          <datalist id="furn-select">
+            <option>SOFA</option>
+            <option>BED</option>
+            <option>TABLE</option>
+          </datalist>
           <div class="favorite-list">
             已加心數 : <span class="favorite-list-num">0</span>
           </div>
