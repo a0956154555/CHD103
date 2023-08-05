@@ -282,6 +282,11 @@ header article {
     background-size: cover;
   }
 }
+@media (max-width: 414px) {
+  header article {
+    font-size: 50px;
+  }
+}
 header article::after {
   content: "";
   width: 5%;
@@ -306,6 +311,11 @@ main .about-black-sign .aboutUs-title {
   font-size: 30px;
   color: white;
 }
+@media (max-width: 414px) {
+  main .about-black-sign .aboutUs-title {
+    width: 100%;
+  }
+}
 main .about-black-sign .aboutUs-title .company {
   position: relative;
   display: flex;
@@ -314,6 +324,11 @@ main .about-black-sign .aboutUs-title .company {
   letter-spacing: 3px;
   font-size: 40px;
   height: 40%;
+}
+@media (max-width: 414px) {
+  main .about-black-sign .aboutUs-title .company {
+    font-size: 30px;
+  }
 }
 main .about-black-sign .aboutUs-title .company::after {
   content: "";
@@ -339,6 +354,13 @@ main .about-black-sign .aboutUs-title .aboutUs-Anthony {
   letter-spacing: 4px;
   border-right: 1px white solid;
 }
+@media (max-width: 414px) {
+  main .about-black-sign .aboutUs-title .aboutUs-Anthony {
+    border: none;
+    letter-spacing: 0px;
+    padding-right: 30px;
+  }
+}
 main .about-black-sign .last-text {
   width: 50%;
   display: flex;
@@ -348,6 +370,11 @@ main .about-black-sign .last-text {
   letter-spacing: 4px;
   line-height: 40px;
   writing-mode: vertical-rl;
+}
+@media (max-width: 414px) {
+  main .about-black-sign .last-text {
+    display: none;
+  }
 }
 main .same-banner-pic {
   height: 100vh;
@@ -369,6 +396,11 @@ main .introduce-all .introduce-service {
   position: relative;
   width: 50%;
   height: 100%;
+}
+@media (max-width: 414px) {
+  main .introduce-all .introduce-service {
+    width: 100%;
+  }
 }
 main .introduce-all .introduce-service .service-all {
   display: flex;
@@ -459,6 +491,11 @@ main .introduce-all .introduce-right-all {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+}
+@media (max-width: 414px) {
+  main .introduce-all .introduce-right-all {
+    display: none;
+  }
 }
 main .introduce-all .introduce-right-all img {
   width: 35px;
