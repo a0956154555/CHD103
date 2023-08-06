@@ -331,7 +331,9 @@ header {
   background-color: rgb(37, 37, 37);
   display: none;
   flex-direction: column;
-
+  @media (max-width: 414px) {
+    height: 50vh;
+  }
   .mini-close,
   .bon-close,
   .corner-close,
@@ -377,6 +379,11 @@ header {
       display: flex;
       overflow: hidden;
       transition: 0.5s;
+      @media (max-width: 414px) {
+        width: 250px;
+        height: 80%;
+        // border: 1px red solid;
+      }
       .mini-translate,
       .bon-translate,
       .corner-translate,
@@ -386,6 +393,11 @@ header {
         width: 100%;
         transform: translateX(-900px);
         transition: 1s;
+        @media (max-width: 414px) {
+          transform: translateX(-750px);
+
+          width: 250px;
+        }
       }
       .bonjour-translate {
         width: 100%;
@@ -502,6 +514,9 @@ main {
           left: 10%;
           top: 50%;
           border-top: 1px white solid;
+          @media (max-width: 414px) {
+            display: none;
+          }
         }
         &::after {
           position: absolute;
@@ -511,6 +526,9 @@ main {
           left: 60%;
           top: 50%;
           border-top: 1px white solid;
+          @media (max-width: 414px) {
+            display: none;
+          }
         }
       }
       .coltrol-items-width1,
