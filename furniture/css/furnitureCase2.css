@@ -6386,6 +6386,10 @@ main .main-control .furniture-control-btn .showDatalist {
     display: flex;
   }
 }
+main .main-control .furniture-control-btn .showDatalist #furn-input {
+  width: 200px;
+  height: 30px;
+}
 main .main-control .sofa-items-all,
 main .main-control .bed-items-all,
 main .main-control .table-items-all {

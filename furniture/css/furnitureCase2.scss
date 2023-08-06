@@ -490,6 +490,10 @@ main {
         @media (max-width: 414px) {
           display: flex;
         }
+        #furn-input {
+          width: 200px;
+          height: 30px;
+        }
       }
     }
     .sofa-items-all,
