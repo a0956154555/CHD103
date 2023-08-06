@@ -485,6 +485,12 @@ main {
           color: rgb(204, 21, 21);
         }
       }
+      .showDatalist {
+        display: none;
+        @media (max-width: 414px) {
+          display: flex;
+        }
+      }
     }
     .sofa-items-all,
     .bed-items-all,

@@ -6378,6 +6378,14 @@ main .main-control .furniture-control-btn .favorite-list .favorite-list-num {
   font-size: 20px;
   color: rgb(204, 21, 21);
 }
+main .main-control .furniture-control-btn .showDatalist {
+  display: none;
+}
+@media (max-width: 414px) {
+  main .main-control .furniture-control-btn .showDatalist {
+    display: flex;
+  }
+}
 main .main-control .sofa-items-all,
 main .main-control .bed-items-all,
 main .main-control .table-items-all {

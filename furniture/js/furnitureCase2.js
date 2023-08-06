@@ -192,87 +192,203 @@ function isMobileDevice() {
   return window.matchMedia("(max-width: 414px)").matches;
 }
 // bonjour---------------
+let controlBonjourPic = document.querySelector(".control-bonjour-pic");
+let bonjourTranslateNumPhone = -750;
+
 bonjourLeftSide.addEventListener("click", function () {
-  bonjourTranslateNum -= 300;
+  if (isMobileDevice()) {
+    bonjourTranslateNumPhone -= 250;
+    if (bonjourTranslateNumPhone <= -750) {
+      bonjourTranslateNumPhone = -750;
+    }
+    for (let i = 0; i < bonjourTranslate.length; i++) {
+      bonjourTranslate[
+        i
+      ].style.transform = `translateX(${bonjourTranslateNumPhone}px)`;
+    }
+  } else {
+    bonjourTranslateNum -= 300;
+    if (bonjourTranslateNum <= -900) {
+      bonjourTranslateNum = -900;
+      bonjourPageNum = 1;
+      bonjourPage.innerHTML = bonjourPageNum;
+    }
+    for (let i = 0; i < bonjourTranslate.length; i++) {
+      bonjourTranslate[
+        i
+      ].style.transform = `translateX(${bonjourTranslateNum}px)`;
+    }
+  }
+
   bonjourPageNum--;
-  bonjourPage.innerHTML = bonjourPageNum;
-  if (bonjourTranslateNum <= -900) {
-    bonjourTranslateNum = -900;
+  if (bonjourPageNum <= 0) {
     bonjourPageNum = 1;
-    bonjourPage.innerHTML = bonjourPageNum;
   }
-  for (let i = 0; i < bonjourTranslate.length; i++) {
-    bonjourTranslate[
-      i
-    ].style.transform = `translateX(${bonjourTranslateNum}px)`;
-  }
+  bonjourPage.innerHTML = bonjourPageNum;
 });
 bonjourRightSide.addEventListener("click", function () {
-  bonjourTranslateNum += 300;
-  bonjourPageNum++;
+  if (bonjourPageNum < 4) {
+    bonjourPageNum++;
+    bonjourPage.innerHTML = bonjourPageNum;
+  }
 
   if (bonjourTranslateNum >= 0) {
     bonjourTranslateNum = 0;
     bonjourPageNum = 4;
+    bonjourPage.innerHTML = bonjourPageNum;
   }
-  bonjourPage.innerHTML = bonjourPageNum;
-  for (let i = 0; i < bonjourTranslate.length; i++) {
-    bonjourTranslate[
-      i
-    ].style.transform = `translateX(${bonjourTranslateNum}px)`;
+  if (isMobileDevice()) {
+    bonjourTranslateNumPhone += 250;
+    if (bonjourTranslateNumPhone >= 0) {
+      bonjourTranslateNumPhone = 0;
+    }
+    for (let i = 0; i < bonjourTranslate.length; i++) {
+      bonjourTranslate[
+        i
+      ].style.transform = `translateX(${bonjourTranslateNumPhone}px)`;
+    }
+  } else {
+    bonjourTranslateNum += 300;
+    if (bonjourTranslateNum >= 0) {
+      bonjourTranslateNum = 0;
+    }
+    for (let i = 0; i < bonjourTranslate.length; i++) {
+      bonjourTranslate[
+        i
+      ].style.transform = `translateX(${bonjourTranslateNum}px)`;
+    }
   }
 });
 // oliver----------------
+let controlOliverPic = document.querySelector(".control-oliver-pic");
+let oliverTranslateNumPhone = -750;
+
 oliverLeftSide.addEventListener("click", function () {
-  oliverTranslateNum -= 300;
+  if (isMobileDevice()) {
+    oliverTranslateNumPhone -= 250;
+    if (oliverTranslateNumPhone <= -750) {
+      oliverTranslateNumPhone = -750;
+    }
+    for (let i = 0; i < oliverTranslate.length; i++) {
+      oliverTranslate[
+        i
+      ].style.transform = `translateX(${oliverTranslateNumPhone}px)`;
+    }
+  } else {
+    oliverTranslateNum -= 300;
+    if (oliverTranslateNum <= -900) {
+      oliverTranslateNum = -900;
+      oliverPageNum = 1;
+      oliverPage.innerHTML = oliverPageNum;
+    }
+    for (let i = 0; i < oliverTranslate.length; i++) {
+      oliverTranslate[
+        i
+      ].style.transform = `translateX(${oliverTranslateNum}px)`;
+    }
+  }
+
   oliverPageNum--;
-  oliverPage.innerHTML = oliverPageNum;
-  if (oliverTranslateNum <= -900) {
-    oliverTranslateNum = -900;
+  if (oliverPageNum <= 0) {
     oliverPageNum = 1;
-    oliverPage.innerHTML = oliverPageNum;
   }
-  for (let i = 0; i < oliverTranslate.length; i++) {
-    oliverTranslate[i].style.transform = `translateX(${oliverTranslateNum}px)`;
-  }
+  oliverPage.innerHTML = oliverPageNum;
 });
 oliverRightSide.addEventListener("click", function () {
-  oliverTranslateNum += 300;
-  oliverPageNum++;
+  if (oliverPageNum < 4) {
+    oliverPageNum++;
+    oliverPage.innerHTML = oliverPageNum;
+  }
 
   if (oliverTranslateNum >= 0) {
     oliverTranslateNum = 0;
     oliverPageNum = 4;
+    oliverPage.innerHTML = oliverPageNum;
   }
-  oliverPage.innerHTML = oliverPageNum;
-  for (let i = 0; i < oliverTranslate.length; i++) {
-    oliverTranslate[i].style.transform = `translateX(${oliverTranslateNum}px)`;
+  if (isMobileDevice()) {
+    oliverTranslateNumPhone += 250;
+    if (oliverTranslateNumPhone >= 0) {
+      oliverTranslateNumPhone = 0;
+    }
+    for (let i = 0; i < oliverTranslate.length; i++) {
+      oliverTranslate[
+        i
+      ].style.transform = `translateX(${oliverTranslateNumPhone}px)`;
+    }
+  } else {
+    oliverTranslateNum += 300;
+    if (oliverTranslateNum >= 0) {
+      oliverTranslateNum = 0;
+    }
+    for (let i = 0; i < oliverTranslate.length; i++) {
+      oliverTranslate[
+        i
+      ].style.transform = `translateX(${oliverTranslateNum}px)`;
+    }
   }
 });
 // loka------------------
+let controlLokaPic = document.querySelector(".control-loka-pic");
+let lokaTranslateNumPhone = -750;
+
 lokaLeftSide.addEventListener("click", function () {
-  lokaTranslateNum -= 300;
+  if (isMobileDevice()) {
+    lokaTranslateNumPhone -= 250;
+    if (lokaTranslateNumPhone <= -750) {
+      lokaTranslateNumPhone = -750;
+    }
+    for (let i = 0; i < lokaTranslate.length; i++) {
+      lokaTranslate[
+        i
+      ].style.transform = `translateX(${lokaTranslateNumPhone}px)`;
+    }
+  } else {
+    lokaTranslateNum -= 300;
+    if (lokaTranslateNum <= -900) {
+      lokaTranslateNum = -900;
+      lokaPageNum = 1;
+      lokaPage.innerHTML = lokaPageNum;
+    }
+    for (let i = 0; i < lokaTranslate.length; i++) {
+      lokaTranslate[i].style.transform = `translateX(${lokaTranslateNum}px)`;
+    }
+  }
+
   lokaPageNum--;
-  lokaPage.innerHTML = lokaPageNum;
-  if (lokaTranslateNum <= -900) {
-    lokaTranslateNum = -900;
+  if (lokaPageNum <= 0) {
     lokaPageNum = 1;
-    lokaPage.innerHTML = lokaPageNum;
   }
-  for (let i = 0; i < lokaTranslate.length; i++) {
-    lokaTranslate[i].style.transform = `translateX(${lokaTranslateNum}px)`;
-  }
+  lokaPage.innerHTML = lokaPageNum;
 });
 lokaRightSide.addEventListener("click", function () {
-  lokaTranslateNum += 300;
-  lokaPageNum++;
+  if (lokaPageNum < 4) {
+    lokaPageNum++;
+    lokaPage.innerHTML = lokaPageNum;
+  }
+
   if (lokaTranslateNum >= 0) {
     lokaTranslateNum = 0;
     lokaPageNum = 4;
+    lokaPage.innerHTML = lokaPageNum;
   }
-  lokaPage.innerHTML = lokaPageNum;
-  for (let i = 0; i < lokaTranslate.length; i++) {
-    lokaTranslate[i].style.transform = `translateX(${lokaTranslateNum}px)`;
+  if (isMobileDevice()) {
+    lokaTranslateNumPhone += 250;
+    if (lokaTranslateNumPhone >= 0) {
+      lokaTranslateNumPhone = 0;
+    }
+    for (let i = 0; i < lokaTranslate.length; i++) {
+      lokaTranslate[
+        i
+      ].style.transform = `translateX(${lokaTranslateNumPhone}px)`;
+    }
+  } else {
+    lokaTranslateNum += 300;
+    if (lokaTranslateNum >= 0) {
+      lokaTranslateNum = 0;
+    }
+    for (let i = 0; i < lokaTranslate.length; i++) {
+      lokaTranslate[i].style.transform = `translateX(${lokaTranslateNum}px)`;
+    }
   }
 });
 // homeBed---------------
