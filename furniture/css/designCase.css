@@ -132,6 +132,11 @@ header .about-us .about-banner {
   width: 25%;
   height: 100%;
 }
+@media (max-width: 414px) {
+  header .about-us .about-banner {
+    display: none;
+  }
+}
 header .about-us .about-banner:first-child {
   width: 25%;
   height: 100%;
@@ -142,6 +147,12 @@ header .about-us .about-banner:first-child {
   background-size: cover;
   position: relative;
   transition: 0.5s;
+}
+@media (max-width: 414px) {
+  header .about-us .about-banner:first-child {
+    display: block;
+    width: 100%;
+  }
 }
 header .about-us .about-banner:first-child:hover {
   width: 50%;
@@ -322,6 +333,9 @@ header .about-us .about-banner:nth-child(4):hover::after {
   #app .person {
     flex-direction: column;
     height: auto;
+    background-color: white;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
   }
 }
 #app .person .txt {
@@ -354,6 +368,12 @@ header .about-us .about-banner:nth-child(4):hover::after {
   line-height: 2;
   width: 80%;
 }
+@media (max-width: 414px) {
+  #app .person .txt .person-txt {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
 #app .person .txt .person-txt .proficient {
   position: absolute;
   left: 50%;
@@ -364,6 +384,12 @@ header .about-us .about-banner:nth-child(4):hover::after {
   font-size: 14px;
   border-radius: 10px;
   cursor: pointer;
+}
+@media (max-width: 414px) {
+  #app .person .txt .person-txt .proficient {
+    position: static;
+    transform: translateX(0%);
+  }
 }
 #app .person .txt .person-txt .personality {
   position: absolute;
@@ -376,6 +402,13 @@ header .about-us .about-banner:nth-child(4):hover::after {
   border-radius: 10px;
   cursor: pointer;
 }
+@media (max-width: 414px) {
+  #app .person .txt .person-txt .personality {
+    position: static;
+    margin-bottom: 10px;
+    transform: translateX(0%);
+  }
+}
 #app .person .txt .person-txt .introduction {
   position: absolute;
   left: 61.7%;
@@ -386,6 +419,13 @@ header .about-us .about-banner:nth-child(4):hover::after {
   font-size: 14px;
   border-radius: 10px;
   cursor: pointer;
+}
+@media (max-width: 414px) {
+  #app .person .txt .person-txt .introduction {
+    position: static;
+    margin-bottom: 10px;
+    transform: translateX(0%);
+  }
 }
 #app .person .pic {
   width: 20%;
@@ -560,8 +600,9 @@ header .about-us .about-banner:nth-child(4):hover::after {
 }
 @media (max-width: 414px) {
   #app .favorite .mostLikeAll .mostLike {
-    height: 150px;
+    height: 200px;
     width: 100%;
+    margin-right: 0px;
   }
 }
 #app .favorite .mostLikeAll .mostLike:hover .close-favorite {

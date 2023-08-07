@@ -154,6 +154,9 @@ header {
       width: 25%;
       height: 100%;
       //   border: 1px red solid;
+      @media (max-width: 414px) {
+        display: none;
+      }
       &:first-child {
         width: 25%;
         height: 100%;
@@ -165,6 +168,10 @@ header {
 
         position: relative;
         transition: 0.5s;
+        @media (max-width: 414px) {
+          display: block;
+          width: 100%;
+        }
         &:hover {
           width: 50%;
         }
@@ -346,6 +353,9 @@ header {
     @media (max-width: 414px) {
       flex-direction: column;
       height: auto;
+      background-color: white;
+      margin-bottom: 0px;
+      padding-bottom: 0px;
     }
     .txt {
       width: 80%;
@@ -377,7 +387,10 @@ header {
         width: 80%;
         // position: relative;
         // border: 1px red solid;
-
+        @media (max-width: 414px) {
+          display: flex;
+          flex-direction: column-reverse;
+        }
         .proficient {
           position: absolute;
           left: 50%;
@@ -388,6 +401,11 @@ header {
           font-size: 14px;
           border-radius: 10px;
           cursor: pointer;
+          @media (max-width: 414px) {
+            position: static;
+
+            transform: translateX(0%);
+          }
         }
         .personality {
           position: absolute;
@@ -399,6 +417,11 @@ header {
           font-size: 14px;
           border-radius: 10px;
           cursor: pointer;
+          @media (max-width: 414px) {
+            position: static;
+            margin-bottom: 10px;
+            transform: translateX(0%);
+          }
         }
         .introduction {
           position: absolute;
@@ -410,6 +433,11 @@ header {
           font-size: 14px;
           border-radius: 10px;
           cursor: pointer;
+          @media (max-width: 414px) {
+            position: static;
+            margin-bottom: 10px;
+            transform: translateX(0%);
+          }
         }
       }
     }
@@ -589,8 +617,9 @@ header {
         overflow: hidden;
         position: relative;
         @media (max-width: 414px) {
-          height: 150px;
+          height: 200px;
           width: 100%;
+          margin-right: 0px;
         }
         &:hover .close-favorite {
           display: flex;
