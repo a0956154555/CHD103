@@ -295,6 +295,10 @@ createApp({
       userSearch: "",
       noticeFalse: false,
       favoriteArr: [],
+      memberJane: 0,
+      memberJustin: 0,
+      memberNelson: 0,
+      memberDandy: 0,
       imgSrcArr: [
         "../../furniture_img3/characterPic1.jpg",
         "../../furniture_img3/characterPic2.jpg",
@@ -432,12 +436,16 @@ createApp({
     pushFavorite(val, i) {
       if (this.favoriteArr.indexOf(val) == -1 && i <= 4) {
         this.favoriteArr.push([val, this.janeName]);
+        this.memberJane++;
       } else if (this.favoriteArr.indexOf(val) == -1 && i >= 4 && i <= 8) {
         this.favoriteArr.push([val, this.justinName]);
+        this.memberJustin++;
       } else if (this.favoriteArr.indexOf(val) == -1 && i >= 8 && i <= 12) {
         this.favoriteArr.push([val, this.nelsonName]);
+        this.memberNelson++;
       } else if (this.favoriteArr.indexOf(val) == -1 && i > 12) {
         this.favoriteArr.push([val, this.dandyName]);
+        this.memberDandy++;
       }
 
       console.log(this.favoriteArr);

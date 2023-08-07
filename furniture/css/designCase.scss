@@ -470,6 +470,7 @@ header {
         }
       }
     }
+
     .pic {
       width: 20%;
       height: 100%;
@@ -700,6 +701,22 @@ header {
           width: 100%;
           scale: 2;
         }
+      }
+    }
+  }
+  .designerMember {
+    color: white;
+    display: flex;
+    justify-content: center;
+
+    align-items: center;
+    @media (max-width: 414px) {
+      flex-direction: column;
+    }
+    div {
+      margin-right: 20px;
+      @media (max-width: 414px) {
+        margin-bottom: 10px;
       }
     }
   }
