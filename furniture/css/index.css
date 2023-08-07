@@ -60,12 +60,32 @@
   cursor: pointer;
   margin-top: 30px;
 }
+@media (max-width: 414px) {
+  .sign-in-program .sign-in-border .send {
+    width: 250px;
+  }
+}
 .sign-in-program .sign-in-border .sign-in-title {
   font-size: 30px;
+}
+@media (max-width: 414px) {
+  .sign-in-program .sign-in-border .sign-in-title {
+    color: white;
+  }
 }
 .sign-in-program .sign-in-border .sign-in-type {
   margin-top: 30px;
   margin-bottom: 20px;
+}
+@media (max-width: 414px) {
+  .sign-in-program .sign-in-border .sign-in-type input {
+    width: 200px;
+  }
+}
+@media (max-width: 414px) {
+  .sign-in-program .sign-in-border #pass {
+    width: 200px;
+  }
 }
 .sign-in-program .sign-in-border .three-times {
   animation: none;
@@ -345,7 +365,7 @@ header .banner {
 }
 @media (max-width: 450px) {
   header .banner {
-    height: 38vh;
+    height: 45vh;
   }
 }
 header .banner img {
