@@ -43,6 +43,7 @@
               <a href="#" class="top-case">案例分享</a
               ><i class="fa-solid fa-caret-down"></i>
               <div class="under-case">
+                <div class="under-close">X</div>
                 <a href="../html/furnitureCase2.html">家具案例</a>
                 <a href="#">窗飾案例</a>
                 <a href="../html/designCase.html">軟裝案例</a>
@@ -181,10 +182,17 @@
         </div>
       </article>
       <article class="designerMember" v-if="favoriteArr.length !== 0">
-        <div v-if="memberJane > 0">Jane : {{memberJane}}件</div>
-        <div v-if="memberJustin > 0">Justin : {{memberJustin}}件</div>
-        <div v-if="memberNelson > 0">Nelson : {{memberNelson}}件</div>
-        <div v-if="memberDandy > 0">Dandy : {{memberDandy}}件</div>
+        <div v-if="memberJane">Jane : {{memberJane}}件</div>
+        <div v-if="memberJustin">Justin : {{memberJustin}}件</div>
+        <div v-if="memberNelson">Nelson : {{memberNelson}}件</div>
+        <div v-if="memberDandy">Dandy : {{memberDandy}}件</div>
+        <div
+          v-if="memberJane || memberJustin || memberNelson || memberDandy"
+          class="clear-all-shops"
+          @click="clearAllShops"
+        >
+          一鍵清除
+        </div>
       </article>
       <section class="notice" v-if="noticeFalse">
         <div class="notice-main">

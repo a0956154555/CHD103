@@ -71,3 +71,12 @@ collapse.addEventListener("click", function () {
 underBannerTxt.addEventListener("click", function () {
   underBannerTxt.style.padding = "50px 10px";
 });
+let underClose = document.querySelector(".under-close");
+underClose.addEventListener("click", function () {
+  underCaseTrueOrFalse = !underCaseTrueOrFalse;
+  if (underCaseTrueOrFalse) {
+    underCase.style.display = "flex";
+  } else {
+    underCase.style.display = "none";
+  }
+});

@@ -456,6 +456,9 @@ createApp({
     closeNotice() {
       this.noticeFalse = false;
     },
+    clearAllShops() {
+      this.favoriteArr = [];
+    },
   },
   computed: {
     controlAllBox() {
