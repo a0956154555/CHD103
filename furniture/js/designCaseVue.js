@@ -13,6 +13,8 @@ createApp({
       delayNone: true,
       designerTxt: "",
       favoriteList: false,
+      disappearMostLikeTrue: [false, false, false, false],
+      currentIndex: 0,
       designerTxtArr: [
         "當",
         "一",
@@ -451,6 +453,15 @@ createApp({
       console.log(this.favoriteArr);
     },
     deleteFavorite(index) {
+      if (this.favoriteArr[index][1] == this.janeName) {
+        this.memberJane--;
+      } else if (this.favoriteArr[index][1] == this.justinName) {
+        this.memberJustin--;
+      } else if (this.favoriteArr[index][1] == this.nelsonName) {
+        this.memberNelson--;
+      } else if (this.favoriteArr[index][1] == this.dandyName) {
+        this.memberDandy--;
+      }
       this.favoriteArr.splice(index, 1);
     },
     closeNotice() {
@@ -458,6 +469,43 @@ createApp({
     },
     clearAllShops() {
       this.favoriteArr = [];
+      this.memberJane = 0;
+      this.memberJustin = 0;
+      this.memberNelson = 0;
+      this.memberDandy = 0;
+    },
+    // dealBtn() {
+    //   const interval = 1000; // 设置每隔1秒执行一次样式变化
+    //   this.currentIndex = 0;
+    //   this.animateItems(interval);
+    // },
+    // animateItems(interval) {
+    //   if (this.currentIndex < this.disappearMostLikeTrue.length) {
+    //     this.disappearMostLikeTrue[this.currentIndex] = true;
+    //     this.currentIndex++;
+    //     setTimeout(() => {
+    //       this.animateItems(interval);
+    //     }, interval);
+    //   }
+    // },
+    dealBtn() {
+      const interval = 300; // 设置每隔1秒执行一次样式变化
+      this.currentIndex = this.disappearMostLikeTrue.length - 1; // 从最后一个元素开始
+      this.animateItems(interval);
+    },
+    animateItems(interval) {
+      if (this.currentIndex >= 0) {
+        this.disappearMostLikeTrue[this.currentIndex] = true;
+        this.currentIndex--;
+        setTimeout(() => {
+          this.animateItems(interval);
+        }, interval);
+      } else {
+        // 动画结束后，将元素从文档中移除
+        setTimeout(() => {
+          this.favoriteArr = [];
+        }, interval);
+      }
     },
   },
   computed: {

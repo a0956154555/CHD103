@@ -174,7 +174,12 @@
       <article class="favorite">
         <div class="favorite-title">{{favoriteTitle}}</div>
         <div class="mostLikeAll">
-          <div v-for="(i,index) in favoriteArr" :key="i" class="mostLike">
+          <div
+            v-for="(i,index) in favoriteArr"
+            :key="i"
+            class="mostLike"
+            :class="{'disappearMostLike' :disappearMostLikeTrue[index] }"
+          >
             <div class="close-favorite" @click="deleteFavorite(index)">X</div>
             <img :src="i[0]" alt="" />
             <div class="favoriteName">CreatedBy : {{i[1]}}</div>
@@ -193,6 +198,18 @@
         >
           一鍵清除
         </div>
+        <div
+          v-if="memberJane || memberJustin || memberNelson || memberDandy"
+          class="deal-all-shops"
+          @click="dealBtn"
+        >
+          選好了!
+        </div>
+        <!-- <div
+          v-if="memberJane || memberJustin || memberNelson || memberDandy && favoriteArr!"
+        >
+          {{}}
+        </div> -->
       </article>
       <section class="notice" v-if="noticeFalse">
         <div class="notice-main">

@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  // overflow-x: hidden;
+  overflow-x: hidden;
   font-family: "Montserrat", sans-serif;
 }
 header {
@@ -853,6 +853,9 @@ header {
           scale: 2;
         }
       }
+      .disappearMostLike {
+        animation: 5s mostLikeDisappear forwards;
+      }
     }
   }
   .designerMember {
@@ -880,6 +883,19 @@ header {
       }
       @media (max-width: 414px) {
         background-color: white;
+        color: black;
+      }
+    }
+    .deal-all-shops {
+      border: 1px #ffcf48 solid;
+      padding: 5px 20px;
+      cursor: pointer;
+      &:hover {
+        background-color: #ffcf48;
+        color: black;
+      }
+      @media (max-width: 414px) {
+        background-color: #ffcf48;
         color: black;
       }
     }
@@ -1108,5 +1124,19 @@ footer {
   100% {
     opacity: 1;
     translate: 0px 0px;
+  }
+}
+@keyframes mostLikeDisappear {
+  0% {
+    opacity: 1;
+    translate: 0px 0px;
+  }
+  50% {
+    opacity: 0.5;
+    translate: 800px 0px;
+  }
+  100% {
+    opacity: 1;
+    translate: 1800px 0px;
   }
 }

@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -836,6 +837,9 @@ header .about-us .collapse {
   width: 100%;
   scale: 2;
 }
+#app .favorite .mostLikeAll .disappearMostLike {
+  animation: 5s mostLikeDisappear forwards;
+}
 #app .designerMember {
   color: white;
   display: flex;
@@ -868,6 +872,21 @@ header .about-us .collapse {
 @media (max-width: 414px) {
   #app .designerMember .clear-all-shops {
     background-color: white;
+    color: black;
+  }
+}
+#app .designerMember .deal-all-shops {
+  border: 1px #ffcf48 solid;
+  padding: 5px 20px;
+  cursor: pointer;
+}
+#app .designerMember .deal-all-shops:hover {
+  background-color: #ffcf48;
+  color: black;
+}
+@media (max-width: 414px) {
+  #app .designerMember .deal-all-shops {
+    background-color: #ffcf48;
     color: black;
   }
 }
@@ -1105,5 +1124,19 @@ footer .footer-width-control .last-text {
   100% {
     opacity: 1;
     translate: 0px 0px;
+  }
+}
+@keyframes mostLikeDisappear {
+  0% {
+    opacity: 1;
+    translate: 0px 0px;
+  }
+  50% {
+    opacity: 0.5;
+    translate: 800px 0px;
+  }
+  100% {
+    opacity: 1;
+    translate: 1800px 0px;
   }
 }/*# sourceMappingURL=designCase.css.map */
