@@ -287,10 +287,11 @@ header .about-us .collapse {
     justify-content: center;
     font-size: 16px;
     transition: 1s;
-    width: 30px;
+    width: 50px;
   }
   header .about-us .collapse img {
     rotate: 270deg;
+    width: 50px;
     animation: arrowMoveX 2s infinite;
     transition: 0.3s;
   }
@@ -309,6 +310,7 @@ header .about-us .collapse {
   position: relative;
   background-color: #d0baa1;
   padding: 50px;
+  transition: 0.8s;
 }
 @media (max-width: 414px) {
   #app .under-banner-txt {
@@ -469,6 +471,9 @@ header .about-us .collapse {
   #app .person .pic {
     width: 110%;
     vertical-align: top;
+    height: 0px;
+    opacity: 0;
+    transition: 0.5s;
   }
 }
 #app .person .pic:first-child img {
@@ -482,6 +487,11 @@ header .about-us .collapse {
   #app .person .pic img {
     width: 100%;
   }
+}
+#app .person .show-pic {
+  height: 100%;
+  opacity: 1;
+  transition: 4s;
 }
 #app .allCase {
   width: 90%;
@@ -899,7 +909,7 @@ footer .footer-width-control .last-text {
     translate: 0px 0px;
   }
   50% {
-    translate: -5px 0px;
+    translate: -15px 0px;
   }
   100% {
     translate: 0px 0px;

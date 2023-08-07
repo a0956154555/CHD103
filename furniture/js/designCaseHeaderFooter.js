@@ -39,6 +39,8 @@ let humanNum = 1;
 let aboutFstChild = document.querySelector(".about-banner:first-child");
 let collapse = document.querySelector(".collapse");
 let aboutUs = document.querySelector(".about-us");
+let underBannerTxt = document.querySelector(".under-banner-txt");
+
 window.addEventListener("load", function () {
   if (isMobileDevice()) {
     aboutFstChild.style.transition = "1s";
@@ -61,4 +63,11 @@ collapse.addEventListener("click", function () {
     aboutUs.style.height = "0";
     aboutUs.style.transition = "1s";
   }, 1000);
+  setTimeout(() => {
+    underBannerTxt.style.padding = "450px 10px";
+  }, 2000);
+});
+
+underBannerTxt.addEventListener("click", function () {
+  underBannerTxt.style.padding = "50px 10px";
 });
