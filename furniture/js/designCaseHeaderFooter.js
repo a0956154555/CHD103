@@ -23,3 +23,42 @@ headerMiddle.addEventListener("click", function () {
     headerRight.style.display = "none";
   }
 });
+
+function isMobileDevice() {
+  return window.matchMedia("(max-width: 450px)").matches;
+}
+
+let aboutBannerFirst = document.querySelector(".about-banner-first");
+let humansArr = [
+  "../../furniture_img/human1.jpg",
+  "../../furniture_img/human2.jpg",
+  "../../furniture_img/human3.jpg",
+  "../../furniture_img/human4.jpg",
+];
+let humanNum = 1;
+let aboutFstChild = document.querySelector(".about-banner:first-child");
+let collapse = document.querySelector(".collapse");
+let aboutUs = document.querySelector(".about-us");
+window.addEventListener("load", function () {
+  if (isMobileDevice()) {
+    aboutFstChild.style.transition = "1s";
+    setInterval(function () {
+      aboutBannerFirst.style.backgroundImage = `url(${humansArr[humanNum]})`;
+      humanNum++;
+      if (humanNum >= 4) {
+        humanNum = 0;
+      }
+    }, 3000);
+  }
+});
+
+collapse.addEventListener("click", function () {
+  collapse.style.width = "100%";
+  setTimeout(() => {
+    aboutFstChild.style.width = "0%";
+  }, 100);
+  setTimeout(() => {
+    aboutUs.style.height = "0";
+    aboutUs.style.transition = "1s";
+  }, 1000);
+});

@@ -150,6 +150,9 @@ header {
     // padding-left: 50px;
     letter-spacing: 3px;
     transition: 0.3s;
+    @media (max-width: 414px) {
+      display: flex;
+    }
     .about-banner {
       width: 25%;
       height: 100%;
@@ -174,6 +177,9 @@ header {
         }
         &:hover {
           width: 50%;
+          @media (max-width: 414px) {
+            width: 100%;
+          }
         }
         &::after {
           position: absolute;
@@ -190,6 +196,9 @@ header {
         }
         &:hover::after {
           display: flex;
+          @media (max-width: 414px) {
+            display: none;
+          }
         }
       }
       &:nth-child(2) {
@@ -280,6 +289,22 @@ header {
         }
         &:hover::after {
           display: flex;
+        }
+      }
+    }
+    .collapse {
+      display: none;
+
+      @media (max-width: 414px) {
+        display: flex;
+        justify-content: center;
+        font-size: 16px;
+        transition: 1s;
+        width: 30px;
+        img {
+          rotate: 270deg;
+          animation: arrowMoveX 2s infinite;
+          transition: 0.3s;
         }
       }
     }
@@ -374,6 +399,7 @@ header {
         width: 100%;
         padding: 25px 0px;
         transition: 0.5s;
+        border: none;
       }
       .openTxt {
         cursor: pointer;
@@ -868,5 +894,17 @@ footer {
   }
   100% {
     transform: translateY(0px);
+  }
+}
+
+@keyframes arrowMoveX {
+  0% {
+    translate: 0px 0px;
+  }
+  50% {
+    translate: -5px 0px;
+  }
+  100% {
+    translate: 0px 0px;
   }
 }

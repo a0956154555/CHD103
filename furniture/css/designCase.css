@@ -128,6 +128,11 @@ header .about-us {
   letter-spacing: 3px;
   transition: 0.3s;
 }
+@media (max-width: 414px) {
+  header .about-us {
+    display: flex;
+  }
+}
 header .about-us .about-banner {
   width: 25%;
   height: 100%;
@@ -157,6 +162,11 @@ header .about-us .about-banner:first-child {
 header .about-us .about-banner:first-child:hover {
   width: 50%;
 }
+@media (max-width: 414px) {
+  header .about-us .about-banner:first-child:hover {
+    width: 100%;
+  }
+}
 header .about-us .about-banner:first-child::after {
   position: absolute;
   left: 0;
@@ -172,6 +182,11 @@ header .about-us .about-banner:first-child::after {
 }
 header .about-us .about-banner:first-child:hover::after {
   display: flex;
+}
+@media (max-width: 414px) {
+  header .about-us .about-banner:first-child:hover::after {
+    display: none;
+  }
 }
 header .about-us .about-banner:nth-child(2) {
   width: 25%;
@@ -262,6 +277,23 @@ header .about-us .about-banner:nth-child(4)::after {
 }
 header .about-us .about-banner:nth-child(4):hover::after {
   display: flex;
+}
+header .about-us .collapse {
+  display: none;
+}
+@media (max-width: 414px) {
+  header .about-us .collapse {
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+    transition: 1s;
+    width: 30px;
+  }
+  header .about-us .collapse img {
+    rotate: 270deg;
+    animation: arrowMoveX 2s infinite;
+    transition: 0.3s;
+  }
 }
 
 #app {
@@ -355,6 +387,7 @@ header .about-us .about-banner:nth-child(4):hover::after {
     width: 100%;
     padding: 25px 0px;
     transition: 0.5s;
+    border: none;
   }
 }
 #app .person .txt .openTxt {
@@ -859,5 +892,16 @@ footer .footer-width-control .last-text {
   }
   100% {
     transform: translateY(0px);
+  }
+}
+@keyframes arrowMoveX {
+  0% {
+    translate: 0px 0px;
+  }
+  50% {
+    translate: -5px 0px;
+  }
+  100% {
+    translate: 0px 0px;
   }
 }/*# sourceMappingURL=designCase.css.map */
