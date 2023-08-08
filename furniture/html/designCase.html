@@ -212,10 +212,10 @@
         :class="{'opacityAllDesign':showTotal}"
       >
         <div>最後選定商品為 :</div>
-        <div>Jane : {{memberJane}}件</div>
-        <div>Justin : {{memberJustin}}件</div>
-        <div>Nelson : {{memberNelson}}件</div>
-        <div>Dandy : {{memberDandy}}件</div>
+        <div v-if="memberJane">Jane : {{memberJane}}件</div>
+        <div v-if="memberJustin">Justin : {{memberJustin}}件</div>
+        <div v-if="memberNelson">Nelson : {{memberNelson}}件</div>
+        <div v-if="memberDandy">Dandy : {{memberDandy}}件</div>
       </section>
       <section class="notice" v-if="noticeFalse">
         <div class="notice-main">
