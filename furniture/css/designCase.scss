@@ -900,6 +900,25 @@ header {
       }
     }
   }
+  .dealAllDesign {
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.3s;
+    font-size: 25px;
+    @media (max-width: 414px) {
+      flex-direction: column;
+      font-size: 20px;
+    }
+    div {
+      margin-right: 20px;
+    }
+  }
+  .opacityAllDesign {
+    animation: 1s opacityDesign forwards 2s;
+  }
   .notice {
     width: 100%;
     height: 100vh;
@@ -1138,5 +1157,14 @@ footer {
   100% {
     opacity: 1;
     translate: 1800px 0px;
+  }
+}
+
+@keyframes opacityDesign {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

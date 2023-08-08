@@ -172,7 +172,7 @@
         </div>
       </div>
       <article class="favorite">
-        <div class="favorite-title">{{favoriteTitle}}</div>
+        <div class="favorite-title" v-if="!showTotal">{{favoriteTitle}}</div>
         <div class="mostLikeAll">
           <div
             v-for="(i,index) in favoriteArr"
@@ -205,12 +205,18 @@
         >
           選好了!
         </div>
-        <!-- <div
-          v-if="memberJane || memberJustin || memberNelson || memberDandy && favoriteArr!"
-        >
-          {{}}
-        </div> -->
       </article>
+      <section
+        v-if="showTotal"
+        class="dealAllDesign"
+        :class="{'opacityAllDesign':showTotal}"
+      >
+        <div>最後選定商品為 :</div>
+        <div>Jane : {{memberJane}}件</div>
+        <div>Justin : {{memberJustin}}件</div>
+        <div>Nelson : {{memberNelson}}件</div>
+        <div>Dandy : {{memberDandy}}件</div>
+      </section>
       <section class="notice" v-if="noticeFalse">
         <div class="notice-main">
           <div class="notice-txt">
