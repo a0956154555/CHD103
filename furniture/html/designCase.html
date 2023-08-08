@@ -95,6 +95,13 @@
           <div class="openTxt" v-if="openTxt[index]" @click="closeTxt(index)">
             開啟對話
           </div>
+          <div
+            class="collapse-arrow"
+            v-if="!openTxt[index]"
+            @click="openTheTxt(index)"
+          >
+            <img src="../../furniture_img/arrow1.png" alt="" />
+          </div>
           <div v-if="!openTxt[index]" class="person-txt">
             {{allPerson[index][0]}}
             <div class="proficient" @click="changeTxtProficient(index)">

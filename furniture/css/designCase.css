@@ -535,7 +535,7 @@ header .about-us .collapse {
 @media (max-width: 414px) {
   #app .person .txt {
     width: 100%;
-    padding: 25px 0px;
+    padding: 30px 0px;
     transition: 0.5s;
     border: none;
   }
@@ -608,6 +608,18 @@ header .about-us .collapse {
     position: static;
     margin-bottom: 10px;
     transform: translateX(0%);
+  }
+}
+#app .person .txt .collapse-arrow {
+  display: none;
+}
+@media (max-width: 414px) {
+  #app .person .txt .collapse-arrow {
+    display: flex;
+    position: absolute;
+    background-color: black;
+    border-radius: 50%;
+    bottom: 0px;
   }
 }
 #app .person .pic {

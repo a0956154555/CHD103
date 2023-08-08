@@ -551,7 +551,7 @@ header {
       position: relative;
       @media (max-width: 414px) {
         width: 100%;
-        padding: 25px 0px;
+        padding: 30px 0px;
         transition: 0.5s;
         border: none;
       }
@@ -618,6 +618,16 @@ header {
             margin-bottom: 10px;
             transform: translateX(0%);
           }
+        }
+      }
+      .collapse-arrow {
+        display: none;
+        @media (max-width: 414px) {
+          display: flex;
+          position: absolute;
+          background-color: black;
+          border-radius: 50%;
+          bottom: 0px;
         }
       }
     }

@@ -386,6 +386,9 @@ createApp({
     closeTxt(val) {
       this.openTxt[val] = false;
     },
+    openTheTxt(index) {
+      this.openTxt[index] = true;
+    },
     searchProducts() {
       if (this.userSearch.toLowerCase() === this.janeName.toLowerCase()) {
         this.imgSrcArr = this.janeSrcArr;
