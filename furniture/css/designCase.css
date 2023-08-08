@@ -652,6 +652,11 @@ header .about-us .collapse {
   align-items: center;
   padding: 20px;
 }
+@media (max-width: 414px) {
+  #app .allCase {
+    border-top: none;
+  }
+}
 #app .allCase .input-type-all {
   display: flex;
   width: 60%;

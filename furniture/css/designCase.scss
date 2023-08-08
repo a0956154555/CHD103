@@ -666,6 +666,9 @@ header {
     justify-content: flex-start;
     align-items: center;
     padding: 20px;
+    @media (max-width: 414px) {
+      border-top: none;
+    }
     .input-type-all {
       display: flex;
       // border: 1px red solid;
