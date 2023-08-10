@@ -3,7 +3,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow-x: hidden;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -104,6 +103,7 @@ header .header-all .header-control-width .header-right {
 }
 header .header-all .header-control-width .header-right div {
   padding-bottom: 8px;
+  margin-right: 20px;
 }
 @media (max-width: 1150px) {
   header .header-all .header-control-width .header-right div {
@@ -183,6 +183,7 @@ header .header-all .header-control-width .header-right .all-case {
   text-decoration: none;
   transition: 0.2s;
   position: relative;
+  z-index: 2000;
 }
 @media (max-width: 450px) {
   header .header-all .header-control-width .header-right .all-case {
@@ -206,7 +207,7 @@ header .header-all .header-control-width .header-right .all-case .under-case {
   position: absolute;
   overflow: white-space;
   white-space: nowrap;
-  z-index: 101;
+  z-index: 2000;
   padding-left: 15px;
   padding-right: 15px;
   padding-top: 15px;
@@ -749,6 +750,9 @@ header .about-us .collapse {
   margin-bottom: 30px;
   position: relative;
   overflow: hidden;
+}
+#app .allCase .card-case-all .card-case .card-case-pic {
+  overflow-x: visible;
 }
 #app .allCase .card-case-all .card-case .card-case-pic img {
   width: 100%;
