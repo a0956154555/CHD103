@@ -317,7 +317,10 @@
           <span @click="plusWidth()">+</span>
           <span @click="minusWidth()">-</span>
         </div>
-        <div v-if="resultWidth >= 100 || resultWidth <= 50" class="noticeWidth">
+        <div
+          v-if="(resultWidth >= 100 || resultWidth <= 50) && designerNameResult "
+          class="noticeWidth"
+        >
           {{ resultWidth > 100 ? '已達最大寬度' : resultWidth < 50 ?
           '已達最小寬度' : '' }}
         </div>
