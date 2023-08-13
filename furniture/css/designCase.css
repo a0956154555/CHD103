@@ -1004,6 +1004,9 @@ header .about-us .collapse {
     height: 20px;
     transition: 3s;
   }
+  #app .randomDesigner .guessAnswer .answerBox .opacityFirst:first-child {
+    color: transparent;
+  }
   #app .randomDesigner .guessBtn {
     border: 1px white solid;
     padding: 2px 50px;

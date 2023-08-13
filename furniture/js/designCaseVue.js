@@ -362,6 +362,7 @@ createApp({
         "../../furniture_img3/characterPic16.jpg",
       ],
       designerNameArr: [
+        "a",
         "Jane",
         "Justin",
         "Nelson",
