@@ -400,8 +400,10 @@ createApp({
         "Dandy",
       ],
       moveDesignerName: 0,
+      moveDesignerNameOther: 0,
       moveDesignTrue: true,
       finalDesignerName: "",
+
       designerNameResult: false,
       designerBtnArr: ["Click", "Reset"],
     };
@@ -556,7 +558,9 @@ createApp({
     },
     randomDesignAns() {
       this.moveDesignTrue = !this.moveDesignTrue;
-      this.moveDesignerName = Math.floor(Math.random() * (410 - 300 + 1)) + 300;
+      this.moveDesignerNameOther = this.moveDesignerName =
+        Math.floor(Math.random() * (410 - 300 + 1)) + 300;
+      this.moveDesignerName += this.moveDesignerNameOther % 20;
       this.finalDesignerName = Math.floor(this.moveDesignerName / 20);
     },
   },
