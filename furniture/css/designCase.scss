@@ -1044,9 +1044,27 @@ header {
       font-size: 20px;
       width: 90%;
       margin: 0 auto;
+
       div {
         margin-bottom: 10px;
       }
+    }
+    .plus-minus-all {
+      display: flex;
+      justify-content: space-around;
+      font-size: 30px;
+      color: white;
+
+      width: 60%;
+      margin-bottom: 10px;
+      span {
+        padding: 20px;
+        border: 1px white solid;
+      }
+    }
+    .noticeWidth {
+      color: red;
+      font-size: 20px;
     }
   }
 }

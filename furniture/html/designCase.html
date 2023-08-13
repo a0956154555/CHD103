@@ -270,6 +270,7 @@
         <section
           v-if="!moveDesignTrue && designerNameResult"
           class="show-final-designer"
+          :style="{ width: resultWidth + '%' }"
         >
           <div
             v-if="designerNameArr[finalDesignerName].toUpperCase() == 'JANE'"
@@ -312,6 +313,14 @@
             <div>貼心程度:4分</div>
           </div>
         </section>
+        <div class="plus-minus-all" v-if="designerNameResult">
+          <span @click="plusWidth()">+</span>
+          <span @click="minusWidth()">-</span>
+        </div>
+        <div v-if="resultWidth >= 100 || resultWidth <= 50" class="noticeWidth">
+          {{ resultWidth > 100 ? '已達最大寬度' : resultWidth < 50 ?
+          '已達最小寬度' : '' }}
+        </div>
       </section>
     </section>
     <footer>

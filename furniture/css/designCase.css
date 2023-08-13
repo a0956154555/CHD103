@@ -1045,6 +1045,22 @@ header .about-us .collapse {
 #app .bonus-all .show-final-designer div {
   margin-bottom: 10px;
 }
+#app .bonus-all .plus-minus-all {
+  display: flex;
+  justify-content: space-around;
+  font-size: 30px;
+  color: white;
+  width: 60%;
+  margin-bottom: 10px;
+}
+#app .bonus-all .plus-minus-all span {
+  padding: 20px;
+  border: 1px white solid;
+}
+#app .bonus-all .noticeWidth {
+  color: red;
+  font-size: 20px;
+}
 
 footer {
   width: 100%;
