@@ -232,6 +232,22 @@
           <div class="notice-close" @click="closeNotice">關閉</div>
         </div>
       </section>
+      <section class="randomDesigner">
+        <div class="guessYouLike">猜你喜歡</div>
+        <div class="guessAnswer">
+          <div
+            class="answerBox"
+            :style="moveDesignTrue ?resetBoxStyle : boxStyle"
+          >
+            <div v-for="designer in designerNameArr" :key="designer">
+              {{ designer }}
+            </div>
+          </div>
+        </div>
+        <div class="guessBtn" @click="randomDesignAns">
+          {{moveDesignTrue ? designerBtnArr[0]:designerBtnArr[1]}}
+        </div>
+      </section>
     </section>
     <footer>
       <div class="footer-width-control">

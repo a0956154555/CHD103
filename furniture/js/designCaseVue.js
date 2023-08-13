@@ -361,6 +361,48 @@ createApp({
         "../../furniture_img3/characterPic15.jpg",
         "../../furniture_img3/characterPic16.jpg",
       ],
+      designerNameArr: [
+        "Jane",
+        "Justin",
+        "Nelson",
+        "Dandy",
+        "Jane",
+        "Justin",
+        "Nelson",
+        "Dandy",
+        "Jane",
+        "Justin",
+        "Nelson",
+        "Dandy",
+        "Jane",
+        "Justin",
+        "Nelson",
+        "Dandy",
+        "Jane",
+        "Justin",
+        "Nelson",
+        "Dandy",
+        "Jane",
+        "Justin",
+        "Nelson",
+        "Dandy",
+        "Jane",
+        "Justin",
+        "Nelson",
+        "Dandy",
+        "Jane",
+        "Justin",
+        "Nelson",
+        "Dandy",
+        "Jane",
+        "Justin",
+        "Nelson",
+        "Dandy",
+      ],
+      moveDesignerName: 0,
+      moveDesignTrue: true,
+
+      designerBtnArr: ["Click", "Reset"],
     };
   },
   methods: {
@@ -511,6 +553,10 @@ createApp({
         }, interval);
       }
     },
+    randomDesignAns() {
+      this.moveDesignTrue = !this.moveDesignTrue;
+      this.moveDesignerName = Math.floor(Math.random() * (410 - 300 + 1)) + 300;
+    },
   },
   computed: {
     controlAllBox() {
@@ -522,6 +568,16 @@ createApp({
       return this.favoriteArr.length !== 0
         ? "目前數量 : " + this.favoriteArr.length
         : "目前暫無任何商品";
+    },
+    boxStyle() {
+      return {
+        transform: `translateY(-${this.moveDesignerName}px)`,
+      };
+    },
+    resetBoxStyle() {
+      return {
+        transform: `translateY(0px)`,
+      };
     },
   },
   watch: {
