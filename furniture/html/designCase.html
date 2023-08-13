@@ -232,27 +232,86 @@
           <div class="notice-close" @click="closeNotice">關閉</div>
         </div>
       </section>
-      <section class="randomDesigner">
-        <div class="guessYouLike">猜你喜歡</div>
-        <div class="guessAnswer">
-          <div
-            class="answerBox"
-            :style="moveDesignTrue ?resetBoxStyle : boxStyle"
-          >
+      <section class="bonus-all">
+        <div class="bonus-title">Phone BONUS</div>
+        <section class="randomDesigner">
+          <div class="guessYouLike">猜你喜歡</div>
+          <div class="guessAnswer">
             <div
-              v-for="designer in designerNameArr"
-              :key="designer"
-              style="height: 20px"
-              class="opacityFirst"
+              class="answerBox"
+              :style="moveDesignTrue ?resetBoxStyle : boxStyle"
             >
-              {{ designer }}
+              <div
+                v-for="designer in designerNameArr"
+                :key="designer"
+                style="height: 20px"
+                class="opacityFirst"
+              >
+                {{ designer }}
+              </div>
             </div>
           </div>
+          <div>老師</div>
+          <div
+            class="guessBtn"
+            @click="randomDesignAns"
+            @click="finalDesignerName=0"
+          >
+            {{moveDesignTrue ? designerBtnArr[0]:designerBtnArr[1]}}
+          </div>
+        </section>
+        <div
+          v-if="!moveDesignTrue"
+          @click="designerNameResult = !designerNameResult"
+          class="showDesignerNameBtn"
+        >
+          {{designerNameResult ? '收起預測結果':'展開預測結果'}}
         </div>
-        <div>老師</div>
-        <div class="guessBtn" @click="randomDesignAns">
-          {{moveDesignTrue ? designerBtnArr[0]:designerBtnArr[1]}}
-        </div>
+        <section
+          v-if="!moveDesignTrue && designerNameResult"
+          class="show-final-designer"
+        >
+          <div
+            v-if="designerNameArr[finalDesignerName].toUpperCase() == 'JANE'"
+          >
+            <div>
+              Jane的風格屬於沉著冷靜，注重細節和品質。無論是工作還是生活中，我都以高標準要求自己，追求卓越。我相信，只有通過努力和付出，我們才能獲得真正的成就感和滿足感。
+            </div>
+            <div>放心程度:8分</div>
+            <div>細心程度:6分</div>
+            <div>貼心程度:4分</div>
+          </div>
+          <div
+            v-if="designerNameArr[finalDesignerName].toUpperCase() == 'JUSTIN'"
+          >
+            <div>
+              Justin的風格屬於外向帶點靦腆，使我在團隊中表現得很好，我善於協作，願意提供幫助和支持。我喜歡參與各種活動，從戶外運動到文化藝術，我都願意嘗試新的事物。
+            </div>
+            <div>放心程度:5分</div>
+            <div>細心程度:8分</div>
+            <div>貼心程度:7分</div>
+          </div>
+          <div
+            v-if="designerNameArr[finalDesignerName].toUpperCase() == 'NELSON'"
+          >
+            <div>
+              Nelson的風格屬於外向活潑的人，總是充滿了朝氣和活力。我喜歡在不同的場合中與人交流，結交新朋友，並在社交中獲得樂趣。
+            </div>
+            <div>放心程度:4分</div>
+            <div>細心程度:5分</div>
+            <div>貼心程度:9分</div>
+          </div>
+          <div
+            v-if="designerNameArr[finalDesignerName].toUpperCase() == 'DANDY'"
+          >
+            <div>
+              Dandy的風格不是個多話的人，但我相信在溝通中，能言之有物才是最重要的。我喜歡把話說到點上，避免浪費時間。有時候，我可能會選擇保持沉默，因為我認為言之過多未必是好事。
+            </div>
+            <div>放心程度:9分</div>
+            <div>細心程度:4分</div>
+            <div>貼心程度:4分</div>
+          </div>
+        </section>
       </section>
     </section>
     <footer>

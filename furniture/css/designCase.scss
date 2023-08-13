@@ -983,38 +983,69 @@ header {
       }
     }
   }
-  .randomDesigner {
+  .bonus-all {
     display: none;
     @media (max-width: 414px) {
-      width: 100%;
-      height: 20vh;
-      border-top: 1px white solid;
-      color: white;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
+      justify-content: center;
+      border-top: 1px white solid;
+    }
+    .bonus-title {
+      color: white;
+      font-size: 25px;
+    }
+    .randomDesigner {
+      display: none;
+      @media (max-width: 414px) {
+        width: 100%;
+        // height: 20vh;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 0px;
+        .guessAnswer {
+          border-bottom: 1px white solid;
+          margin: 0px 10px;
 
-      .guessAnswer {
-        border-bottom: 1px white solid;
-        margin: 0px 10px;
-
-        overflow: hidden;
-        white-space: nowrap;
-        .answerBox {
-          display: flex;
-          flex-direction: column;
-          height: 20px;
-          transition: 3s;
-          .opacityFirst {
-            &:first-child {
-              color: transparent;
+          overflow: hidden;
+          white-space: nowrap;
+          .answerBox {
+            display: flex;
+            flex-direction: column;
+            height: 20px;
+            transition: 3s;
+            .opacityFirst {
+              &:first-child {
+                color: transparent;
+              }
+            }
+            div {
+              border: 1px transparent solid;
             }
           }
         }
+        .guessBtn {
+          border: 1px white solid;
+          padding: 2px 50px;
+        }
       }
-      .guessBtn {
-        border: 1px white solid;
-        padding: 2px 50px;
+    }
+    .showDesignerNameBtn {
+      border: 1px white solid;
+      color: white;
+      padding: 5px 15px;
+      margin-bottom: 10px;
+    }
+    .show-final-designer {
+      color: white;
+      font-size: 20px;
+      width: 90%;
+      margin: 0 auto;
+      div {
+        margin-bottom: 10px;
       }
     }
   }

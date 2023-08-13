@@ -362,7 +362,6 @@ createApp({
         "../../furniture_img3/characterPic16.jpg",
       ],
       designerNameArr: [
-        "a",
         "Jane",
         "Justin",
         "Nelson",
@@ -403,6 +402,7 @@ createApp({
       moveDesignerName: 0,
       moveDesignTrue: true,
       finalDesignerName: "",
+      designerNameResult: false,
       designerBtnArr: ["Click", "Reset"],
     };
   },
