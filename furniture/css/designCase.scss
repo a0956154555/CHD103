@@ -984,6 +984,7 @@ header {
     }
   }
   .randomDesigner {
+    display: none;
     @media (max-width: 414px) {
       width: 100%;
       height: 20vh;

@@ -979,6 +979,9 @@ header .about-us .collapse {
   font-size: 20px;
   letter-spacing: 3px;
 }
+#app .randomDesigner {
+  display: none;
+}
 @media (max-width: 414px) {
   #app .randomDesigner {
     width: 100%;

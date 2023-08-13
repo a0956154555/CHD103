@@ -401,7 +401,7 @@ createApp({
       ],
       moveDesignerName: 0,
       moveDesignTrue: true,
-
+      finalDesignerName: "",
       designerBtnArr: ["Click", "Reset"],
     };
   },
@@ -556,6 +556,7 @@ createApp({
     randomDesignAns() {
       this.moveDesignTrue = !this.moveDesignTrue;
       this.moveDesignerName = Math.floor(Math.random() * (410 - 300 + 1)) + 300;
+      this.finalDesignerName = Math.floor(this.moveDesignerName / 20);
     },
   },
   computed: {

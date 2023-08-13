@@ -239,11 +239,16 @@
             class="answerBox"
             :style="moveDesignTrue ?resetBoxStyle : boxStyle"
           >
-            <div v-for="designer in designerNameArr" :key="designer">
+            <div
+              v-for="designer in designerNameArr"
+              :key="designer"
+              style="height: 20px"
+            >
               {{ designer }}
             </div>
           </div>
         </div>
+        <div>老師</div>
         <div class="guessBtn" @click="randomDesignAns">
           {{moveDesignTrue ? designerBtnArr[0]:designerBtnArr[1]}}
         </div>
