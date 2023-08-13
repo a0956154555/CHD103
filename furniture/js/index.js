@@ -114,8 +114,14 @@ hamburgerNews.addEventListener("click", function () {
   // alert(newsTrueFalse);
   if (newsTrueFalse) {
     newsBottom.style.display = "flex";
+    if (isMobileDevice()) {
+      this.innerHTML = '<i class="fa-solid fa-chevron-up"></i>';
+    }
   } else {
     newsBottom.style.display = "none";
+    if (isMobileDevice()) {
+      this.innerHTML = '<i class="fa-solid fa-chevron-down"></i>';
+    }
   }
 });
 underClose.addEventListener("click", function () {
@@ -132,6 +138,9 @@ mapHamburger.addEventListener("click", function () {
     iframe.style.display = "block";
     trafficInformationText.style.display = "flex";
     contactUs.style.display = "flex";
+    if (isMobileDevice()) {
+      this.innerHTML = '<i class="fa-solid fa-chevron-up"></i>';
+    }
     // allTrafficInformation.style.background =
     //   "linear-gradient(179deg, rgb(49, 48, 48), rgb(255, 255, 255))";
     for (let i = 0; i < forChangeToBlack.length; i++) {
@@ -142,6 +151,9 @@ mapHamburger.addEventListener("click", function () {
     trafficInformationText.style.display = "none";
     contactUs.style.display = "none";
     allTrafficInformation.style.background = "rgb(49, 48, 48)";
+    if (isMobileDevice()) {
+      this.innerHTML = '<i class="fa-solid fa-chevron-down"></i>';
+    }
     for (let i = 0; i < forChangeToBlack.length; i++) {
       forChangeToBlack[i].style.borderBottom = "1px white solid";
     }
@@ -151,8 +163,14 @@ designBtn.addEventListener("click", function () {
   designTrueFalse = !designTrueFalse;
   if (designTrueFalse) {
     designLinksAll.style.display = "flex";
+    if (isMobileDevice()) {
+      this.innerHTML = '<i class="fa-solid fa-chevron-up"></i>';
+    }
   } else {
     designLinksAll.style.display = "none";
+    if (isMobileDevice()) {
+      this.innerHTML = '<i class="fa-solid fa-chevron-down"></i>';
+    }
   }
 });
 messageClose.addEventListener("click", function () {
@@ -278,6 +296,8 @@ send.addEventListener("click", function () {
 let headerMiddle = document.querySelector(".header-middle");
 let headerRight = document.querySelector(".header-right");
 let menuTrue = false;
+let hamburgerAll = document.querySelectorAll(".hamburger-all");
+
 headerMiddle.addEventListener("click", function () {
   menuTrue = !menuTrue;
   if (menuTrue) {
@@ -297,4 +317,13 @@ function isMobileDevice() {
 
 if (isMobileDevice()) {
   informationTextRightH3.innerText = "交通資訊";
+  for (i of hamburgerAll) {
+    i.innerHTML = '<i class="fa-solid fa-chevron-down"></i>';
+
+    i.style.color = "white";
+    i.style.display = "flex";
+    i.style.justifyContent = "center";
+    i.style.alignItems = "center";
+    i.style.animation = "2s moveUp infinite";
+  }
 }
