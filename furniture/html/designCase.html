@@ -365,6 +365,53 @@
           <img src="../../furniture_img/arrow1.png" alt="" />
           <div class="turntableStart" @click="startTruntableFun">START</div>
         </div>
+        <div class="bingoControl" @click="bingoStart = !bingoStart">
+          Bingo Game
+        </div>
+        <div
+          v-for="bingo in bingoNumArr"
+          class="bingo-num-all"
+          v-if="bingoStart"
+        >
+          <div
+            class="bingo-single-num"
+            :style="{ transform: `translateX(${bingoAnimationNum}px)` ,opacity:`${bingoOpacity}`}"
+            @click="putBingoNumArr(bingo[0])"
+            v-if="bingoLane"
+          >
+            {{bingoTrue ? bingo[0] : clickedValue}}
+          </div>
+          <div
+            class="bingo-single-num"
+            :style="{ opacity:`${bingoOpacity}`}"
+            @click="putBingoNumArr(bingo[1])"
+          >
+            {{bingoTrue ? bingo[1] : ''}}
+          </div>
+          <div
+            class="bingo-single-num"
+            :style="{ transform: `translateX(-${bingoAnimationNum}px)`,opacity:`${bingoOpacity}` }"
+            @click="putBingoNumArr(bingo[2])"
+          >
+            {{bingoTrue ? bingo[2] : ''}}
+          </div>
+        </div>
+        <div class="bingoFinalAnswer" v-if="!bingoTrue">
+          <div
+            v-if="!(putBingoArr[0] == '恭喜成功' || putBingoArr[0] == '失敗了')"
+          >
+            已選答案
+          </div>
+          <div v-for="put in putBingoArr">
+            <div>{{put}}</div>
+          </div>
+        </div>
+        <div v-if="bingoStart" class="bingoDetail">
+          共有三排，只要每排選擇到相同數字，亦可獲得該折數以供下次消費使用
+        </div>
+        <div v-if="bingoStart " class="bingoStartBtn" @click="randomBingoNum">
+          START
+        </div>
       </section>
     </section>
     <footer>

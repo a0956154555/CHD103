@@ -410,6 +410,19 @@ createApp({
       resultFontSize: 16,
       turntable: false,
       randomInRange: 0,
+      bingoNumArr: [
+        [1, 9, 5],
+        [1, 9, 5],
+        [1, 9, 5],
+      ],
+      bingoStart: false,
+      bingoStartBtn: false,
+      bingoAnimationNum: 0,
+      bingoOpacity: 1,
+      bingoTrue: true,
+      putBingoArr: [],
+      clickedValue: "",
+      bingoLane: true,
     };
   },
   methods: {
@@ -617,6 +630,58 @@ createApp({
     },
     startTruntableFun() {
       this.randomInRange += Math.floor(Math.random() * (1000 - 500 + 1)) + 500;
+    },
+    randomBingoNum() {
+      const randomNum1 = Math.floor(Math.random() * (2 - 0 + 1)) + 0;
+      const randomNum2 = Math.floor(Math.random() * (2 - 0 + 1)) + 0;
+      const randomNum3 = Math.floor(Math.random() * (2 - 0 + 1)) + 0;
+      this.bingoAnimationNum = 100;
+      this.bingoStartBtn = false;
+      setTimeout(() => [(this.bingoAnimationNum = 0)], 1500);
+      setTimeout(() => {
+        this.bingoOpacity = 0;
+      }, 2000);
+      setTimeout(() => {
+        this.bingoTrue = false;
+        this.bingoOpacity = 1;
+      }, 3000);
+      if (randomNum1 == 0) {
+        this.bingoNumArr[0] = [1, 9, 5];
+      } else if (randomNum1 == 1) {
+        this.bingoNumArr[0] = [9, 1, 5];
+      } else if (randomNum1 == 2) {
+        this.bingoNumArr[0] = [5, 1, 9];
+      }
+      if (randomNum2 == 0) {
+        this.bingoNumArr[1] = [9, 5, 1];
+      } else if (randomNum2 == 1) {
+        this.bingoNumArr[1] = [1, 9, 5];
+      } else if (randomNum2 == 2) {
+        this.bingoNumArr[1] = [5, 1, 9];
+      }
+      if (randomNum3 == 0) {
+        this.bingoNumArr[2] = [5, 9, 1];
+      } else if (randomNum3 == 1) {
+        this.bingoNumArr[2] = [1, 9, 5];
+      } else if (randomNum3 == 2) {
+        this.bingoNumArr[2] = [9, 5, 1];
+      }
+    },
+    putBingoNumArr(val) {
+      this.putBingoArr.push(val);
+
+      let totalNum = this.putBingoArr[0];
+
+      if (this.putBingoArr.length == 3) {
+        if (
+          totalNum == this.putBingoArr[1] &&
+          totalNum == this.putBingoArr[2]
+        ) {
+          this.putBingoArr = ["恭喜成功"];
+        } else {
+          this.putBingoArr = ["失敗了"];
+        }
+      }
     },
   },
   computed: {

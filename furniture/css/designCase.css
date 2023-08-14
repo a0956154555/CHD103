@@ -1072,17 +1072,47 @@ header .about-us .collapse {
   color: red;
   font-size: 20px;
 }
-#app .bonus-all .startTurntable {
+#app .bonus-all .startTurntable,
+#app .bonus-all .bingoControl,
+#app .bonus-all .bingoStartBtn {
   color: white;
   border: 1px white solid;
   padding: 5px 50px;
-  margin-bottom: 15px;
+  margin: 15px 0px;
   display: none;
 }
 @media (max-width: 414px) {
-  #app .bonus-all .startTurntable {
+  #app .bonus-all .startTurntable,
+  #app .bonus-all .bingoControl,
+  #app .bonus-all .bingoStartBtn {
     display: block;
   }
+}
+#app .bonus-all .bingoDetail {
+  width: 80%;
+  margin: 0 auto;
+  color: white;
+}
+#app .bonus-all .bingoStartBtn {
+  margin-top: 100px;
+}
+#app .bonus-all .bingo-num-all {
+  display: flex;
+  position: relative;
+}
+#app .bonus-all .bingo-num-all div {
+  border: 1px white solid;
+  font-size: 20px;
+  color: white;
+  padding: 40px;
+  margin: 5px;
+}
+#app .bonus-all .bingo-num-all .bingo-single-num {
+  transition: 1s;
+}
+#app .bonus-all .bingoFinalAnswer {
+  display: flex;
+  color: rgb(241, 182, 7);
 }
 #app .bonus-all .phoneSlider {
   width: 100%;
@@ -1098,7 +1128,7 @@ header .about-us .collapse {
 #app .bonus-all .phoneSlider::after {
   content: "";
   position: absolute;
-  height: 271px;
+  height: 200px;
   width: 20%;
   right: 0;
   z-index: 2;
@@ -1107,7 +1137,7 @@ header .about-us .collapse {
 #app .bonus-all .phoneSlider::before {
   content: "";
   position: absolute;
-  height: 271px;
+  height: 200px;
   width: 20%;
   left: 0;
   z-index: 2;

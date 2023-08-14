@@ -1077,15 +1077,43 @@ header {
       color: red;
       font-size: 20px;
     }
-    .startTurntable {
+    .startTurntable,
+    .bingoControl,
+    .bingoStartBtn {
       color: white;
       border: 1px white solid;
       padding: 5px 50px;
-      margin-bottom: 15px;
+      margin: 15px 0px;
       display: none;
       @media (max-width: 414px) {
         display: block;
       }
+    }
+    .bingoDetail {
+      width: 80%;
+      margin: 0 auto;
+      color: white;
+    }
+    .bingoStartBtn {
+      margin-top: 100px;
+    }
+    .bingo-num-all {
+      display: flex;
+      position: relative;
+      div {
+        border: 1px white solid;
+        font-size: 20px;
+        color: white;
+        padding: 40px;
+        margin: 5px;
+      }
+      .bingo-single-num {
+        transition: 1s;
+      }
+    }
+    .bingoFinalAnswer {
+      display: flex;
+      color: rgb(241, 182, 7);
     }
     .phoneSlider {
       width: 100%;
@@ -1099,7 +1127,7 @@ header {
       &::after {
         content: "";
         position: absolute;
-        height: 271px;
+        height: 200px;
         width: 20%;
         right: 0;
         z-index: 2;
@@ -1108,7 +1136,7 @@ header {
       &::before {
         content: "";
         position: absolute;
-        height: 271px;
+        height: 200px;
         width: 20%;
         left: 0;
         z-index: 2;
