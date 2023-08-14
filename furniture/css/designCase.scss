@@ -1099,7 +1099,7 @@ header {
       &::after {
         content: "";
         position: absolute;
-        height: 261px;
+        height: 271px;
         width: 20%;
         right: 0;
         z-index: 2;
@@ -1108,7 +1108,7 @@ header {
       &::before {
         content: "";
         position: absolute;
-        height: 261px;
+        height: 271px;
         width: 20%;
         left: 0;
         z-index: 2;
@@ -1124,6 +1124,7 @@ header {
       .turntableStart {
         border: 1px white solid;
         padding: 5px 50px;
+        margin-bottom: 10px;
       }
     }
     .boxPicAll {

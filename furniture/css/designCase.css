@@ -1098,7 +1098,7 @@ header .about-us .collapse {
 #app .bonus-all .phoneSlider::after {
   content: "";
   position: absolute;
-  height: 261px;
+  height: 271px;
   width: 20%;
   right: 0;
   z-index: 2;
@@ -1107,7 +1107,7 @@ header .about-us .collapse {
 #app .bonus-all .phoneSlider::before {
   content: "";
   position: absolute;
-  height: 261px;
+  height: 271px;
   width: 20%;
   left: 0;
   z-index: 2;
@@ -1123,6 +1123,7 @@ header .about-us .collapse {
 #app .bonus-all .turntableTxt .turntableStart {
   border: 1px white solid;
   padding: 5px 50px;
+  margin-bottom: 10px;
 }
 #app .bonus-all .boxPicAll {
   width: 250px;
