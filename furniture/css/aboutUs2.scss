@@ -278,6 +278,7 @@ header {
     // border: 2px red solid;
     background-image: url(../../furniture_img/aboutUsPlus1.jpg);
     background-size: contain;
+
     @media (max-width: 1150px) {
       background-size: cover;
     }

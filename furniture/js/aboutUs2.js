@@ -24,6 +24,7 @@ topCase.addEventListener("click", function () {
 });
 
 window.addEventListener("load", function () {
+  let aboutUsArr = ["A", "p", "c"];
   let i = 0;
   const typingInterval = setInterval(function () {
     if (i < aboutUsArr.length) {
@@ -31,6 +32,27 @@ window.addEventListener("load", function () {
       i++;
     } else {
       clearInterval(typingInterval);
+      setTimeout(function () {
+        let j = aboutUsArr.length - 1;
+        const backspaceInterval = setInterval(function () {
+          if (j >= 0) {
+            aboutUs.innerHTML = aboutUs.innerHTML.slice(0, -1);
+            j--;
+          } else {
+            clearInterval(backspaceInterval);
+            const fullText = "About Us";
+            let k = 0;
+            const typeFullTextInterval = setInterval(function () {
+              if (k < fullText.length) {
+                aboutUs.innerHTML += fullText[k];
+                k++;
+              } else {
+                clearInterval(typeFullTextInterval);
+              }
+            }, 200);
+          }
+        }, 200);
+      }, 1000);
     }
   }, 200);
 });
