@@ -442,7 +442,7 @@ createApp({
           "你不能都這樣沒禮貌知道嗎",
         ];
 
-        this.designerTxt = testArr[1];
+        this.designerTxt = testArr[0];
         setTimeout(() => {
           this.underBannerTrue = false;
         }, 1000);
