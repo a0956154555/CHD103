@@ -254,7 +254,7 @@
               </div>
             </div>
           </div>
-          <div>老師</div>
+          <div>設計師</div>
           <div
             class="guessBtn"
             @click="randomDesignAns"
@@ -334,6 +334,36 @@
         >
           {{ resultWidth > 100 ? '已達最大寬度' : resultWidth < 50 ?
           '已達最小寬度' : '' }}
+        </div>
+        <div class="startTurntable" @click="turntable = !turntable">
+          案例轉盤
+        </div>
+        <div class="phoneSlider" v-if="turntable">
+          <div
+            v-for="Cimg in imgSrcArr2"
+            class="boxPicAll"
+            :style="{ transform: 'translate( -' + randomInRange + 'px, 0px)' }"
+          >
+            <img :src="Cimg" alt="" />
+          </div>
+          <div
+            v-for="Cimg in imgSrcArr2"
+            class="boxPicAll"
+            :style="{ transform: 'translate( -' + randomInRange + 'px, 0px)' }"
+          >
+            <img :src="Cimg" alt="" />
+          </div>
+          <div
+            v-for="Cimg in imgSrcArr2"
+            class="boxPicAll"
+            :style="{ transform: 'translate( -' + randomInRange + 'px, 0px)' }"
+          >
+            <img :src="Cimg" alt="" />
+          </div>
+        </div>
+        <div v-if="turntable" class="turntableTxt">
+          <img src="../../furniture_img/arrow1.png" alt="" />
+          <div class="turntableStart" @click="startTruntableFun">START</div>
         </div>
       </section>
     </section>

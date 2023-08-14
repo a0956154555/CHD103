@@ -1077,6 +1077,59 @@ header {
       color: red;
       font-size: 20px;
     }
+    .startTurntable {
+      color: white;
+      border: 1px white solid;
+      padding: 5px 50px;
+      margin-bottom: 15px;
+    }
+    .phoneSlider {
+      width: 100%;
+
+      background-color: white;
+      display: flex;
+      overflow: hidden;
+
+      &::after {
+        content: "";
+        position: absolute;
+        height: 29%;
+        width: 20%;
+        right: 0;
+        z-index: 2;
+        background-color: rgba(255, 255, 255, 0.8);
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        height: 29%;
+        width: 20%;
+        left: 0;
+        z-index: 2;
+        background-color: rgba(255, 255, 255, 0.8);
+      }
+    }
+    .turntableTxt {
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .turntableStart {
+        border: 1px white solid;
+        padding: 5px 50px;
+      }
+    }
+    .boxPicAll {
+      width: 250px;
+      height: 200px;
+      transition: 1s;
+      img {
+        width: 250px;
+        height: 200px;
+        vertical-align: top;
+      }
+    }
   }
 }
 footer {

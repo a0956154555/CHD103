@@ -408,6 +408,8 @@ createApp({
       designerBtnArr: ["Click", "Reset"],
       underBannerTrue: true,
       resultFontSize: 16,
+      turntable: false,
+      randomInRange: 0,
     };
   },
   methods: {
@@ -612,6 +614,9 @@ createApp({
       if (this.resultFontSize >= 12) {
         this.resultFontSize -= 2;
       }
+    },
+    startTruntableFun() {
+      this.randomInRange += Math.floor(Math.random() * (1000 - 500 + 1)) + 500;
     },
   },
   computed: {

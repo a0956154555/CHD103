@@ -1072,6 +1072,57 @@ header .about-us .collapse {
   color: red;
   font-size: 20px;
 }
+#app .bonus-all .startTurntable {
+  color: white;
+  border: 1px white solid;
+  padding: 5px 50px;
+  margin-bottom: 15px;
+}
+#app .bonus-all .phoneSlider {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  overflow: hidden;
+}
+#app .bonus-all .phoneSlider::after {
+  content: "";
+  position: absolute;
+  height: 29%;
+  width: 20%;
+  right: 0;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+#app .bonus-all .phoneSlider::before {
+  content: "";
+  position: absolute;
+  height: 29%;
+  width: 20%;
+  left: 0;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+#app .bonus-all .turntableTxt {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#app .bonus-all .turntableTxt .turntableStart {
+  border: 1px white solid;
+  padding: 5px 50px;
+}
+#app .bonus-all .boxPicAll {
+  width: 250px;
+  height: 200px;
+  transition: 1s;
+}
+#app .bonus-all .boxPicAll img {
+  width: 250px;
+  height: 200px;
+  vertical-align: top;
+}
 
 footer {
   width: 100%;
