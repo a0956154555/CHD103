@@ -1077,17 +1077,28 @@ header .about-us .collapse {
   border: 1px white solid;
   padding: 5px 50px;
   margin-bottom: 15px;
+  display: none;
+}
+@media (max-width: 414px) {
+  #app .bonus-all .startTurntable {
+    display: block;
+  }
 }
 #app .bonus-all .phoneSlider {
   width: 100%;
   background-color: white;
-  display: flex;
+  display: none;
   overflow: hidden;
+}
+@media (max-width: 414px) {
+  #app .bonus-all .phoneSlider {
+    display: flex;
+  }
 }
 #app .bonus-all .phoneSlider::after {
   content: "";
   position: absolute;
-  height: 29%;
+  height: 261px;
   width: 20%;
   right: 0;
   z-index: 2;
@@ -1096,7 +1107,7 @@ header .about-us .collapse {
 #app .bonus-all .phoneSlider::before {
   content: "";
   position: absolute;
-  height: 29%;
+  height: 261px;
   width: 20%;
   left: 0;
   z-index: 2;
@@ -1117,6 +1128,12 @@ header .about-us .collapse {
   width: 250px;
   height: 200px;
   transition: 1s;
+  display: none;
+}
+@media (max-width: 414px) {
+  #app .bonus-all .boxPicAll {
+    display: block;
+  }
 }
 #app .bonus-all .boxPicAll img {
   width: 250px;
