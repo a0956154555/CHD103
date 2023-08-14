@@ -522,6 +522,14 @@ header {
         width: 30px;
       }
     }
+    .deleteThePost {
+      position: absolute;
+      bottom: 10px;
+      left: 20%;
+      padding: 5px 20px;
+      color: white;
+      border: 1px white solid;
+    }
   }
   .person {
     width: 100%;
@@ -1049,15 +1057,18 @@ header {
         margin-bottom: 10px;
       }
     }
-    .plus-minus-all {
+    .plus-minus-all,
+    .fontSize-plus-minus-all {
       display: flex;
       justify-content: space-around;
-      font-size: 30px;
+      align-items: center;
+      font-size: 16px;
       color: white;
 
-      width: 60%;
+      width: 80%;
       margin-bottom: 10px;
-      span {
+
+      .widthPlusMinusBtn {
         padding: 20px;
         border: 1px white solid;
       }

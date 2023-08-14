@@ -406,6 +406,8 @@ createApp({
       resultWidth: 90,
       designerNameResult: false,
       designerBtnArr: ["Click", "Reset"],
+      underBannerTrue: true,
+      resultFontSize: 16,
     };
   },
   methods: {
@@ -425,6 +427,34 @@ createApp({
         this.heartShow = true;
       }
     },
+    deleteReadPost() {
+      this.disappearTrue = true;
+      setTimeout(() => {
+        this.delayNone = false;
+        this.typePreviousCharacter(); // 调用新的逐字删除函数
+      }, 1000);
+      setTimeout(() => {
+        let testArr = [
+          "不理你了 88",
+          "你很煩欸 討厭鬼",
+          "你不能都這樣沒禮貌知道嗎",
+        ];
+
+        this.designerTxt = testArr[1];
+        setTimeout(() => {
+          this.underBannerTrue = false;
+        }, 1000);
+      }, 14500);
+    },
+    typePreviousCharacter() {
+      if (this.designerTxt.length > 0) {
+        this.designerTxt = this.designerTxt.slice(0, -1); // 从最后一个字开始删除
+        setTimeout(this.typePreviousCharacter, 50);
+      } else {
+        this.heartShow = false;
+      }
+    },
+
     redLove() {
       this.redHeart = !this.redHeart;
     },
@@ -571,6 +601,16 @@ createApp({
     minusWidth() {
       if (this.resultWidth >= 50) {
         this.resultWidth -= 5;
+      }
+    },
+    plusFontSize() {
+      if (this.resultFontSize <= 30) {
+        this.resultFontSize += 2;
+      }
+    },
+    minusFontSize() {
+      if (this.resultFontSize >= 12) {
+        this.resultFontSize -= 2;
       }
     },
   },

@@ -70,7 +70,7 @@
       </article>
     </header>
     <section id="app">
-      <section class="under-banner-txt">
+      <section class="under-banner-txt" v-if="underBannerTrue">
         <div
           class="readPost"
           :class="{'disappear':disappearTrue}"
@@ -85,6 +85,9 @@
             :src="redHeart ? '../../furniture_img/H03.svg' : '../../furniture_img/H00.png'"
             alt=""
           />
+        </div>
+        <div v-if="heartShow" class="deleteThePost" @click="deleteReadPost">
+          刪除
         </div>
       </section>
       <div class="person" v-for="(person,index) in personArr">
@@ -270,7 +273,9 @@
         <section
           v-if="!moveDesignTrue && designerNameResult"
           class="show-final-designer"
-          :style="{ width: resultWidth + '%' }"
+          :style="{ width: resultWidth + '%',
+          fontSize : resultFontSize + 'px'
+         }"
         >
           <div
             v-if="designerNameArr[finalDesignerName].toUpperCase() == 'JANE'"
@@ -314,8 +319,14 @@
           </div>
         </section>
         <div class="plus-minus-all" v-if="designerNameResult">
-          <span @click="plusWidth()">+</span>
-          <span @click="minusWidth()">-</span>
+          <span>畫面寬度調整</span>
+          <span @click="plusWidth()" class="widthPlusMinusBtn">+</span>
+          <span @click="minusWidth()" class="widthPlusMinusBtn">-</span>
+        </div>
+        <div class="fontSize-plus-minus-all" v-if="designerNameResult">
+          <span>字體大小調整</span>
+          <span @click="plusFontSize()" class="widthPlusMinusBtn">+</span>
+          <span @click="minusFontSize()" class="widthPlusMinusBtn">-</span>
         </div>
         <div
           v-if="(resultWidth >= 100 || resultWidth <= 50) && designerNameResult "
