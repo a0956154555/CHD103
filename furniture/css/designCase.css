@@ -1092,6 +1092,8 @@ header .about-us .collapse {
   width: 80%;
   margin: 0 auto;
   color: white;
+  font-size: 18px;
+  line-height: 2;
 }
 #app .bonus-all .bingoStartBtn {
   margin-top: 100px;
