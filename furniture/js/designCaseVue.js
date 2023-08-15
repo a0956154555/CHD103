@@ -424,6 +424,7 @@ createApp({
       putBingoArr: [],
       clickedValue: "",
       bingoLane: true,
+      showBingoList: false,
     };
   },
   methods: {
@@ -638,6 +639,7 @@ createApp({
       const randomNum3 = Math.floor(Math.random() * (2 - 0 + 1)) + 0;
       this.bingoAnimationNum = 100;
       this.bingoStartBtn = false;
+      this.showBingoList = true;
       setTimeout(() => [(this.bingoAnimationNum = 0)], 1500);
       setTimeout(() => {
         this.bingoOpacity = 0;
