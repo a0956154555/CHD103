@@ -24,7 +24,7 @@ topCase.addEventListener("click", function () {
 });
 
 window.addEventListener("load", function () {
-  let aboutUsArr = ["A", "p", "c"];
+  let aboutUsArr = ["下", "午", "三", "點", "星", "聚", "點", "見"];
   let i = 0;
   const typingInterval = setInterval(function () {
     if (i < aboutUsArr.length) {
