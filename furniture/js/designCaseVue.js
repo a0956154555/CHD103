@@ -450,7 +450,7 @@ createApp({
       }, 1000);
       setTimeout(() => {
         let testArr = [
-          "不理你了 88",
+          "今晚星聚點見",
           "你很煩欸 討厭鬼",
           "你不能都這樣沒禮貌知道嗎",
         ];
@@ -459,7 +459,7 @@ createApp({
         setTimeout(() => {
           this.underBannerTrue = false;
         }, 1000);
-      }, 14500);
+      }, 15000);
     },
     typePreviousCharacter() {
       if (this.designerTxt.length > 0) {
