@@ -224,7 +224,8 @@ let forGrayBkc = document.querySelector(".for-gray-bkc");
 
 window.addEventListener("load", function () {
   let countToHundredNum = 0; // 設定初始數字為 0
-
+  account.value = "CHD106";
+  pass.value = "123456";
   const incrementNumber = () => {
     countToHundred.innerHTML = `${countToHundredNum}%`;
     countToHundredNum++;
